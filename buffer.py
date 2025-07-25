@@ -22,7 +22,7 @@ class RolloutBuffer:
     def to_tensors(self, device):
         return {
             'states': torch.tensor(np.array(self.states), dtype=torch.float32, device=device),
-            'actions': torch.tensor(self.actions, dtype=torch.int64, device=device),
+            'actions': torch.tensor(self.actions, dtype=torch.float32, device=device),
             'log_probs': torch.tensor(self.log_probs, dtype=torch.float32, device=device),
             'rewards': torch.tensor(self.rewards, dtype=torch.float32, device=device),
             'dones': torch.tensor(self.dones, dtype=torch.float32, device=device),

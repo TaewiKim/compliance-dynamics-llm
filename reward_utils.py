@@ -32,21 +32,21 @@ def compute_reward(
         dict: intermediate values for debugging/logging
     """
     goal_score = np.exp(-((action - goal) ** 2))
-    mu_score = np.exp(-((estimated_behavior_mean - goal) ** 2))
-    suggestion_score = np.exp(-((action_space[suggestion_idx] - goal) ** 2))
+    mu_distance_penalty = (estimated_behavior_mean - goal) ** 2
+    suggestion_distance_penalty = (action_space[suggestion_idx] - goal) ** 2
 
     total_reward = (
         reward_weight_compliance * actual_compliance +
         reward_weight_goal * goal_score -
-        penalty_weight_behavior_mean * mu_score -
-        penalty_weight_suggestion * suggestion_score
+        penalty_weight_behavior_mean * mu_distance_penalty -
+        penalty_weight_suggestion * suggestion_distance_penalty
     )
 
     details = {
         "compliance": actual_compliance,
         "goal_score": goal_score,
-        "mu_score": mu_score,
-        "suggestion_score": suggestion_score,
+        "mu_distance_penalty": mu_distance_penalty,
+        "suggestion_distance_penalty": suggestion_distance_penalty,
         "total_reward": total_reward
     }
     return total_reward, details
