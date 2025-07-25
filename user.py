@@ -18,6 +18,23 @@ class AdaptiveUser:
         self.min_noise = epsilon            # ε: Minimum noise level
         self.history = []                   # Memory of recent user actions
 
+        # ─────────────────────────────────────────────
+        # Additional attributes for the PPO simulator
+        # ─────────────────────────────────────────────
+        self.action_space = np.linspace(2.0, 5.0, num=7)
+        self.estimated_behavior_mean = mu
+        self.goal = 4.0
+
+        # reward weights (tunable)
+        self.reward_weight_compliance = 1.0
+        self.reward_weight_goal = 1.5
+        self.penalty_weight_behavior_mean = 1.0
+        self.penalty_weight_suggestion = 0.5
+
+        # simple online estimates
+        self.q_values = np.zeros(len(self.action_space))
+        self.compliance_estimate = 0.0
+
     def compliance_prob(self, suggestion):
         """
         Compute user's compliance probability based on psychological distance.
@@ -51,3 +68,18 @@ class AdaptiveUser:
 
     def get_nearest_action_index(self, action_value):
         return int(np.argmin(np.abs(self.action_space - action_value)))
+
+    # ------------------------------------------------------------------
+    # Simple update utilities used by the PPO trainer
+    # ------------------------------------------------------------------
+    def _update_q(self, action_idx, reward, lr=0.1):
+        """Update internal Q-value estimate for the given action."""
+        self.q_values[action_idx] += lr * (reward - self.q_values[action_idx])
+
+    def _update_compliance(self, compliance, lr=0.1):
+        """Update running compliance estimate."""
+        self.compliance_estimate += lr * (compliance - self.compliance_estimate)
+
+    def _update_behavior_mean(self, observed_action, lr=0.1):
+        """Update estimated behavior mean based on observed action."""
+        self.estimated_behavior_mean += lr * (observed_action - self.estimated_behavior_mean)
