@@ -6,7 +6,7 @@ from user import AdaptiveUser
 from simulator import PPOTrainerSimulator
 
 if __name__ == '__main__':
-    state_dim = 5  # 입력 상태 벡터 크기
+    state_dim = 2  # 입력 상태 벡터 크기
 
     # Continuous action space 범위
     action_low = 2.0
@@ -21,7 +21,7 @@ if __name__ == '__main__':
         lr=3e-4,
         gamma=0.99,
         eps_clip=0.2,
-        entropy_coef=0.005,
+        entropy_coef=0.01,
         value_coef=0.5,
         device='cuda' if torch.cuda.is_available() else 'cpu'
     )
@@ -31,7 +31,7 @@ if __name__ == '__main__':
         user=user,
         ppo_agent=agent,
         total_steps=1000,
-        update_interval=64,
+        update_interval=20,
         action_low=action_low,
         action_high=action_high
     )

@@ -25,12 +25,6 @@ class AdaptiveUser:
         self.estimated_behavior_mean = mu
         self.goal = 4.0
 
-        # reward weights (tunable)
-        self.reward_weight_compliance = 1.0
-        self.reward_weight_goal = 1.5
-        self.penalty_weight_behavior_mean = 1.0
-        self.penalty_weight_suggestion = 0.5
-
         # simple online estimates
         self.q_values = np.zeros(len(self.action_space))
         self.compliance_estimate = 0.0
@@ -71,14 +65,6 @@ class AdaptiveUser:
 
     # ------------------------------------------------------------------
     # Simple update utilities used by the PPO trainer
-    # ------------------------------------------------------------------
-    def _update_q(self, action_idx, reward, lr=0.1):
-        """Update internal Q-value estimate for the given action."""
-        self.q_values[action_idx] += lr * (reward - self.q_values[action_idx])
-
-    def _update_compliance(self, compliance, lr=0.1):
-        """Update running compliance estimate."""
-        self.compliance_estimate += lr * (compliance - self.compliance_estimate)
 
     def _update_behavior_mean(self, observed_action, lr=0.1):
         """Update estimated behavior mean based on observed action."""

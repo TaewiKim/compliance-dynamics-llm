@@ -26,5 +26,5 @@ class RolloutBuffer:
             'log_probs': torch.tensor(self.log_probs, dtype=torch.float32, device=device),
             'rewards': torch.tensor(self.rewards, dtype=torch.float32, device=device),
             'dones': torch.tensor(self.dones, dtype=torch.float32, device=device),
-            'state_values': torch.tensor(self.state_values, dtype=torch.float32, device=device),
+            'state_values': torch.cat(self.state_values).to(device),
         }

@@ -1,9 +1,7 @@
-# agent.py
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from buffer import RolloutBuffer
 import numpy as np
 
 class ActorCriticNetwork(nn.Module):
@@ -14,17 +12,30 @@ class ActorCriticNetwork(nn.Module):
             nn.Tanh()
         )
         self.actor_mean = nn.Linear(hidden_dim, 1)
-        self.actor_log_std = nn.Parameter(torch.zeros(1))  # 학습 가능한 std
+        self.actor_log_std = nn.Parameter(torch.zeros(1))  # 학습 가능한 log_std
         self.critic = nn.Sequential(
             nn.Linear(hidden_dim, hidden_dim),
             nn.Tanh(),
             nn.Linear(hidden_dim, 1)
         )
+        
+        for m in self.modules():
+            if isinstance(m, nn.Linear):
+                nn.init.kaiming_normal_(m.weight, nonlinearity='tanh')
+                nn.init.constant_(m.bias, 0.0)
 
     def forward(self, state):
         x = self.shared(state)
         mean = self.actor_mean(x)
-        std = self.actor_log_std.exp().expand_as(mean)
+        std = self.actor_log_std.exp().clamp(min=1e-2, max=2.0).expand_as(mean)
+
+        if torch.isnan(mean).any() or torch.isnan(std).any():
+            print("[NaN DETECTED in forward]")
+            print("mean:", mean)
+            print("std:", std)
+            print("state:", state)
+            raise ValueError("NaN in policy output")
+        
         value = self.critic(x).squeeze(-1)
         return mean, std, value
 
@@ -44,22 +55,7 @@ class PPOAgent:
         self.device = device
 
         self.policy = ActorCriticNetwork(state_dim).to(self.device)
-        self.optimizer = torch.optim.Adam(self.policy.parameters(), lr=lr)
-
-    def select_action(self, state, buffer):
-        state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0).to(self.device)
-        with torch.no_grad():
-            action, log_prob, value = self.policy.act(state_tensor)
-
-        # Clamp to environment action bounds
-        action = float(np.clip(action, 2.0, 5.0))
-
-        buffer.states.append(state)
-        buffer.actions.append(action)
-        buffer.log_probs.append(log_prob.item())
-        buffer.state_values.append(value.item())
-
-        return action
+        self.optimizer = optim.Adam(self.policy.parameters(), lr=lr)
 
     def compute_returns_and_advantages(self, rewards, dones, values):
         returns, G = [], 0
@@ -74,10 +70,13 @@ class PPOAgent:
         data = buffer.to_tensors(self.device)
         states, actions = data['states'], data['actions']
         old_log_probs, rewards, dones, old_values = data['log_probs'], data['rewards'], data['dones'], data['state_values']
-        with torch.no_grad():
-            old_values_tensor = torch.tensor(old_values, dtype=torch.float32).to(self.device)
 
-        returns, advantages = self.compute_returns_and_advantages(rewards, dones, old_values_tensor)
+        returns, advantages = self.compute_returns_and_advantages(rewards, dones, old_values)
+
+        if advantages.std().item() < 1e-5 or len(advantages) < 2:
+            print("⚠️ Skip normalization due to insufficient std or batch size")
+        else:
+            advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-8)
 
         for _ in range(batch_epochs):
             for i in range(0, len(states), batch_size):
@@ -87,13 +86,21 @@ class PPOAgent:
                 new_log_probs = dist.log_prob(actions[idx]).squeeze()
                 entropy = dist.entropy().mean()
 
-                # PPO loss
                 ratios = torch.exp(new_log_probs - old_log_probs[idx])
                 surr1 = ratios * advantages[idx]
                 surr2 = torch.clamp(ratios, 1 - self.eps_clip, 1 + self.eps_clip) * advantages[idx]
                 policy_loss = -torch.min(surr1, surr2).mean()
                 value_loss = F.mse_loss(values, returns[idx])
                 total_loss = policy_loss + self.value_coef * value_loss - self.entropy_coef * entropy
+
+                if torch.isnan(total_loss):
+                    print("❌ [NaN] total_loss 발생 - optimizer step 건너뜀")
+                    print("  mean:", mean.detach().cpu().numpy().flatten())
+                    print("  std:", std.detach().cpu().numpy().flatten())
+                    print("  ratios:", ratios.detach().cpu().numpy().flatten())
+                    print("  advantages:", advantages[idx].detach().cpu().numpy().flatten())
+                    print(f"  value_loss: {value_loss.item():.4f}, policy_loss: {policy_loss.item():.4f}")
+                    continue
 
                 self.optimizer.zero_grad()
                 total_loss.backward()
