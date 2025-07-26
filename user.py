@@ -1,3 +1,4 @@
+# user.py
 import numpy as np
 
 class AdaptiveUser:
@@ -17,17 +18,6 @@ class AdaptiveUser:
         self.convergence_threshold = delta  # δ: Variance threshold to trigger adaptation
         self.min_noise = epsilon            # ε: Minimum noise level
         self.history = []                   # Memory of recent user actions
-
-        # ─────────────────────────────────────────────
-        # Additional attributes for the PPO simulator
-        # ─────────────────────────────────────────────
-        self.action_space = np.linspace(2.0, 5.0, num=7)
-        self.estimated_behavior_mean = mu
-        self.goal = 4.0
-
-        # simple online estimates
-        self.q_values = np.zeros(len(self.action_space))
-        self.compliance_estimate = 0.0
 
     def compliance_prob(self, suggestion):
         """
@@ -59,13 +49,3 @@ class AdaptiveUser:
                 self.behavior_mean += self.adaptation_rate * delta_mu
 
         return action
-
-    def get_nearest_action_index(self, action_value):
-        return int(np.argmin(np.abs(self.action_space - action_value)))
-
-    # ------------------------------------------------------------------
-    # Simple update utilities used by the PPO trainer
-
-    def _update_behavior_mean(self, observed_action, lr=0.1):
-        """Update estimated behavior mean based on observed action."""
-        self.estimated_behavior_mean += lr * (observed_action - self.estimated_behavior_mean)

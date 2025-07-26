@@ -1,130 +1,138 @@
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
 import numpy as np
 
-class ActorCriticNetwork(nn.Module):
-    def __init__(self, state_dim, hidden_dim=64):
-        super().__init__()
-        self.shared = nn.Sequential(
-            nn.Linear(state_dim, hidden_dim),
-            nn.Tanh()
-        )
-        self.actor_mean = nn.Linear(hidden_dim, 1)
-        self.actor_log_std = nn.Parameter(torch.zeros(1))  # 학습 가능한 log_std
-        self.critic = nn.Sequential(
-            nn.Linear(hidden_dim, hidden_dim),
-            nn.Tanh(),
-            nn.Linear(hidden_dim, 1)
-        )
-        
-        for m in self.modules():
-            if isinstance(m, nn.Linear):
-                nn.init.kaiming_normal_(m.weight, nonlinearity='tanh')
-                nn.init.constant_(m.bias, 0.0)
+class Agent:
+    """
+    Reinforcement learning-based agent that learns to make behavior suggestions
+    based on estimated user preference (μ̂), compliance probability, and goal alignment.
+    """
 
-    def forward(self, state):
-        x = self.shared(state)
-        mean = self.actor_mean(x)
-        std = self.actor_log_std.exp().clamp(min=1e-2, max=2.0).expand_as(mean)
+    def __init__(
+        self,
+        action_space,
+        goal_behavior=4.0,
+        reward_weight_compliance=1.0,
+        reward_weight_goal=1.5,
+        penalty_weight_suggestion=0.1,
+        softness_mu=0.1,
+        softness_goal=0.1,
+        lr_q=0.6,
+        lr_compliance=0.6,
+        lr_mu=0.6,
+        policy_temp_decay=0.04
+    ):
 
-        if torch.isnan(mean).any() or torch.isnan(std).any():
-            print("[NaN DETECTED in forward]")
-            print("mean:", mean)
-            print("std:", std)
-            print("state:", state)
-            raise ValueError("NaN in policy output")
-        
-        value = self.critic(x).squeeze(-1)
-        return mean, std, value
+        self.action_space = np.array(action_space)
+        self.num_actions = len(action_space)
+        self.q_values = np.zeros(self.num_actions)
+        self.goal = goal_behavior
 
-    def act(self, state):
-        mean, std, value = self.forward(state)
-        dist = torch.distributions.Normal(mean, std)
-        action = dist.sample()
-        log_prob = dist.log_prob(action)
-        return action.squeeze().item(), log_prob.squeeze(), value
+        self.estimated_compliance = 0.5
+        self.estimated_behavior_mean = goal_behavior  # μ̂
 
-class PPOAgent:
-    def __init__(self, state_dim, lr=3e-4, gamma=0.99, eps_clip=0.2, entropy_coef=0.01, value_coef=0.5, device='cpu',
-                 action_low=2.0, action_high=5.0):
-        self.gamma = gamma
-        self.eps_clip = eps_clip
-        self.entropy_coef = entropy_coef
-        self.value_coef = value_coef
-        self.device = device
+        # Reward weights
+        self.reward_weight_compliance = reward_weight_compliance
+        self.reward_weight_goal = reward_weight_goal
+        self.penalty_weight_suggestion = penalty_weight_suggestion
+        self.penalty_weight_behavior_mean = 0.1
 
-        self.action_low = action_low
-        self.action_high = action_high
-        self.action_scale = (action_high - action_low) / 2.0
-        self.action_bias = (action_high + action_low) / 2.0
+        # Learning rates
+        self.learning_rate_q = lr_q
+        self.learning_rate_compliance = lr_compliance
+        self.learning_rate_behavior_mean = lr_mu
 
-        self.policy = ActorCriticNetwork(state_dim).to(self.device)
-        self.optimizer = optim.Adam(self.policy.parameters(), lr=lr)
+        # Softmax policy temperature control
+        self.policy_temperature = 1.0
+        self.min_policy_temperature = 0.1
+        self.policy_temp_decay = policy_temp_decay
 
-    def act(self, state):
-        mean, std, value = self.policy(state)
-        base_dist = torch.distributions.Normal(mean, std)
-        tanh = torch.distributions.transforms.TanhTransform()
-        dist = torch.distributions.TransformedDistribution(base_dist, tanh)
-        raw_action = dist.rsample()
-        log_prob = dist.log_prob(raw_action) - torch.log(torch.tensor(self.action_scale))
-        action = raw_action * self.action_scale + self.action_bias
-        return action.squeeze().item(), log_prob.squeeze(), value.squeeze()
+        # Exploration soft focus
+        self.softness_mu = softness_mu
+        self.softness_goal = softness_goal
 
-    def compute_returns_and_advantages(self, rewards, dones, values):
-        returns, G = [], 0
-        for r, done in zip(reversed(rewards), reversed(dones)):
-            G = r + self.gamma * G * (1 - done)
-            returns.insert(0, G)
-        returns = torch.tensor(returns, dtype=torch.float32).to(self.device)
-        advantages = returns - values
-        return returns, advantages
+        self.action_history = []
+        self.prev_suggestion_idx = None
 
-    def update(self, buffer, batch_epochs=4, batch_size=64):
-        data = buffer.to_tensors(self.device)
-        states, actions = data['states'], data['actions']
-        old_log_probs, rewards, dones, old_values = data['log_probs'], data['rewards'], data['dones'], data['state_values']
-
-        returns, advantages = self.compute_returns_and_advantages(rewards, dones, old_values)
-
-        if advantages.std().item() < 1e-5 or len(advantages) < 2:
-            print("⚠️ Skip normalization due to insufficient std or batch size")
+    def _update_behavior_mean(self, action):
+        """
+        Update estimated user preference (μ̂) based on recent actions.
+        """
+        self.action_history.append(action)
+        window = 10
+        if len(self.action_history) >= window:
+            self.estimated_behavior_mean = np.mean(self.action_history[-window:])
         else:
-            advantages = (advantages - advantages.mean()) / (advantages.std() + 1e-8)
+            self.estimated_behavior_mean += self.learning_rate_behavior_mean * (action - self.estimated_behavior_mean)
+        self.estimated_behavior_mean = np.clip(self.estimated_behavior_mean, 0.0, 5.0)
 
-        for _ in range(batch_epochs):
-            for i in range(0, len(states), batch_size):
-                idx = slice(i, i + batch_size)
-                mean, std, values = self.policy(states[idx])
-                base_dist = torch.distributions.Normal(mean, std)
-                tanh = torch.distributions.transforms.TanhTransform()
-                dist = torch.distributions.TransformedDistribution(base_dist, tanh)
+    def _update_compliance(self, actual_compliance):
+        """
+        Update agent's estimate of user compliance.
+        """
+        error = actual_compliance - self.estimated_compliance
+        self.estimated_compliance += self.learning_rate_compliance * error
+        self.estimated_compliance = np.clip(self.estimated_compliance, 0.0, 1.0)
 
-                scaled_actions = actions[idx]
-                norm_actions = (scaled_actions - self.action_bias) / self.action_scale
-                norm_actions = norm_actions.clamp(-0.999, 0.999)
-                new_log_probs = dist.log_prob(norm_actions) - torch.log(torch.tensor(self.action_scale))
-                new_log_probs = new_log_probs.squeeze()
-                entropy = base_dist.entropy().mean()
+    def _update_q(self, suggestion_idx, reward):
+        """
+        Q-learning update.
+        """
+        old_q = self.q_values[suggestion_idx]
+        self.q_values[suggestion_idx] += self.learning_rate_q * (reward - old_q)
 
-                ratios = torch.exp(new_log_probs - old_log_probs[idx])
-                surr1 = ratios * advantages[idx]
-                surr2 = torch.clamp(ratios, 1 - self.eps_clip, 1 + self.eps_clip) * advantages[idx]
-                policy_loss = -torch.min(surr1, surr2).mean()
-                value_loss = F.mse_loss(values, returns[idx])
-                total_loss = policy_loss + self.value_coef * value_loss - self.entropy_coef * entropy
+    def _decay_temperature(self):
+        """
+        Adjust policy temperature based on distance from goal.
+        """
+        mu_distance = abs(self.estimated_behavior_mean - self.goal)
+        max_distance = np.ptp(self.action_space)
+        ratio = np.clip(mu_distance / max_distance, 0.0, 1.0)
+        target_temp = self.min_policy_temperature + ratio * (1.0 - self.min_policy_temperature)
+        self.policy_temperature = (1 - self.policy_temp_decay) * self.policy_temperature + self.policy_temp_decay * target_temp
 
-                if torch.isnan(total_loss):
-                    print("❌ [NaN] total_loss 발생 - optimizer step 건너뜀")
-                    print("  mean:", mean.detach().cpu().numpy().flatten())
-                    print("  std:", std.detach().cpu().numpy().flatten())
-                    print("  ratios:", ratios.detach().cpu().numpy().flatten())
-                    print("  advantages:", advantages[idx].detach().cpu().numpy().flatten())
-                    print(f"  value_loss: {value_loss.item():.4f}, policy_loss: {policy_loss.item():.4f}")
-                    continue
+    def reward(self, suggestion_idx, action, actual_compliance):
+        """
+        Calculate composite reward based on:
+        - compliance with suggestion
+        - proximity of action and behavior mean to goal
+        """
+        self._update_compliance(actual_compliance)
+        self._update_behavior_mean(action)
 
-                self.optimizer.zero_grad()
-                total_loss.backward()
-                self.optimizer.step()
+        goal_score = np.exp(-((action - self.goal) ** 2))
+        mu_score = np.exp(-((self.estimated_behavior_mean - self.goal) ** 2))
+        suggestion_score = np.exp(-((self.action_space[suggestion_idx] - self.goal) ** 2))
+
+        total_reward = (
+            self.reward_weight_compliance * actual_compliance +
+            self.reward_weight_goal * goal_score +
+            self.penalty_weight_behavior_mean * mu_score +
+            self.penalty_weight_suggestion * suggestion_score
+        )
+
+        self._update_q(suggestion_idx, total_reward)
+        return total_reward, actual_compliance
+
+    def policy(self):
+        """
+        Softmax action selection influenced by both estimated user mean (μ̂) and goal (G).
+        """
+        scaled_q = self.q_values / self.policy_temperature
+
+        idx_mu = np.argmin(np.abs(self.action_space - self.estimated_behavior_mean))
+        idx_goal = np.argmin(np.abs(self.action_space - self.goal))
+
+        weight_mu = np.exp(-self.softness_mu * np.abs(np.arange(len(self.action_space)) - idx_mu))
+        weight_goal = np.exp(-self.softness_goal * np.abs(np.arange(len(self.action_space)) - idx_goal))
+
+        smooth_weight = weight_mu * weight_goal
+        adjusted_scaled = scaled_q + np.log(smooth_weight + 1e-8)
+
+        probs = np.exp(adjusted_scaled - np.max(adjusted_scaled))
+        probs /= np.sum(probs)
+
+        suggestion_idx = np.random.choice(len(self.action_space), p=probs)
+        self.prev_suggestion_idx = suggestion_idx
+        suggestion = self.action_space[suggestion_idx]
+
+        self._decay_temperature()
+        return suggestion, suggestion_idx, probs
