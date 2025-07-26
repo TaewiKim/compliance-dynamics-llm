@@ -47,15 +47,31 @@ class ActorCriticNetwork(nn.Module):
         return action.squeeze().item(), log_prob.squeeze(), value
 
 class PPOAgent:
-    def __init__(self, state_dim, lr=3e-4, gamma=0.99, eps_clip=0.2, entropy_coef=0.01, value_coef=0.5, device='cpu'):
+    def __init__(self, state_dim, lr=3e-4, gamma=0.99, eps_clip=0.2, entropy_coef=0.01, value_coef=0.5, device='cpu',
+                 action_low=2.0, action_high=5.0):
         self.gamma = gamma
         self.eps_clip = eps_clip
         self.entropy_coef = entropy_coef
         self.value_coef = value_coef
         self.device = device
 
+        self.action_low = action_low
+        self.action_high = action_high
+        self.action_scale = (action_high - action_low) / 2.0
+        self.action_bias = (action_high + action_low) / 2.0
+
         self.policy = ActorCriticNetwork(state_dim).to(self.device)
         self.optimizer = optim.Adam(self.policy.parameters(), lr=lr)
+
+    def act(self, state):
+        mean, std, value = self.policy(state)
+        base_dist = torch.distributions.Normal(mean, std)
+        tanh = torch.distributions.transforms.TanhTransform()
+        dist = torch.distributions.TransformedDistribution(base_dist, tanh)
+        raw_action = dist.rsample()
+        log_prob = dist.log_prob(raw_action) - torch.log(torch.tensor(self.action_scale))
+        action = raw_action * self.action_scale + self.action_bias
+        return action.squeeze().item(), log_prob.squeeze(), value.squeeze()
 
     def compute_returns_and_advantages(self, rewards, dones, values):
         returns, G = [], 0
@@ -82,9 +98,16 @@ class PPOAgent:
             for i in range(0, len(states), batch_size):
                 idx = slice(i, i + batch_size)
                 mean, std, values = self.policy(states[idx])
-                dist = torch.distributions.Normal(mean, std)
-                new_log_probs = dist.log_prob(actions[idx]).squeeze()
-                entropy = dist.entropy().mean()
+                base_dist = torch.distributions.Normal(mean, std)
+                tanh = torch.distributions.transforms.TanhTransform()
+                dist = torch.distributions.TransformedDistribution(base_dist, tanh)
+
+                scaled_actions = actions[idx]
+                norm_actions = (scaled_actions - self.action_bias) / self.action_scale
+                norm_actions = norm_actions.clamp(-0.999, 0.999)
+                new_log_probs = dist.log_prob(norm_actions) - torch.log(torch.tensor(self.action_scale))
+                new_log_probs = new_log_probs.squeeze()
+                entropy = base_dist.entropy().mean()
 
                 ratios = torch.exp(new_log_probs - old_log_probs[idx])
                 surr1 = ratios * advantages[idx]
