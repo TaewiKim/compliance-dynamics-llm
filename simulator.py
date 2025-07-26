@@ -28,8 +28,7 @@ class PPOTrainerSimulator:
             state = self.state_vector()
             state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0).to(self.ppo_agent.device)
 
-            action, log_prob, value = self.ppo_agent.policy.act(state_tensor)
-            action = float(np.clip(action, self.action_low, self.action_high))
+            action, log_prob, value = self.ppo_agent.act(state_tensor)
 
             user_action = self.user.respond(action)
             compliance = self.user.compliance_prob(action)
