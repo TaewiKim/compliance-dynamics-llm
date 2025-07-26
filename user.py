@@ -1,51 +1,55 @@
 # user.py
-import numpy as np
+from typing import Dict, Optional
+import os
 
-class AdaptiveUser:
+class UserLlm:
     """
-    Simulates a psychologically grounded adaptive user.
-    The user has an internal behavior preference (μ) and 
-    probabilistically follows suggestions from an agent based on psychological distance.
+    Generates LLM prompts for adaptive users receiving dietary coaching.
+    Can work with various LLM providers via a unified HTTP API interface.
     """
 
-    def __init__(self, mu=2.0, beta=0.05, alpha=0.0, gamma=0.5, memory=10, delta=0.2, epsilon=1e-3):
-        self.initial_behavior_mean = mu     # μ₀: Initial preference
-        self.behavior_mean = mu             # μ: Current internal behavior mean
-        self.compliance_sensitivity = beta  # β: Sensitivity to suggestion distance
-        self.adaptation_rate = alpha        # α: Speed of adaptation toward consistent behavior
-        self.noise_sensitivity = gamma      # γ: Noise scaling depending on (1 - compliance)
-        self.memory = memory                # Number of past actions for stability check
-        self.convergence_threshold = delta  # δ: Variance threshold to trigger adaptation
-        self.min_noise = epsilon            # ε: Minimum noise level
-        self.history = []                   # Memory of recent user actions
+    def __init__(self, user_profile: Dict[str, str]):
 
-    def compliance_prob(self, suggestion):
-        """
-        Compute user's compliance probability based on psychological distance.
-        """
-        return np.exp(-self.compliance_sensitivity * (suggestion - self.behavior_mean) ** 2)
+        self.user_profile = user_profile
+        self.model_name = "gpt-4o-mini"
+        self.api_url = f"https://api.openai.com/v1/chat/completions"
+        self.headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {os.getenv('LLM_API_KEY', '')}"
+        }
+        self.api_key = os.getenv("OPENAI_API_KEY") 
 
-    def respond(self, suggestion):
-        """
-        Generate a user action in response to an agent suggestion.
-        Combines internal preference, suggestion, and stochastic noise.
-        """
-        compliance = self.compliance_prob(suggestion)
-        noise_std = self.noise_sensitivity * (1 - compliance) + self.min_noise
-        noise = np.random.normal(0, noise_std)
+    def format_user_prompt(self) -> str:
+        return f"""
+        ## 🧑‍⚕️ Dietary Coaching User Profile
 
-        action = (1 - compliance) * self.behavior_mean + compliance * suggestion + noise
-        action = np.clip(action, 0.0, 5.0)
+        You are a user receiving coaching from an AI to improve your dietary habits.
 
-        self.history.append(action)
-        if len(self.history) > self.memory:
-            self.history.pop(0)
+        Your age is **{self.user_profile['age']}**, and your gender is **{self.user_profile['gender']}**.  
+        You are currently experiencing issues related to **{self.user_profile['condition']}**.
 
-        if len(self.history) == self.memory:
-            std_recent = np.std(self.history)
-            if std_recent < self.convergence_threshold:
-                # Update μ toward mean of stable actions
-                delta_mu = np.sign(np.mean(self.history) - self.behavior_mean)
-                self.behavior_mean += self.adaptation_rate * delta_mu
+        Your typical eating habits are described as **{self.user_profile['mu']}**,  
+        and you tend to **{self.user_profile['beta']}** in response to dietary suggestions from the AI.  
+        When a consistent eating pattern is maintained, you **{self.user_profile['alpha']}** in adapting to new habits.  
+        However, you are **{self.user_profile['gamma']}** in response to external influences such as emotional states or environmental changes.
 
-        return action
+        You can recall your recent eating patterns for approximately **{self.user_profile['memory']}**,  
+        and if the patterns are stable, you show **{self.user_profile['delta']}** likelihood of change.  
+        Nevertheless, in unexpected situations, you may still exhibit **{self.user_profile['epsilon']}** levels of irregular eating behavior.
+
+        The AI uses this behavioral profile to provide personalized dietary coaching tailored to your needs.
+
+        ### ✏️ Output Instructions:
+        Generate your response in **JSON format** with the following keys:
+
+        \\```json
+        {
+        "utterance": "What the user would say out loud, e.g., a sentence or two",
+        "monologue": "What the user is thinking internally or emotionally",
+        "endkey": true or false, // true if the user takes an eating action
+        "action": 1.0 to 5.0     // only include if endkey is true. 5.0 = very healthy eating, 1.0 = very unhealthy
+        }
+        \\```
+                """.strip()
+
+
