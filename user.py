@@ -13,11 +13,11 @@ class UserLlm:
         self.user_profile = user_profile
         self.model_name = "gpt-4o-mini"
         self.api_url = f"https://api.openai.com/v1/chat/completions"
+        self.api_key = os.getenv("OPENAI_API_KEY") 
         self.headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {os.getenv('LLM_API_KEY', '')}"
+            "Authorization": f"Bearer {self.api_key}"
         }
-        self.api_key = os.getenv("OPENAI_API_KEY") 
 
     def format_user_prompt(self) -> str:
         return f"""
@@ -43,12 +43,12 @@ class UserLlm:
         Generate your response in **JSON format** with the following keys:
 
         \\```json
-        {
+        {{
         "utterance": "What the user would say out loud, e.g., a sentence or two",
         "monologue": "What the user is thinking internally or emotionally",
         "endkey": true or false, // true if the user takes an eating action
         "action": 1.0 to 5.0     // only include if endkey is true. 5.0 = very healthy eating, 1.0 = very unhealthy
-        }
+        }}
         \\```
                 """.strip()
 

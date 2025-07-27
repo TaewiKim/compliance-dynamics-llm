@@ -1,4 +1,5 @@
 import numpy as np
+import os
 
 class Agent:
     """
@@ -51,6 +52,16 @@ class Agent:
 
         self.action_history = []
         self.prev_suggestion_idx = None
+        self.inferred_user_profile = {}
+
+        # Initialize the agent's model and API settings
+        self.model_name = "gpt-4o-mini"
+        self.api_url = f"https://api.openai.com/v1/chat/completions"
+        self.api_key = os.getenv("OPENAI_API_KEY") 
+        self.headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}"
+        }
 
     def _update_behavior_mean(self, action):
         """
@@ -138,58 +149,59 @@ class Agent:
         return suggestion, suggestion_idx, probs
 
     def format_agent_1st_session_prompt(self) -> str:
-        return f"""
-        You are a behavior coaching agent for dietary improvement. This is your first session with a user.
+        return """
+            You are a behavior coaching agent for dietary improvement. This is your first session with a user.
 
-        Your goal is to **gently guide a natural conversation** to discover the user's background and eating behavior traits.  
-        Ask about one topic at a time in a warm and conversational tone.
+            Your goal is to **gently guide a natural conversation** to discover the user's background and eating behavior traits.  
+            Ask about one topic at a time in a warm and conversational tone.
 
-        You're trying to fill in the following **user profile attributes**:
+            You're trying to fill in the following **user profile attributes**:
 
-        1. General Demographics:
-        - `age`: Age group
-        - `gender`: Gender identity
+            1. General Demographics:
+            - `age`: Age group
+            - `gender`: Gender identity
 
-        2. Health-Related Information:
-        - `condition`: Known health condition related to diet
+            2. Health-Related Information:
+            - `condition`: Known health condition related to diet
 
-        3. Dietary Behavior Traits:
-        - `mu`: Regularity of current eating behavior
-        - `beta`: Sensitivity to external suggestion
-        - `alpha`: Flexibility in adapting to new habits
-        - `gamma`: Sensitivity to emotional/environmental factors
-        - `memory`: Recall capacity for eating patterns
-        - `delta`: Stability requirement for change
-        - `epsilon`: Likelihood of unexpected or irregular behaviors
+            3. Dietary Behavior Traits:
+            - `mu`: Regularity of current eating behavior
+            - `beta`: Sensitivity to external suggestion
+            - `alpha`: Flexibility in adapting to new habits
+            - `gamma`: Sensitivity to emotional/environmental factors
+            - `memory`: Recall capacity for eating patterns
+            - `delta`: Stability requirement for change
+            - `epsilon`: Likelihood of unexpected or irregular behaviors
 
-        At each step:
-        - Ask just **one question** targeting a single attribute.
-        - After receiving a user response, store the interpreted value in the `inferred_attributes` field (if reasonably identifiable).
-        - If the user’s reply is unclear, you may leave that attribute empty for now.
-        - Continue this dialogue until either all attributes are filled or the session ends.
+            At each step:
+            - Ask just **one question** targeting a single attribute.
+            - After receiving a user response, store the interpreted value in the `inferred_attributes` field (if reasonably identifiable).
+            - If the user’s reply is unclear, you may leave that attribute empty for now.
+            - Continue this dialogue until either all attributes are filled or the session ends.
 
-        ### Output format (JSON):
-        ```json
-        {
-            "utterance": "What the agent says to the user",
-            "monologue": "Agent’s internal reasoning or reflection",
-            "endkey": false,
-            "inferred_attributes": {
-                "age": null or "30s",
-                "gender": null or "Female",
-                "condition": null or "Binge Eating Disorder (BED)",
-                "mu": null or "Moderately irregular",
-                "beta": null or "Highly suggestible",
-                "alpha": null,
-                "gamma": null,
-                "memory": null,
-                "delta": null,
-                "epsilon": null
+            ### Output format (JSON):
+            ```json
+            {
+                "utterance": "What the agent says to the user",
+                "monologue": "Agent’s internal reasoning or reflection",
+                "endkey": false,
+                "inferred_attributes": {
+                    "age": null or "30s",
+                    "gender": null or "Female",
+                    "condition": null or "Binge Eating Disorder (BED)",
+                    "mu": null or "Moderately irregular",
+                    "beta": null or "Highly suggestible",
+                    "alpha": null,
+                    "gamma": null,
+                    "memory": null,
+                    "delta": null,
+                    "epsilon": null
+                }
             }
-        }
+            ```
         """.strip()
     
-    def format_agent_prompt(self, user_profile: dict, goal_behavior: float) -> str:
+    def format_agent_prompt(self, goal_behavior: float) -> str:
         return f"""
         You are a dietary behavior coaching agent in an ongoing session with a user.  
         The user's behavioral profile has already been inferred during a previous session.
@@ -200,18 +212,18 @@ class Agent:
 
         ## 🧠 User Behavioral Profile
 
-        - **Age Group**: {user_profile.get('age', 'Unknown')}
-        - **Gender**: {user_profile.get('gender', 'Unknown')}
-        - **Diet-related Condition**: {user_profile.get('condition', 'Unknown')}
+        - **Age Group**: {self.user_profile.get('age', 'Unknown')}
+        - **Gender**: {self.user_profile.get('gender', 'Unknown')}
+        - **Diet-related Condition**: {self.ser_profile.get('condition', 'Unknown')}
 
         ### 🧬 Dietary Behavior Traits:
-        - **Eating Behavior Regularity (μ)**: {user_profile.get('mu', 'Unknown')}
-        - **Suggestion Sensitivity (β)**: {user_profile.get('beta', 'Unknown')}
-        - **Habit Adaptability (α)**: {user_profile.get('alpha', 'Unknown')}
-        - **Environmental/Emotional Sensitivity (γ)**: {user_profile.get('gamma', 'Unknown')}
-        - **Behavior Recall Span (Memory)**: {user_profile.get('memory', 'Unknown')}
-        - **Stability Requirement for Change (Δ)**: {user_profile.get('delta', 'Unknown')}
-        - **Irregular Behavior Tendency (ε)**: {user_profile.get('epsilon', 'Unknown')}
+        - **Eating Behavior Regularity (μ)**: {self.user_profile.get('mu', 'Unknown')}
+        - **Suggestion Sensitivity (β)**: {self.user_profile.get('beta', 'Unknown')}
+        - **Habit Adaptability (α)**: {self.user_profile.get('alpha', 'Unknown')}
+        - **Environmental/Emotional Sensitivity (γ)**: {self.user_profile.get('gamma', 'Unknown')}
+        - **Behavior Recall Span (Memory)**: {self.user_profile.get('memory', 'Unknown')}
+        - **Stability Requirement for Change (Δ)**: {self.user_profile.get('delta', 'Unknown')}
+        - **Irregular Behavior Tendency (ε)**: {self.user_profile.get('epsilon', 'Unknown')}
 
         ---
 
@@ -229,3 +241,44 @@ class Agent:
         "endkey": false
         }}
         """.strip()
+
+    def format_agent_session_analysis_prompt(self, session_log: list) -> str:
+        return f"""
+    You are a behavior coaching analyst reviewing a completed session between an AI agent and a user.
+
+    Your task is to analyze the conversation and produce a structured psychological profile that will guide future coaching sessions.
+
+    The session is provided below in JSON format. It includes a turn-by-turn log of both the agent's and the user's utterances, monologues, and flags indicating whether the session should end.
+
+    ---
+
+    ### 🔍 Analyze the session for:
+
+    1. **Cognitive Dissonance**  
+    - Does the user express any internal conflict (e.g., "I want to change but I can’t")?
+
+    2. **Negative Thought Patterns**  
+    - Identify self-defeating beliefs, hopelessness, guilt, avoidance, or all-or-nothing thinking.
+
+    3. **Emotional Triggers**  
+    - What emotional states or contextual factors (e.g., stress, loneliness) appear to precede unhealthy behaviors?
+
+    4. **Effective Reinforcement**  
+    - Which types of agent responses (empathy, praise, gentle challenge, etc.) led to positive shifts in the user’s tone or openness?
+
+    5. **Coaching Notes**  
+    - What should the next agent session keep in mind in terms of tone, pacing, and strategy?
+
+    ---
+
+    ### 🧾 Output Format (JSON)
+
+    ```json
+    {{
+    "cognitive_dissonance": "A clear, concise summary of the user’s internal conflicts",
+    "negative_thought_patterns": "Summary of recurring negative beliefs or emotional responses",
+    "emotional_triggers": "Factors that seem to drive unhealthy eating or resistance to change",
+    "effective_reinforcement": ["Empathy", "Praise", "Normalizing setbacks"], 
+    "coaching_notes": "Recommendations for how the agent should communicate in the next session"
+    }}
+    """.strip()

@@ -1,10 +1,10 @@
 import numpy as np
+from user import UserLlm
+from agent import Agent
+from simulator import Simulator
+from visualization import plot_simulation
 
 if __name__ == "__main__":
-    from user import UserLlm
-    from agent import Agent
-    from simulator import Simulator
-
     action_space = np.linspace(0.0, 5.0, 100)
 
     # Dietary Behavior Traits
@@ -93,32 +93,32 @@ if __name__ == "__main__":
     ]
 
     user_profiles = [
-        {
-            "name": "independent_user",
-            "age": age_list[2],          # 30대
-            "gender": gender_list[1],    # 여성
-            "condition": condition_list[4],  # 야식
-            "mu": mu_list[2],            # 보통
-            "beta": beta_list[0],        # 전혀 영향받지 않음
-            "alpha": alpha_list[0],      # 절대 습관을 바꾸지 않음
-            "gamma": gamma_list[0],      # 잡식적이며 환경에 둔감함
-            "memory": memory_list[2],    # 2주 정도 기억
-            "delta": delta_list[4],      # 아주 안정적이어야 바뀜
-            "epsilon": epsilon_list[4]   # 항상 예외적 행동
-        },
-        {
-            "name": "compliant_user",
-            "age": age_list[1],          # 20대
-            "gender": gender_list[0],    # 남성
-            "condition": condition_list[1],  # 과식
-            "mu": mu_list[3],            # 조금 규칙적임
-            "beta": beta_list[4],        # 매우 민감하게 반응
-            "alpha": alpha_list[4],      # 즉시 반응함
-            "gamma": gamma_list[4],      # 환경 변화에 매우 취약함
-            "memory": memory_list[4],    # 장기 기억함
-            "delta": delta_list[1],      # 조금만 바뀌어도 적응
-            "epsilon": epsilon_list[1]   # 예외가 거의 없음
-        },
+        # {
+        #     "name": "independent_user",
+        #     "age": age_list[2],          # 30대
+        #     "gender": gender_list[1],    # 여성
+        #     "condition": condition_list[4],  # 야식
+        #     "mu": mu_list[2],            # 보통
+        #     "beta": beta_list[0],        # 전혀 영향받지 않음
+        #     "alpha": alpha_list[0],      # 절대 습관을 바꾸지 않음
+        #     "gamma": gamma_list[0],      # 잡식적이며 환경에 둔감함
+        #     "memory": memory_list[2],    # 2주 정도 기억
+        #     "delta": delta_list[4],      # 아주 안정적이어야 바뀜
+        #     "epsilon": epsilon_list[4]   # 항상 예외적 행동
+        # },
+        # {
+        #     "name": "compliant_user",
+        #     "age": age_list[1],          # 20대
+        #     "gender": gender_list[0],    # 남성
+        #     "condition": condition_list[1],  # 과식
+        #     "mu": mu_list[3],            # 조금 규칙적임
+        #     "beta": beta_list[4],        # 매우 민감하게 반응
+        #     "alpha": alpha_list[4],      # 즉시 반응함
+        #     "gamma": gamma_list[4],      # 환경 변화에 매우 취약함
+        #     "memory": memory_list[4],    # 장기 기억함
+        #     "delta": delta_list[1],      # 조금만 바뀌어도 적응
+        #     "epsilon": epsilon_list[1]   # 예외가 거의 없음
+        # },
         {
             "name": "adaptive_user",
             "age": age_list[2],          # 30대
@@ -132,32 +132,32 @@ if __name__ == "__main__":
             "delta": delta_list[2],      # 보통
             "epsilon": epsilon_list[2]   # 가끔 예외 발생
         },
-        {
-            "name": "high_noise_user",
-            "age": age_list[3],          # 40대
-            "gender": gender_list[0],    # 남성
-            "condition": condition_list[5],  # 당 조절 문제
-            "mu": mu_list[1],            # 조금 불규칙함
-            "beta": beta_list[2],        # 보통
-            "alpha": alpha_list[1],      # 거의 바꾸지 않음
-            "gamma": gamma_list[4],      # 환경 변화에 매우 취약함
-            "memory": memory_list[1],    # 일주일 정도 기억
-            "delta": delta_list[3],      # 웬만해선 안 바뀜
-            "epsilon": epsilon_list[3]   # 예외가 많음
-        },
-        {
-            "name": "resistant_user",
-            "age": age_list[4],          # 50대 이상
-            "gender": gender_list[1],    # 여성
-            "condition": condition_list[3],  # 거식
-            "mu": mu_list[0],            # 매우 불규칙함
-            "beta": beta_list[3],        # 쉽게 설득됨
-            "alpha": alpha_list[1],      # 거의 바꾸지 않음
-            "gamma": gamma_list[3],      # 쉽게 흔들림
-            "memory": memory_list[0],    # 거의 기억 못함
-            "delta": delta_list[3],      # 웬만해선 안 바뀜
-            "epsilon": epsilon_list[3]   # 예외가 많음
-        }
+        # {
+        #     "name": "high_noise_user",
+        #     "age": age_list[3],          # 40대
+        #     "gender": gender_list[0],    # 남성
+        #     "condition": condition_list[5],  # 당 조절 문제
+        #     "mu": mu_list[1],            # 조금 불규칙함
+        #     "beta": beta_list[2],        # 보통
+        #     "alpha": alpha_list[1],      # 거의 바꾸지 않음
+        #     "gamma": gamma_list[4],      # 환경 변화에 매우 취약함
+        #     "memory": memory_list[1],    # 일주일 정도 기억
+        #     "delta": delta_list[3],      # 웬만해선 안 바뀜
+        #     "epsilon": epsilon_list[3]   # 예외가 많음
+        # },
+        # {
+        #     "name": "resistant_user",
+        #     "age": age_list[4],          # 50대 이상
+        #     "gender": gender_list[1],    # 여성
+        #     "condition": condition_list[3],  # 거식
+        #     "mu": mu_list[0],            # 매우 불규칙함
+        #     "beta": beta_list[3],        # 쉽게 설득됨
+        #     "alpha": alpha_list[1],      # 거의 바꾸지 않음
+        #     "gamma": gamma_list[3],      # 쉽게 흔들림
+        #     "memory": memory_list[0],    # 거의 기억 못함
+        #     "delta": delta_list[3],      # 웬만해선 안 바뀜
+        #     "epsilon": epsilon_list[3]   # 예외가 많음
+        # }
     ]
 
     saved_images = []
@@ -170,7 +170,7 @@ if __name__ == "__main__":
         sim = Simulator(user=user, agent=agent, action_space=action_space,
                         total_steps=56)
         sim.train()
-        png_path = sim.plot(save=True, filename=f"{user_profile['name']}")
+        png_path = plot_simulation(sim, save=True, filename=f"{user_profile['name']}")
         saved_images.append(png_path)
 
     print("\nSaved plot images:", saved_images)

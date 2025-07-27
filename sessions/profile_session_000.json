@@ -1,0 +1,149 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Hi there! To get started, could you tell me your age group?",
+    "agent_monologue": "I'm beginning the conversation by asking about age, as it's a fundamental demographic detail that can influence dietary habits. It's a nice, simple question to ease into the session.",
+    "agent_endkey": false,
+    "user_utterance": "I'm in my 30s and I've been struggling with binge eating.",
+    "user_monologue": "I really want to improve my eating habits, but I often find it hard to stick to a routine, especially when I'm feeling stressed or overwhelmed.",
+    "user_endkey": false,
+    "inferred_attributes": {
+      "age": null,
+      "gender": null,
+      "condition": null,
+      "mu": null,
+      "beta": null,
+      "alpha": null,
+      "gamma": null,
+      "memory": null,
+      "delta": null,
+      "epsilon": null
+    }
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Thank you for sharing that with me. Could you tell me a bit about your eating patterns? For example, do you find that your eating habits are regular or do they fluctuate a lot?",
+    "agent_monologue": "I want to understand more about the user's current eating behavior to help them better. This will give me insights into how regular or irregular they are with their meals, which is important for addressing binge eating.",
+    "agent_endkey": false,
+    "user_utterance": "My eating habits are moderately regular, but I do find that I sometimes struggle, especially during stressful times.",
+    "user_monologue": "I know I should be sticking to a routine, but it feels so hard when my emotions get the best of me. I worry about not being able to control my eating.",
+    "user_endkey": false,
+    "inferred_attributes": {
+      "age": "30s",
+      "gender": null,
+      "condition": null,
+      "mu": null,
+      "beta": null,
+      "alpha": null,
+      "gamma": null,
+      "memory": null,
+      "delta": null,
+      "epsilon": null
+    }
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Thanks for sharing. It sounds like stress plays a big role in your eating habits. Can I ask if you have any specific health conditions related to your diet that you're aware of?",
+    "agent_monologue": "I'm trying to understand more about their health context, which will help tailor suggestions later. Since they've mentioned binge eating, I'm curious if there’s a formal diagnosis or condition related to that.",
+    "agent_endkey": false,
+    "user_utterance": "I don't have any specific health conditions, but I do notice that stress really affects my eating.",
+    "user_monologue": "I wish I could manage my stress better. It feels like my eating habits spiral out of control when I'm overwhelmed. I want to make a change, but it's tough.",
+    "user_endkey": false,
+    "inferred_attributes": {
+      "age": "30s",
+      "gender": null,
+      "condition": null,
+      "mu": null,
+      "beta": null,
+      "alpha": null,
+      "gamma": null,
+      "memory": null,
+      "delta": null,
+      "epsilon": null
+    }
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "It's great that you're aware of how stress affects your eating. Can you tell me about how regular your eating habits are on a daily basis?",
+    "agent_monologue": "I'm trying to understand the user's current dietary behaviors, focusing on their eating regularity to get a clearer picture of their overall habits.",
+    "agent_endkey": false,
+    "user_utterance": "My eating habits are usually consistent, but they can really change when I'm stressed.",
+    "user_monologue": "I want to stick to a healthy routine, but stress often derails my plans. I need to figure out how to manage this better.",
+    "user_endkey": false,
+    "inferred_attributes": {
+      "age": "30s",
+      "gender": null,
+      "condition": null,
+      "mu": null,
+      "beta": null,
+      "alpha": null,
+      "gamma": null,
+      "memory": null,
+      "delta": null,
+      "epsilon": null
+    }
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Thank you for sharing that! How do you usually handle stress when it arises? Do you find that you have specific coping mechanisms?",
+    "agent_monologue": "I'm trying to understand how the user copes with stress because knowing their coping mechanisms can give insight into their emotional eating patterns. This might help me understand how they adapt to challenges.",
+    "agent_endkey": false,
+    "user_utterance": "When I'm stressed, I often turn to comfort food, which isn't the healthiest choice.",
+    "user_monologue": "I wish I could manage my stress better without resorting to food. It becomes a cycle that is hard to break.",
+    "user_endkey": false,
+    "inferred_attributes": {
+      "age": "30s",
+      "gender": null,
+      "condition": null,
+      "mu": "Moderately regular",
+      "beta": null,
+      "alpha": null,
+      "gamma": null,
+      "memory": null,
+      "delta": null,
+      "epsilon": null
+    }
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "It's common to seek comfort food during times of stress. Can you tell me if you feel these cravings are strong or more manageable?",
+    "agent_monologue": "I'm trying to understand how intense the cravings are when stress hits. This will help me gauge their level of sensitivity to emotional factors and how it influences their eating behavior.",
+    "agent_endkey": false,
+    "user_utterance": "My cravings can be pretty strong when I'm stressed, and it's hard to resist them sometimes.",
+    "user_monologue": "I really want to find a healthier way to cope with my stress instead of relying on comfort food. I feel frustrated that I don't have better control over my cravings.",
+    "user_endkey": false,
+    "inferred_attributes": {
+      "age": "30s",
+      "gender": null,
+      "condition": null,
+      "mu": null,
+      "beta": null,
+      "alpha": null,
+      "gamma": null,
+      "memory": null,
+      "delta": null,
+      "epsilon": null
+    }
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "It sounds like those cravings can make things challenging. How often do you find yourself binge eating or turning to comfort food when you're feeling stressed?",
+    "agent_monologue": "I want to learn more about their patterns around binge eating, as this will help me understand the frequency and severity of the behavior. This will also contribute to the 'epsilon' attribute of unexpected or irregular behaviors.",
+    "agent_endkey": false,
+    "user_utterance": "I find myself binge eating about once a week when I'm really stressed, and it can be really hard to control.",
+    "user_monologue": "I know I shouldn't turn to food for comfort, but sometimes it feels like the only thing that helps. I just wish I could find healthier ways to cope with my stress.",
+    "user_endkey": true,
+    "inferred_attributes": {
+      "age": "30s",
+      "gender": null,
+      "condition": null,
+      "mu": null,
+      "beta": null,
+      "alpha": null,
+      "gamma": null,
+      "memory": null,
+      "delta": null,
+      "epsilon": null
+    }
+  }
+]
