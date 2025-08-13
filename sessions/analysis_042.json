@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 3.0,
+  "compliance_estimate": 0.92,
+  "confidence": 0.7,
+  "basis": "User expressed a concrete plan to prepare yogurt-berry cup, keep almonds handy, log after eating, perform a 60-second post-log pause, and rely on fixed options. No explicit report of actual consumption in this turn; action is plan-based.",
+  "cognitive_dissonance": "No explicit internal conflict detected; user shows clear commitment and acceptance of contingencies.",
+  "negative_thought_patterns": "Minimal; mentions potential stumbling but frames it with reset and continued adherence to routine.",
+  "emotional_triggers": "Cravings and need for structure are ongoing triggers; user uses fixed options and short resets to manage them.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Maintain a supportive, structured tone; acknowledge concrete planning and future execution. In next session, verify actual action taken, reinforce cues and contingencies, and encourage small, measurable adherence milestones."
+}

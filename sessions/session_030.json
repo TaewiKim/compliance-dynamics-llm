@@ -1,0 +1,24 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Try a brief, fixed post-dinner ritual: after your meal, start with a tall glass of water, then do a short, gentle stretch or light movement to settle the evening energy, and finish by choosing one small, pre-approved snack from your list (portion it in advance). This simple, structured routine helps you feel in control, reduces late-night snacking, and nudges you toward healthier patterns over time.",
+    "agent_monologue": "Your profile shows a strong need for structure and sensitivity to evening cues. Recent micro-actions helped calm urge to snack, so I’m recommending a tiny, fixed post-dinner ritual that requires minimal cognitive load. This uses behavioral activation and external cues to replace unplanned snacking with a controllable, predictable step, supporting gradual progress toward the target behavior.",
+    "agent_endkey": false,
+    "user_utterance": "I like the plan. After dinner I’ll start with a big glass of water, do a short stretch to settle down, and keep one small, pre-portioned snack on hand if I’m still hungry. I’ll test it tonight and see how I do.",
+    "user_endkey": false,
+    "planned_suggestion": 1.6161616161616161,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Tonight, after your water and light stretch, add a quick 1-minute hunger-and-emotion check. Rate your hunger 0–10 and name the feeling driving it (e.g., stress, tiredness, craving). If your hunger is low (3 or less), pause for 5 minutes and try a non-food reset (tea, a brief walk, or another stretch) before deciding on the snack. If hunger feels high, proceed with your pre-portioned snack. Then log the check and how you felt afterward. This tiny check-in helps you build a structured routine and strengthens the link between feelings and choices.",
+    "agent_monologue": "Brief rationale: given her need for structure and sensitivity to evening cues, a brief, reflective micro-action reinforces the routine without overwhelming her. This small check-in ties emotions to behavior, supporting gradual progress toward the target habit level without exposing internal scores.",
+    "agent_endkey": false,
+    "user_utterance": "That sounds doable. I'll try it tonight after dinner: drink a big glass of water, do a short stretch, then the 1-minute hunger check. If I rate hunger 3 or below, I'll pause for 5 minutes and try a non-food reset (tea, a quick walk, or another stretch) before deciding on the snack. If hunger is higher, I'll use my pre-portioned snack and log how I felt afterward. I'll keep you posted on how it goes.",
+    "user_endkey": true,
+    "planned_suggestion": 1.6161616161616161,
+    "ground_truth_action": 4.0,
+    "inferred_action": 1.5,
+    "compliance_estimate": 0.97
+  }
+]

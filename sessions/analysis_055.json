@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 2.0,
+  "compliance_estimate": 0.29,
+  "confidence": 0.7,
+  "basis": "User states intent to perform the micro-step tonight but does not report actual action or intake yet; action is limited to planning non-eating steps.",
+  "cognitive_dissonance": "User expresses simultaneous hope and anxiety about BED triggers, indicating internal conflict between motivation to change and fear of triggering cues.",
+  "negative_thought_patterns": "Anxiety about triggers; potential fear of failure; cautious planning suggests vigilance but not overt self-criticism yet.",
+  "emotional_triggers": "Anxiety around BED triggers, anticipation of cravings, dinner-related/environmental cues; urgency to avoid relapse paired with hope for small successes.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Structured micro-steps",
+    "Non-judgmental language"
+  ],
+  "coaching_notes": "Maintain a calm, supportive tone; reaffirm the value of ultra-simple steps; introduce optional coping tools (urge surfing, quick breathing) and encourage explicit reporting of immediate outcomes to adjust coaching as needed."
+}

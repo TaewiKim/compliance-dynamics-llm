@@ -1,0 +1,14 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight’s micro-step: after dinner, use a quick 2-minute post-meal log with one-tap entries (what you ate, how full you felt). Place your phone by the dining table so the cue is hard to miss, and keep the log focused on those two fields. This small, repeatable action builds routine and nudges your pattern toward steadier progress without adding stress.",
+    "agent_monologue": "I’m prioritizing a tiny, structure-friendly cue that fits your evening-sensitivity and memory profile. The goal is to increase consistency without overloading you, by anchoring logging to a simple post-dinner routine that’s easy to repeat.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I can do that after dinner. I’ll place my phone on the dining table and log what I ate and how full I felt in two quick taps—feels doable, even with BED in mind.",
+    "user_endkey": true,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": 4.0,
+    "inferred_action": 1.0,
+    "compliance_estimate": 0.4425
+  }
+]

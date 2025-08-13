@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 1.0,
+  "compliance_estimate": 0.56,
+  "confidence": 0.7,
+  "basis": "The latest turn outlines a plan to perform the snack and upgrade actions but contains no evidence of actual eating or logging yet.",
+  "cognitive_dissonance": "No explicit internal conflict or contradictory messages; user acknowledges BED and commits to a small, doable plan.",
+  "negative_thought_patterns": "No persistent self-blame or hopeless language detected; occasional framing of BED as a tricky obstacle but not a negative self-assessment.",
+  "emotional_triggers": "Evening-related stress and BED cravings referenced as primary triggers for difficulty.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Maintain warm, nonjudgmental tone; reinforce tiny, low-friction steps; encourage brief post-action reflection and logging of what helped or was hard; continue cue-based environmental tweaks and a simple hunger-check routine; monitor for rising guilt or binge urges and adjust pacing accordingly."
+}

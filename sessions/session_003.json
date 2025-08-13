@@ -1,0 +1,14 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, create a small, fixed evening snack window. In that window, choose one pre-portioned snack you’ve already planned, eat it mindfully, and log the action immediately after. If you’re not hungry, log that you paused at the cue (evening stress) to reinforce awareness. One clear, doable step can steadily move you toward consistent action.",
+    "agent_monologue": "Brief rationale: evenings and stress cues raise the risk of planning without action. A single, concrete micro-action aligns with your need for structure and supports progress without triggering all-or-nothing thinking. This nudges you toward a small, reliable step that builds consistency toward your target behavior level.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll set a small fixed evening snack window. I’ll choose my pre-planned snack (yogurt with berries) and eat it mindfully, then log it right after. If I’m not hungry, I’ll pause at the cue and log that instead.",
+    "user_endkey": true,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": 4.5,
+    "inferred_action": 4.0,
+    "compliance_estimate": 0.87
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 1.0,
+  "compliance_estimate": 0.15,
+  "confidence": 0.7,
+  "basis": "The user consistently describes planning and logging hunger without reporting actual food intake in any turn. The stated action is abstaining from eating beyond logging, with a potential smallest pre-planned option only as a plan, not a reported consumption.",
+  "cognitive_dissonance": "Minimal explicit cognitive dissonance detected. The user shows alignment with the anchor and expresses commitment, with only tentative mentions of struggle; no clear conflict between values and actions.",
+  "negative_thought_patterns": "Low-level self-doubt or guilt is not prominent. Some tendency toward all-or-nothing thinking is not explicit, but there is a strong emphasis on structure and perfection of the routine (ultra-simple anchors), which could mask underlying avoidance or rigidity over time.",
+  "emotional_triggers": "Stressful moments, particularly in the evenings, are the primary triggers. The pattern shows stress prompting a pause, hunger logging, and potential food decisions, indicating emotion-driven decision points.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Maintain a calm, supportive tone; reinforce simplicity and honesty while gradually introducing flexible micro-adjustments (e.g., expanding non-food coping strategies during high-stress periods). Encourage brief reflective checks after each log, and consider adding optional post-log quick-coping options to reduce reliance on rigidity. If ED risk signs emerge, escalate to targeted ED-competent support."
+}

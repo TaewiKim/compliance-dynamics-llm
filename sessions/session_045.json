@@ -1,0 +1,14 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, when an evening craving hits, pause for 30 seconds and choose one pre-planned option: (A) a small, portion-controlled snack you’ve prepared in advance (for example, a small apple or a small handful of nuts) or (B) a brief non-food reset (1 minute of deep breathing and a quick stretch). After you decide, either eat the snack in a mindful, measured way or complete the reset, then log what you did and how it felt. Keep the choice simple, and aim to repeat this exact approach tomorrow for consistency.",
+    "agent_monologue": "High evening triggers and a strong need for structure suggest a tiny, highly doable step that can be logged easily. This nudges you toward the target by adding a clear, low-friction choice at craving time without adding friction to your routine.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try option A tonight: a small, pre-planned snack (like a small apple) eaten slowly and mindfully. I’ll log what I ate and how I felt right afterward. Keeping it simple feels doable given my BED and my recent pattern.",
+    "user_endkey": true,
+    "planned_suggestion": 2.929292929292929,
+    "ground_truth_action": 4.5,
+    "inferred_action": 1.0,
+    "compliance_estimate": 0.52
+  }
+]

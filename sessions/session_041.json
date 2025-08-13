@@ -1,0 +1,14 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, try a 5-minute pre-dinner check-in: name one craving you’re feeling, then choose a simple swap to satisfy it (for example, a small serving of Greek yogurt with berries) and log that choice immediately after you eat. Keep the meal balanced and view logging as a workout for your habit—tiny, consistent steps move you toward your goal.",
+    "agent_monologue": "Brief rationale: The user benefits from clear, structured steps that address evening cues and BED challenges. A small, crave-aware pre-dinner cue plus a simple, trackable swap supports steady progress without overhauling routines.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I tried the 5-minute pre-dinner check-in. My craving was for something sweet, so I picked a small serving of Greek yogurt with berries and logged it right after I ate. It felt doable, and I’m aiming to keep meals balanced tonight.",
+    "user_endkey": true,
+    "planned_suggestion": 3.080808080808081,
+    "ground_truth_action": 4.5,
+    "inferred_action": 3.0,
+    "compliance_estimate": 0.98
+  }
+]

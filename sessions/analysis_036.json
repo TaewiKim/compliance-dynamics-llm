@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 4.0,
+  "compliance_estimate": 0.99,
+  "confidence": 0.7,
+  "basis": "User consumed a substantial lunch (quinoa bowl with veggies and chicken, plus yogurt and apple) and reported feeling 4/5 full; no indication of overeating or skipping; the action aligns closely with S = 4.04.",
+  "cognitive_dissonance": "No explicit internal conflict expressed; user describes a calm decision process (paused to breathe before deciding whether to have more).",
+  "negative_thought_patterns": "Minimal; no self-blame or all-or-nothing thinking evident; stress is described as a trigger rather than a source of guilt.",
+  "emotional_triggers": "Work-related stress preceding the meal acts as an emotional trigger; stress led to a pause rather than impulsive additional eating.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Maintain a supportive, nonjudgmental tone; reinforce the value of the breathing pause and fullness cues; encourage explicit reflection on whether to have more after a pause; set small post-meal check-in goals (e.g., note fullness and stress level, plan for the next snack if needed)."
+}

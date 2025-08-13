@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 2.5,
+  "compliance_estimate": 0.46,
+  "confidence": 0.65,
+  "basis": "The user only stated intent to grab the prepped snack and log it; there is no recorded actual action or logging in the provided turns.",
+  "cognitive_dissonance": "Minimal to none; user aligns with the plan and references BED management without expressing conflict.",
+  "negative_thought_patterns": "Not explicitly present; there is no stated self-blame or hopelessness. Monitor for potential all-or-nothing thinking if the plan isn’t followed.",
+  "emotional_triggers": "Evening routine cues and potential cravings/stress are common triggers, though not explicitly described in this session.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Next session should confirm actual action taken and logging. Reinforce the value of immediate, small steps and quick logging after snacking. Continue using supportive language, address any barriers to action (e.g., forgetting to log, temptation after snack), and tailor prompts to BED management with practical micro-steps."
+}

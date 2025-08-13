@@ -1,0 +1,104 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Great progress. Tonight, try a tiny post-dinner pause: after your meal, spend 2 minutes resetting. Step 1: drink a glass of water. Step 2: stand up and do a quick 30-second stretch. Step 3: decide on one small non-food activity you can do in the next 10 minutes if a craving arises (for example, a short walk, quick tidy, or sending a quick text to a friend). This keeps your routine structured and gives you a safe alternative without adding friction.",
+    "agent_monologue": "Reasoning: The user thrives on structure and is highly sensitive to evening cues. A brief, predictable post-dinner ritual with a tiny, concrete action provides a low-friction path to reduce cravings and edge toward a higher self-management score without overwhelming the user.",
+    "agent_endkey": false,
+    "user_utterance": "That sounds doable. After dinner I'll do a tiny 2-minute reset: a glass of water, a quick 30-second stretch, and one small non-food activity to try if cravings pop up (like a short walk or texting a friend). I’ll aim to use this tonight and let you know how it goes.",
+    "user_endkey": false,
+    "planned_suggestion": 4.848484848484849,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Love the plan. After you finish the 2-minute reset tonight, add a super-brief post-dinner check-in: one sentence about what you noticed (for example, a calm feeling, hunger cue, or environment cue) and one tiny tomorrow-facing cue you’ll try if cravings pop up (for example, a 2-minute walk). Keeping it ultra-simple helps you stay consistent and steadily move toward your target. You’ve got this.",
+    "agent_monologue": "Reasoning: The user thrives on structure and is highly sensitive to evening cues. A tiny, repeatable post-dinner routine with a brief self-check-in reinforces cue-response without adding friction, supporting incremental progress toward the target behavior. Providing a simple reflection plus a concrete, low-effort plan for cravings helps build self-efficacy and reduces reliance on willpower.",
+    "agent_endkey": false,
+    "user_utterance": "I’ll try your 2‑minute post‑dinner reset tonight—glass of water, a quick 30‑second stretch, and a small non‑food activity if cravings pop up. I’m hopeful but a bit anxious about BED triggers, and I’ll report back on how it goes afterward.",
+    "user_endkey": false,
+    "planned_suggestion": 4.848484848484849,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "After your 2-minute post-dinner reset, add a 60-second craving check-in: silently label the urge (e.g., 'urge to snack') and note the main cue in your environment. If the craving persists, commit to one ultra-brief replacement action you can do in under 5 minutes (for example, a quick 2–3 minute walk around your room or sending a short text to a friend). Keeping this step ultra-simple helps maintain consistency and nudges you toward your target behavior without adding extra friction.",
+    "agent_monologue": "I can't share my private chain-of-thought, but here's a concise rationale: given the user's need for structure and sensitivity to evening cues, adding a tiny craving-management extension to the post-dinner routine can reduce BED triggers without adding friction. The step is simple, observable, and future-facing.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I'll try the 2-minute post-dinner reset tonight: glass of water, a 30-second stretch, and a quick non-food activity if cravings pop up. I'm a bit anxious about BED triggers but hopeful. I'll report back after I try it.",
+    "user_endkey": false,
+    "planned_suggestion": 4.848484848484849,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Tonight's ultra-simple step: after dinner, spend 60 seconds labeling what you feel (urge, hunger, or mood) and then tackle a single tiny non-food task you can finish in under 3 minutes, such as a quick kitchen tidy that puts away leftovers and clears the counter. This helps you regain a sense of control and keeps you moving toward your goal without adding friction.",
+    "agent_monologue": "The user shows a high need for structure and notable sensitivity to evening cues, with mild anxiety around BED triggers. A small, low-friction step that uses labeling of urges and a concrete, quick non-eating task can boost self-efficacy without adding cognitive load. This leverages habit consistency and reduces exposure to triggering environments after meals, aligning with a gentle push toward the target behavior level.",
+    "agent_endkey": false,
+    "user_utterance": "I'm planning to try the 2-minute post-dinner reset tonight—drink water, do a quick 30-second stretch, and choose one tiny non-food activity if cravings come up. I'm a little anxious about BED triggers but hopeful. I'll check back after I try it.",
+    "user_endkey": false,
+    "planned_suggestion": 4.848484848484849,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Tonight, try a fresh post-dinner micro-step: after your 2-minute reset, spend 60 seconds naming the strongest craving cue (urge, hunger, or mood). Then do one ultra-brief non-food task you can finish in under 2 minutes that reshapes the kitchen setup—e.g., move the snack container to a higher shelf and wipe the counter, or put leftovers away and tidy the area around the sink. This creates a quick win, lowers trigger exposure, and helps you stay on track with your routine.",
+    "agent_monologue": "Reasoning: The user has high evening cue sensitivity and a strong need for structure. To avoid repetition and keep progress steady, I’m proposing a fresh, ultra-small step that combines cue management with a tiny environmental tweak. This leverages urge-triage (label and respond) and a quick setup change to reduce triggers, supporting consistent movement toward the target behavior without adding friction.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I'll try that micro-step after dinner—name the strongest craving cue for 60 seconds and do one ultra-brief non-food task in under 2 minutes. I'm a bit anxious about BED triggers but hopeful this small routine will help. I'll check back after I try it.",
+    "user_endkey": false,
+    "planned_suggestion": 4.848484848484849,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "Tonight's micro-step: after your 2-minute reset, spend 60 seconds naming the strongest craving cue (urge, hunger, or mood). Then complete one ultra-brief boundary task you can finish in under 2 minutes, such as putting leftovers away in the fridge and wiping the counter. This small, tangible win reinforces control and aligns with your need for structure while being mindful of BED triggers.",
+    "agent_monologue": "Reasoning: Your profile indicates a strong need for structure and sensitivity to evening triggers. A brief labeling step combined with a concrete, low-friction boundary action leverages both cognitive and environmental control, creating a reliable rhythm that reduces cue exposure and supports steady progress toward the target routine without triggering overwhelm.",
+    "agent_endkey": false,
+    "user_utterance": "I'll try the micro-step after dinner tonight—name the strongest craving cue for 60 seconds and do one ultra-brief non-food task in under 2 minutes. I'm a bit anxious about BED triggers but hopeful this small routine will help. I'll check back after I try it.",
+    "user_endkey": false,
+    "planned_suggestion": 4.848484848484849,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Tonight's fresh micro-step: after your 2-minute reset and 60 seconds labeling your strongest craving cue, perform one ultra-brief boundary action you can finish in under 2 minutes that shifts the snack environment. For example, relocate the snack container to a higher shelf and wipe the nearby counter, then have a glass of water ready as a pause cue. This creates a quick win, reduces immediate cue exposure, and keeps you on track with your routine.",
+    "agent_monologue": "I can’t share my full internal reasoning, but here’s a concise rationale: the user benefits from ultra-small, structured steps that address post-dinner triggers and environmental cues. A fresh, boundary-focused micro-step supports consistency and reduces automatic snacking by creating a visible, time-limited barrier without adding friction.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s micro-step: after the 2-minute reset, I’ll spend 60 seconds labeling my strongest craving cue and then do the ultra-brief boundary task (like moving the snack container to a higher shelf and wiping the counter), followed by a glass of water as a pause. I am a bit anxious about BED triggers, but I’m hopeful this small routine will help. I’ll check back after I try it.",
+    "user_endkey": false,
+    "planned_suggestion": 4.848484848484849,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Tonight’s gentle nudge: after your two-minute post-dinner reset, add a brief 60-second cue check-in to name what the strongest urge feels like (urge, hunger, or mood). Then complete one ultra-brief boundary action (under 2 minutes) that lightly reshapes the snack environment. If cravings persist, follow with a short (2-minute) walk or stretch to reset. This keeps your routine predictable, reduces exposure to cues, and moves you toward your goal with minimal friction.",
+    "agent_monologue": "Reasoning: The user exhibits high sensitivity to evening cues and a strong need for structure. A compact, non-judgmental micro-step that combines a quick cue labeling check-in with a tiny, boundary-shaping task reduces exposure to triggers without adding friction. Framing it as an ultra-simple, repeatable routine supports consistency and nudges progress toward the target behavior level.",
+    "agent_endkey": false,
+    "user_utterance": "Sounds good—I'll give tonight's micro-step a try after the 2-minute reset: label the strongest craving cue for 60 seconds, then do the ultra-brief boundary task, followed by a glass of water as a pause. I'm a bit anxious about BED triggers but hopeful this small routine will help. I’ll report back after I try it.",
+    "user_endkey": false,
+    "planned_suggestion": 4.848484848484849,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "Nice work staying with your micro-step plan. Tonight, after your 2-minute reset and 60-second craving labeling, try a fresh micro-step: silently affirm 'I can choose a brief, non-food moment now,' then pick one ultra-brief task that lightly reshapes the environment in under 2 minutes (for example, pausing to wipe a small surface and placing a glass of water where you can see it). If cravings persist, add a brief 2-minute walk to reset. This keeps your routine predictable, reduces cue exposure, and supports steady progress with minimal friction.",
+    "agent_monologue": "Given the user's profile (high sensitivity to evening cues, very high need for structure, near-target behavior score) a micro-step that combines labeling, a quick cognitive reframe, and a fresh, ultra-short environmental tweak should sustain engagement without increasing friction. This leverages habit-building through small, controllable actions and reinforces the sense of agency when BED triggers loom.",
+    "agent_endkey": false,
+    "user_utterance": "I'll try tonight's micro-step after my 2-minute reset: label the strongest craving cue for 60 seconds, then do the ultra-brief boundary task, followed by a glass of water as a pause. I'm a bit anxious about BED triggers, but hopeful this small routine will help. I'll check back after I try it.",
+    "user_endkey": false,
+    "planned_suggestion": 4.848484848484849,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "Tonight, after your 2-minute reset and craving labeling, add one ultra-brief boundary action that subtly reshapes the snack environment in under 2 minutes. For example, move the snack container to a higher shelf and place a glass of water plus a small 'Pause' note on the counter. If cravings persist, follow with a short 2-minute walk or stretch. This keeps your routine predictable, reduces cue exposure, and nudges you toward your goal with minimal friction.",
+    "agent_monologue": "Reasoning: The user benefits from ultra-small, structured steps and a clear, repeatable post-dinner routine due to their high sensitivity to evening cues and need for predictability. A tiny environmental adjustment paired with a brief pause reinforces control without triggering resistance. Framing the next move as a simple boundary action plus water creates a tangible victory and sustains momentum toward the target behavior.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s micro-step after the 2-minute reset: label the craving cue for 60 seconds, do the ultra-brief boundary task, and then have a glass of water as a pause. I’m a bit anxious about BED triggers but hopeful this small routine will help. I’ll report back after I try it.",
+    "user_endkey": false,
+    "planned_suggestion": 4.848484848484849,
+    "ground_truth_action": null,
+    "inferred_action": 2.0,
+    "compliance_estimate": 0.29
+  }
+]

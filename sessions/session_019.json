@@ -1,0 +1,104 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Next time an urge hits, try a single, ultra-simple step: start a quick non-food action you can finish in about 3 minutes (for example, a short stretch sequence, a fast tidy-up in a different room, or a brisk 2-minute walk in place). After you complete it, quickly log the urge and your mood, and note how helpful the action felt. Repeat this simple reset consistently for a week to build momentum toward a calmer, more controlled evening routine.",
+    "agent_monologue": "I can't share my private chain-of-thought, but here's a concise rationale: your profile shows stress-driven urges and a strong need for ultra-simple, repeatable structure. A tiny, time-boxed non-food redirect at the moment of urge reduces automatic eating and builds a quick, positive feedback loop, nudging you toward a steadier pattern without feeling overwhelming.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try your quick 3-minute non-food reset next time I feel an urge, and I’ll log my urge and mood afterward to track its impact. I’ll keep this up for a week to build a calmer routine.",
+    "user_endkey": false,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "When an urge hits, try a fresh 3-minute non-food reset: 1) 60 seconds of box breathing (inhale, hold, exhale, hold), 2) 60 seconds of light movement (march in place, gentle shoulder rolls), 3) 60 seconds to tidy a small area or set out a non-food cue (e.g., place a glass of water and a simple reminder card where you’ll see it). Then log your urge and mood to track how this reset helps. Consistently practicing this for a week can move you closer to your goal without overwhelming you.",
+    "agent_monologue": "I can't share my internal chain-of-thought, but here's a brief rationale: a short, structured non-food reset leverages routine, reduces stress, and interrupts urges without adding cognitive burden. This supports gradual progress toward the target behavior by building consistency with a simple, repeatable action.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try the 3-minute reset the next time I feel an urge and log my urge and my mood right after to see how it helps. I’ll keep this up for a week to see if it makes a difference. Tonight I’m a little on edge, so I’ll set out water and the reminder card and start with the breathing and a quick stretch.",
+    "user_endkey": false,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Nice work tonight. After your 3-minute reset, add a quick urge-check-in: in about 60 seconds, name the trigger in a word or two and rate the urge on a 0–5 scale, then immediately pick one non-food action from this tiny kit and do it before you log your mood. Options: sip a glass of water, stand and march in place for 60 seconds, or do a brief body-grounding breath (30 seconds) plus a quick scan of how your body feels. Then log your urge and mood to track the impact. Keeping this ultra-simple supports your need for structure and helps curb stress-driven urges.",
+    "agent_monologue": "The user shows moderate progress but ongoing stress-related triggers. They respond best to ultra-simple, repeatable micro-actions that reinforce structure. A quick urge-check-in paired with a tiny non-food action leverages CBT principles (urge labeling, cue exposure, and behavioral activation) without adding cognitive load, supporting progression toward the target behavior level while honoring their need for routine.",
+    "agent_endkey": false,
+    "user_utterance": "Tonight I felt a bit on edge, so I set out water and the reminder card, did a quick 3-minute reset (breathing + stretch), and logged my urge and mood right after. It seemed to help keep me focused on non-food actions instead of snacking. I’ll keep this up for a week and track how it changes my urges.",
+    "user_endkey": false,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Nice progress tonight. To nudge a bit further toward consistent evening control, add a tiny urge-triage step after your 3-minute reset: spend about 60 seconds to name the trigger in one or two words, rate the urge 0–5, then immediately pick one non-food action from your kit and do it before you log. Quick options: sip a glass of water, do a 60-second gentle stretch, or take a brief grounding breath (30–60 seconds) and notice how your body feels. Keeping this ultra-simple helps maintain structure and gradually moves you toward steadier evenings.",
+    "agent_monologue": "Using a brief urge-triage reinforces self-monitoring and leverages structure to counter stress-driven urges in the evening. The suggested micro-action remains ultra-simple to fit the user’s preference for repeatable routines and to move toward the target behavior without increasing cognitive load.",
+    "agent_endkey": false,
+    "user_utterance": "Tonight I set out water and the reminder card, did a quick 3-minute reset (breathing + stretch), and logged my urge and mood afterward. It seemed to help me stay focused on non-food actions, so I didn’t snack. I’ll keep this up for a week and track how it changes my urges.",
+    "user_endkey": false,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Nice progress tonight. After your 3-minute reset, add a quick body check-in to notice where you feel tension and how your breathing is, then commit to one non-food action from your kit (for example, a sip of water, a brief stretch, or a quick walk) before you log your urge and mood. If urges feel stronger, you can extend the action slightly or choose a different non-food task. Track how this affects your urges and mood over the next week.",
+    "agent_monologue": "I can't share my internal chain-of-thought, but here's a concise rationale: given your profile (high stress sensitivity and a strong need for structure), adding a brief body-awareness check and a guaranteed non-food action after each reset provides a concrete, low-friction step that anchors your evening routine and helps reduce snacking under pressure.",
+    "agent_endkey": false,
+    "user_utterance": "Tonight I followed the plan: water + reminder card, a quick 3-minute reset (breathing + stretch), and I logged my urge and mood afterward. It helped me stay with non-food actions, so I didn’t snack. I’ll keep this up for a week and track how my urges change.",
+    "user_endkey": false,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "Tonight, after your 3-minute reset and urge rating, add a 60-second sensory grounding exercise (name five things you can see, four you can touch, three you can hear). Then pick one small non-food action from your kit you haven’t used this cycle—such as a quick 2-minute walk around your space or a brief stretch—and log your urge and mood afterward. Keeping the step ultra-simple but a touch newer supports steady progress toward calmer evenings.",
+    "agent_monologue": "Reasoning: Your behavioral profile indicates high stress sensitivity and a strong need for simple, repeatable routines. A brief, sensory grounding after the reset can reduce arousal and create a tiny moment of control, making it easier to choose a non-food action. Since you’ve been consistent with ultra-simple steps, introducing a fresh micro-element without adding friction should nudge you toward steadier evenings over time.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll add the sensory grounding after the 3-minute reset and pick a small non-food action, then log my urge and mood. Tonight I followed the plan—water, reminder card, reset—and I didn’t snack. I’ll keep this up for a week and track how urges change; if an urge feels stronger, I’ll try a slightly longer action or a different quick action.",
+    "user_endkey": false,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Nice progress tonight. After you log your urge, pick one new micro-action from your kit that you haven’t used yet this cycle and do it immediately: a 2-minute gentle walk around your space (or outside, if you can), or a quick 1-minute shoulder stretch. Then log your urge and mood. Keeping the action ultra-simple and a touch fresh helps sustain momentum toward calmer evenings.",
+    "agent_monologue": "I can't share my internal chain-of-thought, but here's a concise rationale: your profile shows high emotional/stress sensitivity and a strong need for structure. A new ultra-short action right after urge rating interrupts the cue-behavior loop without adding cognitive load, making it easier to move toward the target behavior with consistency.",
+    "agent_endkey": false,
+    "user_utterance": "Tonight I followed the plan again—water, reminder card, a quick 3-minute reset (breathing + stretch), plus the sensory grounding step, then I logged my urge and mood. I didn’t snack, and I’ll keep this up for a week to see if urges change.",
+    "user_endkey": false,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Tomorrow after you log your urge, pick one new micro-action from your kit that you haven’t used yet this cycle and do it right away for about 60–90 seconds. Options can include a short walk around your space, a quick shoulder stretch, or a brief grounding breath with a quick body scan. Then log your urge and mood. Keeping this ultra-simple and slightly fresh supports steady progress toward calmer evenings, especially with your preference for structure and stress sensitivity.",
+    "agent_monologue": "This choice leans on behavioral activation and habit formation: given stress-driven urges and a strong need for structure, a consistent, low-effort post-urge action—plus occasional novelty by using a new micro-action—is likely to reduce the chance of snacking and build automaticity toward calmer evenings.",
+    "agent_endkey": false,
+    "user_utterance": "Sounds good. I'll try the new micro-action after I log my urge tomorrow, and I'll keep using water and the reminder card. I'll report back on how it affects my urges and mood.",
+    "user_endkey": false,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "Great job staying with the plan. After you log your urge tomorrow, pick one new micro-action from your kit that you haven’t used yet this cycle and do it right away for about 60–90 seconds. Examples: a quick standing stretch with a deep exhale, a short 60-second in-place walk around your space, or a rapid grounding breath with a brief body scan. Then log your urge and mood. Keeping it ultra-simple and a touch fresh supports calmer evenings and fewer snacking slips.",
+    "agent_monologue": "I can’t share my internal chain-of-thought, but here’s a concise rationale: your profile indicates you respond well to structure and benefit from small, fresh micro-actions to reset urges. A new 60–90 second post-log action aligns with your habit pattern and helps interrupt stress-driven snacking without adding cognitive load.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try the new micro-action right after I log my urge tomorrow and keep using water and the reminder card. If urges come up, I’ll start with the micro-action and see how it affects my mood. Tonight I followed the plan and didn’t snack, so I’ll keep this going for BED and track changes over the next week.",
+    "user_endkey": false,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "After you log your urge tomorrow, try a new micro-action for about 60–90 seconds: a quick seated or standing torso twist with a slow inhale, then a 30-second grounding breath and a brief body check (shoulders, jaw). This provides a fresh, ultra-simple cue to shift focus away from urges. If the urge feels stronger, you can extend the action to 90 seconds or swap to another quick action, but keep it simple and routine-focused.",
+    "agent_monologue": "I can’t share my private chain-of-thought, but here’s a concise rationale: given the user’s stress sensitivity and need for structure, a fresh, ultra-short micro-action after logging helps interrupt urges without increasing cognitive load, reinforcing a steady routine and reducing snacking risk.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try the new micro-action right after I log my urge tomorrow and keep using water and the reminder card. If urges come up, I’ll start with the micro-action and see how it affects my mood. Tonight I followed the plan and didn’t snack, so I’ll keep this going for BED and track changes over the next week.",
+    "user_endkey": false,
+    "planned_suggestion": 3.484848484848485,
+    "ground_truth_action": null,
+    "inferred_action": 1.0,
+    "compliance_estimate": 0.38
+  }
+]

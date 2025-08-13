@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 4.5,
+  "compliance_estimate": 0.985,
+  "confidence": 0.72,
+  "basis": "User explicitly states they prepared a single-plate meal (grilled chicken + steamed broccoli + quinoa) within 5 minutes and planned to log afterward.",
+  "cognitive_dissonance": "No evident internal conflict; expressed commitment to the anchor.",
+  "negative_thought_patterns": "Cravings/binge thoughts acknowledged in prior turns; current message shows planning to resist with a simple cue; no persistent negative self-talk observed.",
+  "emotional_triggers": "Potential triggers include stress and cravings; user references leaning on plan when stressed.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Continue reinforcing the anchor with brief cues; encourage immediate post-meal logging; address cravings with simple, non-judgmental reminders; keep tone supportive and practical."
+}

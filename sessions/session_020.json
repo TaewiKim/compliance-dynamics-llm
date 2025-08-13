@@ -1,0 +1,104 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Try a simple 5-minute post-dinner wind-down: do 3–4 gentle stretches, then 2 minutes of slow, diaphragmatic breathing in the same spot each night. This small, structure-friendly routine can help ease evening urges. Afterward, jot a quick note on your urge level (0–10) and mood so we can tailor the next steps together.",
+    "agent_monologue": "Brief CBT-style reasoning: given your stress and evening cues, a tiny, repeatable post-dinner wind-down aligns with your need for structure and provides data on what reduces cravings without adding complexity.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try your wind-down plan: a few gentle stretches and 2 minutes of slow, diaphragmatic breathing in the same spot tonight. My urge is around 6/10 and I’m a bit tense after dinner, so I’ll log my urge and mood afterward and use the breathing as my first step. I’ve been following guidance fairly well lately (about a 4.5 on adherence), so I’ll aim to keep that going.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Nice job planning your wind-down. Tonight, after you begin your 2-minute diaphragmatic breathing in the same spot, if the urge remains around 6/10, add one ultra-short micro-action for about 60 seconds—gentle movement in place (for example a light march or shoulder rolls)—then resume your stretches for another minute. Log your current urge and mood, and stay with the ultra-simple sequence. This slight extra step keeps you steady and helps you build toward the next level without increasing decision fatigue.",
+    "agent_monologue": "Reasoning: The user benefits from ultra-simple, structure-preserving steps. With an urge around 6/10 and dinner-related tension, adding a tiny, optional micro-action after the breathing can create a quick win, maintain routine fidelity, and supply log data to tailor future steps. This aligns with a high need for structure and avoids introducing new complexity.",
+    "agent_endkey": false,
+    "user_utterance": "Tonight I’ll start with 2 minutes of slow diaphragmatic breathing in my usual spot. If the urge stays around 6/10, I’ll add a quick 60-second micro-action (like light marching or shoulder rolls) and then resume the stretches for another minute. I’ll log my urge and mood afterward and aim to keep my adherence around 4.5 to stay steady with BED management.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Tonight, start with your two-minute diaphragmatic breathing as the anchor. If the urge remains around your current level, add a fresh 60-second micro-action you can do in place: 30 seconds of ankle circles and 30 seconds of gentle torso twists, then resume your stretches for another minute. Log your urge and mood after the session. This ultra-simple, rotating sequence helps you stay on track and move toward a steadier BED-management rhythm.",
+    "agent_monologue": "Using a small, low-friction action when urges peak leverages the user's need for structure and reduces decision fatigue, helping maintain adherence and progress toward a steadier routine. Rotating micro-actions avoids boredom and supports BED management by pairing action with urge logging.",
+    "agent_endkey": false,
+    "user_utterance": "Tonight I’ll start with two minutes of slow diaphragmatic breathing in my usual spot. If the urge stays around 6/10, I’ll add a quick 60-second micro-action (like light marching or shoulder rolls) and then resume the stretches for another minute. I’ll log my urge and mood afterward and aim to keep my adherence around 4.5 to stay steady with BED management.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Tonight, keep two minutes of slow diaphragmatic breathing as your anchor. If the urge stays around 6/10, add a fresh 60-second micro-action: in-place hip circles (30 seconds clockwise, 30 seconds counterclockwise). Then resume your stretches for another minute and log your urge and mood. With your adherence goal around 4.5, this rotating micro-action supports steady progress by preserving structure while introducing a light novelty to tackle urges more effectively.",
+    "agent_monologue": "Brief rationale: The user has a high sensitivity to stress and needs structure. Introducing a fresh, in-place micro-action helps maintain momentum, reduces habituation to prior moves, and targets both physical and emotional arousal without adding decision fatigue, nudging toward steadier BED management.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, tonight I’ll start with two minutes of slow diaphragmatic breathing in my usual spot. If the urge stays around 6/10, I’ll add a 60-second micro-action (in-place hip circles) and then resume the stretches for another minute. I’ll log my urge and mood afterward and aim to keep my adherence around 4.5 to stay steady with BED management.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Tonight, keep two minutes of slow diaphragmatic breathing as your anchor. If the urge stays around 6/10, try a fresh 60-second micro-action in place—e.g., 30 seconds of light marching in place with gentle arm swings, followed by 30 seconds of in-place shoulder rolls—then resume the stretches for another minute. Log urge and mood after the session, and aim to keep adherence around 4.5 to stay steady with BED management.",
+    "agent_monologue": "I'm not able to share my internal chain-of-thought, but here's a concise rationale: you respond well to routine and ultra-simple actions, especially under stress. Rotating a fresh micro-action helps shift focus without adding complexity, supporting progression toward the target behavior while preserving your structure and adherence.",
+    "agent_endkey": false,
+    "user_utterance": "Sounds good. I’ll start tonight with two minutes of slow diaphragmatic breathing, and if the urge stays around 6/10 I’ll add the 60-second micro-action (like light marching or hip circles) and then resume the stretches for another minute. I’ll log my urge and mood afterward and aim to keep my adherence around 4.5 to stay steady with BED management.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "Tonight, start with two minutes of slow diaphragmatic breathing as your anchor. If the urge around 6 persists, add a fresh 60-second micro-action you can do in place: try this 60-second sequence—20 seconds of gentle hip tilts, 20 seconds of arm circles, 20 seconds of neck resets—then resume the stretches for another minute. Log your urge and mood afterward. With adherence around your target, this rotating, ultra-simple plan supports steady progress toward the next goal.",
+    "agent_monologue": "Brief rationale: given strong evening stress sensitivity and a high need for structure, ultra-simple, slightly novel micro-actions help maintain momentum without increasing cognitive load, nudging behavior toward the target level while supporting urge tracking.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, tonight I’ll start with two minutes of slow diaphragmatic breathing in my usual spot. If the urge stays around 6/10, I’ll add your 60-second micro-action sequence (20 seconds hip tilts, 20 seconds arm circles, 20 seconds neck resets) and then resume the stretches for another minute. I’ll log my urge and mood afterward and aim to keep my adherence around 4.5 to stay steady with BED management.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Tonight, continue with two minutes of slow diaphragmatic breathing as your anchor. If the urge feels elevated, insert a fresh 60-second micro-action you can do in place: a brief sequence of knee lifts (20 seconds), light arm punches (20 seconds), and gentle torso twists (20 seconds), then resume the stretches for another minute. Log your urge and mood afterward, and aim to keep your adherence around 4.5 to stay steady with BED management.",
+    "agent_monologue": "I can't share my private chain-of-thought, but here's a concise rationale: given your high sensitivity to evening cues and your need for structure, introducing a fresh, ultra-simple micro-action when urges rise helps maintain momentum without increasing cognitive load. A brief, varied in-place sequence provides just enough novelty to prevent fatigue and supports steady progress toward BED management within your mid-range plan.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll start tonight with two minutes of slow diaphragmatic breathing as you suggested. If the urge stays around 6/10, I’ll do your 60-second micro-action sequence—20 seconds hip tilts, 20 seconds arm circles, 20 seconds neck resets—then resume the stretches for another minute. I’ll log my urge and mood afterward and aim to keep my adherence around 4.5 to stay steady with BED management.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Tonight, after your two minutes of slow diaphragmatic breathing, try a fresh 60-second micro-action sequence done in place: 20 seconds of foot taps, 20 seconds of shoulder shrugs, and 20 seconds of chin tucks. Then resume the stretches for another minute. Log your urge and mood afterward. With adherence around 4.5, this tiny rotation can help steady progress toward BED management goals.",
+    "agent_monologue": "I can't share my private chain-of-thought, but here's a concise rationale: given the user's need for structure and sensitivity to evening cues, a fresh, ultra-simple 60-second micro-action after the breathing helps maintain routine while providing a light variation. This nudges toward the target behavior by sustaining engagement without increasing cognitive load.",
+    "agent_endkey": false,
+    "user_utterance": "Sounds good. I’ll start tonight with two minutes of slow diaphragmatic breathing. If the urge stays around 6/10, I’ll try your 60-second micro-action sequence: 20 seconds foot taps, 20 seconds shoulder shrugs, 20 seconds chin tucks, then resume the stretches for another minute. I’ll log my urge and mood afterward and aim to keep my adherence around 4.5 to stay steady with BED management.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "Tonight, after your two-minute slow diaphragmatic breathing, add a fresh 60-second micro-action in place: 20 seconds of gentle torso twists, 20 seconds of ankle circles, and 20 seconds of wrist stretches. Then resume the stretches for another minute and log your urge and mood. This small rotation preserves structure while introducing a slightly new movement to support steady progress toward BED management. If urges rise, we can adapt the micro-actions or duration in future sessions.",
+    "agent_monologue": "Your current behavior score sits just below midrange, and your profile shows high sensitivity to stress and evening cues. You respond well to ultra-simple, low-decision tasks that still create a sense of control. A fresh micro-action after your breathing adds a tiny, non-food cue to reinforce cue-response pairing and keep momentum without adding cognitive load. Tracking urges and mood will help fine-tune the rotation toward the next step and the target behavior level.",
+    "agent_endkey": false,
+    "user_utterance": "Got it. Tonight I’ll start with two minutes of slow diaphragmatic breathing, then the 60-second micro-action of 20 seconds gentle torso twists, 20 seconds ankle circles, and 20 seconds wrist stretches, then resume the stretches for another minute. I’ll log my urge and mood afterward and aim to keep my adherence around 4.5 to stay steady with BED management.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "Tonight, after your two minutes of slow diaphragmatic breathing, try this fresh 60-second micro-action in place: 20 seconds of standing hip circles (gentle), 20 seconds of small arm circles, and 20 seconds of gentle neck tilts. Then resume the stretches for another minute and log your urge and mood. This ultra-simple rotation supports consistent progress toward BED management goals.",
+    "agent_monologue": "I can't share my internal chain-of-thought, but here’s a concise rationale: your profile shows a strong need for structure and sensitivity to evening stress. Ultra-simple, rotating micro-actions after a brief breathing anchor keep momentum without overwhelming you, while urge/mood logging helps identify which actions are most effective. This approach nudges toward a steady, moderate progress path.",
+    "agent_endkey": false,
+    "user_utterance": "Tonight I’ll start with two minutes of slow diaphragmatic breathing in my usual spot. If the urge stays around 6/10, I’ll add the 60-second micro-action sequence—20 seconds hip tilts, 20 seconds arm circles, 20 seconds neck tilts—and then resume the stretches for another minute. I’ll log my urge and mood afterward and aim to keep my adherence around 4.5 to stay steady with BED management. I’ve been hitting about 4.5 adherence lately, so I’m hoping this simple rotation helps keep the rhythm steady.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null,
+    "inferred_action": 1.0,
+    "compliance_estimate": 0.32
+  }
+]

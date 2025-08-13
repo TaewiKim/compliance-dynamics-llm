@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 3.5,
+  "compliance_estimate": 0.82,
+  "confidence": 0.65,
+  "basis": "User consistently describes implementing a post-meal ritual stack (60s craving pause, 2-minute urge-surf, 2-minute non-food action) and a wrap-up habit, with plans to run this for three days and track cravings/mood. There is no explicit report of completed eating actions or meals, so the action is inferred from adherence to the post-meal routine rather than actual food intake.",
+  "cognitive_dissonance": "No explicit internal conflict expressed; user appears motivated and aligned with BED management goals. Minor ambiguity about daily consistency across meals, but not a stated contradiction.",
+  "negative_thought_patterns": "No persistent self-criticism or defeatist beliefs evident. Some anticipatory concern about cravings, but overall constructive framing and forward planning.",
+  "emotional_triggers": "Cravings after meals; mood shifts following meals; reliance on structured routines to maintain calm and control.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Maintain a supportive, nonjudgmental tone. Reinforce the value of micro-habits and consistency over perfection. If progress stalls, consider simplifying steps or adding gentle reminders to sustain momentum. Monitor for all-or-nothing thinking and help reframe lapses as data for adjustment. Consider occasional mid-day check-ins to sustain engagement and address any emerging emotional triggers."
+}

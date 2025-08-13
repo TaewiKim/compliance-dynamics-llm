@@ -1,0 +1,16 @@
+{
+  "user_action_estimate": 2.0,
+  "compliance_estimate": 0.4,
+  "confidence": 0.65,
+  "basis": "User explicitly engaged in a tiny non-food coping routine (stretch, water, quick walk) and did not eat, indicating a non-eating action rather than following through with the planned snack.",
+  "cognitive_dissonance": "Moderate conflict: user reports hunger mixed with emotion and consistently delays eating, suggesting internal tension between relief of hunger and adherence to the plan.",
+  "negative_thought_patterns": "Ambivalence about eating; potential all-or-nothing mindset (delay vs. immediate eating); some self-monitoring language that implies accountability but limited addressing of underlying cravings.",
+  "emotional_triggers": "Hunger paired with emotional states (stress or unease) around a 6/10 urge level; possible desire for emotional regulation or comfort.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalization of setbacks",
+    "Clear ultra-simple steps"
+  ],
+  "coaching_notes": "Maintain a calm, supportive tone; reinforce the value of ultra-simple steps and urge logging; explore specific emotions driving urges with brief reflective prompts; consider adding brief urge-surfing techniques and breathing variations; track patterns over multiple sessions to identify cues and gradually reduce urge intensity from 6/10 toward lower targets."
+}

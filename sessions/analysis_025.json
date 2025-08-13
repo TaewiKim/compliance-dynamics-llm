@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 3.0,
+  "compliance_estimate": 0.97,
+  "confidence": 0.7,
+  "basis": "User committed to drinking a glass of water before deciding next steps, mapped to 3.0 on a 1–5 action scale.",
+  "cognitive_dissonance": "No explicit internal conflict; user appears to align with the goal and plan.",
+  "negative_thought_patterns": "No explicit negative self-talk or defeatist beliefs observed.",
+  "emotional_triggers": "No emotional triggers described; action suggests a neutral coping approach (hydration).",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Maintain a calm, supportive tone; reinforce the 60-second pause and a pre-commitment to small non-food actions. Track hunger rating and chosen action; if actions stay at water or smaller steps, continue; if cravings intensify, introduce a brief distraction or walk and revisit hunger scale."
+}

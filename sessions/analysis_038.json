@@ -1,0 +1,16 @@
+{
+  "user_action_estimate": 2.5,
+  "compliance_estimate": 0.94,
+  "confidence": 0.7,
+  "basis": "User articulates intentions to pre-plan and rotate A–D post-meal actions and log cravings, but there is no explicit account of completing an eating action in this message.",
+  "cognitive_dissonance": "Minimal; user appears aligned with the plan and acknowledges BED concerns without expressing internal conflict.",
+  "negative_thought_patterns": "Limited self-blame or hopelessness; potential risk of all-or-nothing thinking (must follow exactly) given BED concerns, but no explicit self-criticism in this message.",
+  "emotional_triggers": "Cravings and BED-related fears; desire for structure and predictability; potential frustration if cravings persist despite micro-actions.",
+  "effective_reinforcement": [
+    "Empathy and validation",
+    "Clear, actionable steps",
+    "Gradual progression with small tasks",
+    "Positive framing"
+  ],
+  "coaching_notes": "Maintain warm, non-judgmental tone; explicitly check for actual action completion in the next session; trackMeal-related actions, craving intensity, and mood; be ready to adjust micro-actions if the user feels overwhelmed; monitor BED concerns and suggest professional support if symptoms worsen."
+}

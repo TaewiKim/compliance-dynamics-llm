@@ -1,0 +1,104 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, try a tiny, structured move: when you feel a craving, pause for 60 seconds and pick one non-food coping option from your toolkit (for example: box breathing, a 2-minute stretch, or a quick 5-minute walk). Then log your craving level and whether you used the coping option. To support consistency, have one easy non-food option ready at hand (herbal tea, a small fruit, or a short walk plan) so you can act immediately. This small, doable step fits your preference for structure and gradually nudges you toward your goal.",
+    "agent_monologue": "Reasoning: Since evenings and stress are common triggers, a small, structured coping action paired with quick logging helps turn intention into habit without overhauling the day. You respond well to bite-sized steps and steady progress, so nudging you with a concrete micro-action above your current baseline can incrementally lift you toward your target without triggering overwhelm.",
+    "agent_endkey": false,
+    "user_utterance": "That sounds doable. I'll try the 60-second pause when cravings hit and pick a quick non-food coping option (for example, box breathing or a short 2-minute walk). I’ll log the craving level and what I did, and keep a simple plan handy tonight.",
+    "user_endkey": false,
+    "planned_suggestion": 2.9797979797979797,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Tonight, after you pause for 60 seconds during a craving, commit to one quick non-food coping action you can finish in under 3 minutes: a 2-minute 5-4-3-2-1 grounding exercise (name 5 things you see, 4 you feel, 3 you hear, 2 you smell, 1 you taste or touch). Then log the craving level and the action you took. You’re building steady momentum with small, doable steps.",
+    "agent_monologue": "High-level rationale: The user benefits from a brief, structured cue-to-action habit. A short grounding exercise after the craving pause supports stress regulation and reinforces a non-food coping pattern, aligning with their need for structure and guiding progress toward the target behavior with consistent, small wins.",
+    "agent_endkey": false,
+    "user_utterance": "I’ll try the 60-second pause tonight when cravings hit and pick a quick coping option (like box breathing or a short walk). I’ll log the craving level and what I did, and keep a simple plan handy for tonight. With my recent pattern around 4.5 for actions, I’m aiming for steady, doable steps to stay on track.",
+    "user_endkey": false,
+    "planned_suggestion": 2.9797979797979797,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Tonight, after you pause for 60 seconds, pick one micro-action you can finish in under 2 minutes and do it immediately before logging. Options: a quick 2-minute walk in your space, a 60-second box-breathing cycle, or a short 1-minute full-body stretch with breathing. Then note the craving level and the exact action you took in your log. Keeping this small, repeatable ritual tonight supports steady progress toward your goal.",
+    "agent_monologue": "Brief CBT-style reasoning: Your profile shows a strong need for structure and sensitivity to evening stress. A tiny, consistent post-craving ritual strengthens the habit loop (cue → coping → log) without adding cognitive burden, making it more likely you gradually raise your action score toward the target.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I will try this tonight. I will pause for 60 seconds when cravings hit, pick a quick non-food coping option like box breathing or a short walk, and log the craving level and what I did. I will keep a simple plan handy for tonight and aim to keep my action pattern steady around 4.5.",
+    "user_endkey": false,
+    "planned_suggestion": 2.9797979797979797,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Tonight, after your 60-second craving pause, choose one micro-action you can finish in under 2 minutes—examples include a quick box-breathing cycle, a 2-minute walk in place, or a short 1-minute stretch with breath. Then log the craving level and the exact action you took. Keep a simple plan handy and aim for steady, consistent steps rather than big leaps, so you stay on track toward your goal.",
+    "agent_monologue": "Reasoning: The user responds well to structure and brief, doable tasks. Their stress sensitivity and evening cues suggest small, repeatable actions reduced to under-2-minute tasks with immediate logging will reinforce routine without triggering overwhelm. This aligns with a gradual push toward the target behavior level by building consistency, not intensity, and leverages cognitive-behavioral techniques (urge surfacing, coping planning, and self-monitoring).",
+    "agent_endkey": false,
+    "user_utterance": "That sounds good. I'll pause for 60 seconds when cravings hit tonight and choose a quick micro-action (box breathing, a 2-minute walk in place, or a short stretch). I’ll log the craving level and the exact action I took, keep a simple plan handy, and try to keep my action pattern around 4.5 tonight—steady and doable.",
+    "user_endkey": false,
+    "planned_suggestion": 2.9797979797979797,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Tonight, after your 60-second craving pause, pick one micro-action you can finish in under 2 minutes and log it right away. Try one of these fresh options: a 30-second body scan with a 1-minute slow-breath cycle, a quick 1-minute upper-body stretch, or a 90-second in-place walk. Keep a simple plan handy (phone reminder or sticky note) so you can act immediately when cravings hit. If the craving remains strong, repeat the micro-action once or extend to 2 minutes, then log again. Remember: small, consistent steps beat big leaps.",
+    "agent_monologue": "Your profile shows high sensitivity to evening cues and a strong need for structure. A single, reliably executed micro-action after a brief craving pause helps anchor the response without overwhelming you. By tying this to immediate logging, you convert craving energy into a small, repeatable win, which steadily nudges you toward the target behavior through consistent, manageable steps.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight exactly as you suggested: pause 60 seconds when cravings hit, choose a quick micro-action like box breathing, a 2-minute walk, or a short stretch, and log the craving level and the action I took. I’ll keep a simple plan handy and aim to keep my action pattern steady around 4.5. I’m mindful of BED and will use these small steps to stay on track tonight.",
+    "user_endkey": false,
+    "planned_suggestion": 2.9797979797979797,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "Tonight, after your 60-second craving pause, add a brief 1-minute 'emotion audit': name the feeling, identify the trigger in your environment, and decide on a fresh non-food response you haven't used yet. Then pick one micro-action from this new set and perform it immediately: 1) a 60-second cold-water face splash, 2) a 3-minute rapid journaling prompt about the cue, 3) a 2-minute quick tidy-up to shift your mood, or 4) a 1-minute text to a supportive person. Log the craving level and the exact action you took. Keep a simple plan handy and aim for steady, doable steps toward your goal. If the craving remains strong, you can repeat a micro-action once more, but avoid turning to food.",
+    "agent_monologue": "The user shows consistency with a structured pause and micro-actions but has room to enhance awareness of emotional triggers and diversify coping tools. By adding a brief emotion audit and fresh, non-food micro-actions, we support deeper self-awareness and reduce over-reliance on any single tactic, nudging toward a steadier pattern closer to the target behavior level while honoring their need for structure.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight exactly as you suggested: pause 60 seconds when cravings hit, choose a quick micro-action like box breathing or a short stretch, and log the craving level and my action. I’ll keep a simple plan handy and aim to keep my actions around 4.5—steady and doable. I’m mindful of BED, so I’ll use these small steps to stay on track and, if the craving stays strong, I’ll repeat a micro-action instead of turning to food.",
+    "user_endkey": false,
+    "planned_suggestion": 2.9797979797979797,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Tonight, after your 60-second craving pause, try a fresh micro-action: a quick 2-minute environmental reset. Move to a different room, take a glass of water, and aloud state one short, positive reminder (for example, 'I can handle this'). Do this immediately, then log the craving level and the exact action you took. Keep your simple plan handy (phone reminder or sticky note). If the craving remains, you can repeat the micro-action once more, but avoid turning to food. This small, sensory-grounding step adds a fresh cue while preserving structure, helping gradually move your pattern toward your goal.",
+    "agent_monologue": "The user values structure and small, repeatable steps, but their BED mindfulness also benefits from a touch of novelty to prevent boredom and support engagement. Introducing a brief sensory/environmental reset creates a new cue-response cycle that feels proportional to their current score and supports gradual improvement without overwhelming them. This aligns with behavioral activation principles and uses a non-food action to reinforce control and confidence, nudging toward the target behavior level without sacrificing the need for structure.",
+    "agent_endkey": false,
+    "user_utterance": "Got it. Tonight I’ll try your micro-action: a quick 2-minute environmental reset—move to another room, drink a glass of water, and say a short positive reminder. I’ll log the craving level and the action, keep a simple plan handy, and aim to keep my actions around 4.5—steady and doable. I’ll stay mindful of BED, and if the craving persists I’ll repeat the micro-action rather than turning to food.",
+    "user_endkey": false,
+    "planned_suggestion": 2.9797979797979797,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Tonight, try a fresh micro-action: in about 2 minutes, switch to a different room, take a slow sip of water, and read aloud a short, positive reminder like 'I can handle this.' Then log the craving level and the exact action you took. Keep a simple plan handy and aim for steady, doable steps toward your goal.",
+    "agent_monologue": "High-stress evenings with BED concerns call for a fresh, manageable cue-to-action that reinforces structure without adding complexity. A brief, new micro-action that combines environmental change, hydration, and a quick cognitive cue can reduce automatic eating urges and boost self-efficacy toward the target behavior level.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try the 2-minute environmental reset tonight—move to a different room, take a slow sip of water, and read a short positive reminder like 'I can handle this.' I’ll log the craving level and the exact action I took, keep a simple plan handy, and aim to keep my actions around 4.5—steady and doable. I’m mindful of BED and will use these small steps to stay on track; if the craving persists, I’ll repeat the micro-action instead of turning to food.",
+    "user_endkey": false,
+    "planned_suggestion": 2.9797979797979797,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "Tonight's fresh micro-action: when cravings hit, do a quick three-part grounding sequence. First, name one emotion and one environmental trigger. Second, perform a 60-second extended exhale breathing (inhale 4, exhale 6). Third, hold a small grounding object (like a smooth stone or ring) for 20 seconds while you breathe and notice sensations. Then log the craving level and the exact action you took. Keep a simple plan handy and aim for steady, doable steps—mindful of BED, and if the craving persists, repeat this micro-action instead of turning to food.",
+    "agent_monologue": "Using cognitive-affective grounding to complement a BED-aware approach: the user benefits from a fresh, structured micro-action that engages emotion labeling, a regulated breath, and tactile grounding. This avoids reusing prior tactics while preserving small, doable steps aligned with gradually increasing target behavior.",
+    "agent_endkey": false,
+    "user_utterance": "Alright, I'll try tonight's grounding sequence after cravings hit: name an emotion and the trigger, do a 60-second extended exhale, hold a small grounding object for 20 seconds, then log the craving level and the action I took. I'll keep a simple plan handy and aim to keep my actions around 4.5 - steady and doable, mindful of BED, and if the craving persists I'll repeat the micro-action instead of turning to food.",
+    "user_endkey": false,
+    "planned_suggestion": 2.9797979797979797,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "Tonight’s small, actionable nudge: when cravings hit, run a quick 2-minute craving-check sequence to interrupt the urge and reinforce your routine. Do: 1) step away from the food area for 60 seconds, 2) drink a glass of water, 3) name one emotion and one trigger, 4) complete a 30-second box-breathing cycle (inhale 4, exhale 4). Then log the craving level and the exact action you took. Keep a simple plan handy (phone reminder or sticky note). If the craving persists, you can repeat the micro-action once more, but avoid turning to food. This keeps steps small, structured, and progressively builds toward your goal.",
+    "agent_monologue": "I can’t share my private chain-of-thought, but here’s a concise rationale: the user has a strong need for structure and is sensitive to evening cues. A compact, cue-aware micro-action that combines environment changes, brief hydration, emotion/cue labeling, and breathing fits their profile and supports steady progress toward higher adherence without overwhelming them.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, tonight I’ll try the grounding sequence you suggested: pause for 60 seconds and run the 2-minute craving-check—step away from the food area for 60 seconds, drink a glass of water, name one emotion and one trigger, and complete a 30-second box-breathing cycle. I’ll log the craving level and the exact action I took, keep a simple plan handy, and aim to keep my actions around 4.5—steady and doable. I’m mindful of BED, and if the craving persists I’ll repeat the micro-action instead of turning to food.",
+    "user_endkey": false,
+    "planned_suggestion": 2.9797979797979797,
+    "ground_truth_action": null,
+    "inferred_action": 1.0,
+    "compliance_estimate": 0.51
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, when an evening urge hits, try a 3-step micro-routine: 1) name the urge in 10 seconds (e.g., 'urge to snack because I'm stressed'). 2) switch to a quick 2-minute task (tidy a small area, wash a dish, or stretch). 3) choose a brief non-food counteraction for 5 minutes (sip water or herbal tea, take a 3-minute mindful breath, or a short walk). Then log what you did and note how you felt. Keep it simple and repeatable, aiming for consistency over perfection.",
+    "agent_monologue": "I can't share a verbatim internal chain-of-thought, but here's a concise rationale: your profile shows strong evening cues and a high need for structure. A brief urge-surfing micro-step—name the urge, then do a quick, structured task, then a non-food coping action—offers a reliable, low-friction path toward the target behavior. It respects your routine preference and reduces cognitive load.",
+    "agent_endkey": false,
+    "user_utterance": "Alright, I’ll try your 3-step micro-routine tonight: name the urge, switch to a quick 2-minute task, then do a 5-minute non-food counteraction, and I’ll log how it feels. I know stress can derail me, but I’ll keep it simple and aim for consistency this week.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7878787878787876,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Nice work tonight. Keep your 3-step plan: after you name the urge, switch to a 2-minute task, then a 5-minute non-food counteraction. To reinforce consistency, add a brief post-step log note (one sentence) about what shifted for you, such as feeling calmer or craving reduced. If helpful, pick one actionable non-food option for tonight, like drinking a glass of water, a 3-minute stretch, or a short walk. Repeat this pattern through the week to move toward steadier consistency.",
+    "agent_monologue": "Reasoning: Your profile shows a strong need for structure and sensitivity to evening stress. Emphasizing urge labeling plus short, non food micro-actions aligns with your adaptability and keeps effort low, which supports consistency and gradual progress toward the target behavior level without triggering resistance.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’m going to try the 3-step micro-routine tonight: name the urge, do a quick 2-minute task, then a 5-minute non-food counteraction, and I’ll log how it felt. Stress still trips me with BED, but I’ll keep it simple and aim for consistency this week. I’ve noticed my recent guidance actions have been around 4.5, so I want to move toward steadier patterns by sticking to the plan.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7878787878787876,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Tonight’s nudge: after you name the urge, pick a 2-minute task that shifts your environment (for example, tidy a small area or put away one item). Then choose a 5-minute non-food counteraction like a short walk, a brief stretching sequence with slow breaths, or a quick body scan while sipping water. Finish with a one-sentence log about what shifted for you and how you felt. Repeat this micro-pattern tonight and through the week to build steadier consistency toward your goal.",
+    "agent_monologue": "Reasoning: The user faces stress-driven risk in the evenings and aims to move from about a 3.8 toward a higher consistency level. A CBT-informed approach here uses urge labeling plus ultra-brief, environment-changing tasks followed by a non-food grounding activity. This structure reduces cognitive load, builds self-efficacy with micro-wins, and creates momentum toward steadier patterns without triggering a binge cycle.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I am going to try the 3 step tonight: name the urge, do a quick 2 minute task, then a 5 minute non food counteraction, and I will log how it felt. Stress is still a trigger for BED, but I am keeping it simple to build consistency this week. My recent guidance actions have been around 4.5, so sticking with this plan feels like the right move to steady my pattern.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7878787878787876,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Tonight's gentle nudge: after you name the urge, add a quick 15-second grounding check (pause, take a slow breath, and notice three things you can see, feel, or hear). Then proceed with your usual 2-minute task and 5-minute non-food counteraction, and finish with a one-sentence log about what shifted. If you want an extra anchor this evening, pick one tiny non-food action (a sip of water, a 30–60 second stretch, or a short hallway walk) before logging. This small, consistent extra step helps reduce stress spillover and supports building a steadier pattern over time.",
+    "agent_monologue": "Reasoning: The user benefits from structure but also from a minimal, low-friction add-on to counter evening stress triggers. A brief, grounding cue after labeling the urge reduces impulsivity and primes the next action, supporting steady progress toward the target behavior level without increasing cognitive load. This leverages their need for routine and reduces emotional spillover that can derail BED management.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight's micro-routine with your grounding step: name the urge, 15-second grounding, then a 2-minute task, a 5-minute non-food counteraction, and a quick log. Stress still triggers BED, but I’ll keep it simple to build consistency this week.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7878787878787876,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Nice plan. Tonight, after you name the urge and complete your grounding, add a tiny reset: take a 20–30 second slow inhale/exhale and sip a glass of water before you start the 2-minute task. Then proceed with the 5-minute non-food counteraction and finish with a quick log about how you felt. This small pause helps reduce stress spillover and supports a steadier pattern toward your goal.",
+    "agent_monologue": "Given the user's high sensitivity to stress and emphasis on structure, a tiny post-urge reset supports urge surfing without adding complexity. Introducing a brief breath cycle and a sip of water after labeling the urge reinforces cue-control and creates a predictable, non-food action that complements the micro-step routine.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s micro-routine again: name the urge, do the 15-second grounding, then the 2-minute task, the 5-minute non-food counteraction, and a quick log. Stress still triggers BED, but I’ll keep it simple to build consistency this week and aim for steadier patterns rather than perfection.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7878787878787876,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "Tonight, keep your flow but add two small anchors: after naming the urge and grounding, give yourself a brief self-compassion cue (for example, 'It's okay to feel this; I'm choosing a small, effective step'), and rate the urge on a 0–10 scale before you begin. Then proceed with the 2-minute task, 5-minute non-food counteraction, and a quick log. If stress spikes, use the rating to decide whether to pause a bit longer or switch to a different quick action. This supports structure and steadier patterns this week.",
+    "agent_monologue": "Reasoning: The user benefits from clear structure and gentle self-compassion, especially with stress-linked BED. By adding a brief urge rating and a self-compassion cue, we maintain momentum while reducing emotional arousal, supporting consistent micro-steps and ongoing logging. This aligns with aiming for steadier patterns without increasing friction or perfectionism.",
+    "agent_endkey": false,
+    "user_utterance": "Alright, I’ll try tonight’s micro-routine. I’ll name the urge, do the 15-second grounding, rate the urge 0–10, then do the 2-minute task and 5-minute non-food counteraction, followed by a quick log. If stress hits, I’ll pause a bit longer or switch to a different quick action. I’ll avoid eating in response to urges this week and focus on consistency.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7878787878787876,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Nice progress. Add a tiny pre-snack reset this week: after naming the urge and rating it 0–10, take a 20-second box-breath, drink a glass of water, then proceed with your 2-minute task and 5-minute non-food counteraction, followed by a quick log. If the urge stays high, rely on the non-food counteraction and remind yourself that small, steady steps move you toward steadier patterns this week.",
+    "agent_monologue": "I can't share an explicit internal monologue, but here's a concise rationale: given the user's high stress sensitivity and strong need for structure, a brief pre-action reset (name the urge and rate it) plus a quick breath and hydration step can lower urge intensity and keep the plan simple, supporting steady progress toward the target behavior level over time.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try the tiny pre-snack reset: after naming the urge and rating it 0–10, I’ll take a 20-second box-breath and drink a glass of water before the 2-minute task. Stress still triggers BED, but I’m sticking with small, repeatable steps to build consistency this week. My recent actions have been around 4.5, so I’m hopeful this will help me move toward steadier patterns rather than perfection.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7878787878787876,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Tonight, after you name and rate the urge (0–10), pause for a brief self-compassion cue and a 20-second box-breath. Then choose one quick non-food action to engage for about 5 minutes (for example a brisk 2–3 minute walk, a short stretch with slow breaths, or sipping water while doing a gentle body scan). Finish with a brief log of what you did and how you felt. If the urge remains high, extend the pause a bit or switch to a different quick action. The goal this week is steady micro-steps that move you toward steadier patterns rather than perfection.",
+    "agent_monologue": "Given the user’s high sensitivity to stress and evening cues, a brief urge-labeling plus a calm pause and a concrete non-food anchor can reduce automatic snacking and build consistency. This approach supports gradual progress toward the target pattern by emphasizing compassionate self-talk, simple actions, and quick reflection, rather than chasing perfection.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s micro-routine with the grounding step: I’ll name and rate the urge, do a 20-second box-breath, then the 2-minute task and a 5-minute non-food action, and finish with a quick log. I’ll avoid eating in response to urges this week and keep it simple to build consistency toward steadier patterns.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7878787878787876,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "Nice progress. Tonight, after you name and rate the urge (0–10), add a brief self-compassion cue: silently remind yourself, 'It's okay to feel this; I’m choosing a small, effective step now.' Then do the 20-second box-breath, followed by the 2-minute task and 5-minute non-food action, and finish with a quick log. If stress spikes, extend the pause a bit or switch to a different quick action. This small kindness cue supports consistency and helps you move toward steadier patterns this week.",
+    "agent_monologue": "I can’t share my private step-by-step reasoning, but here’s a brief rationale: adding a tiny self-compassion cue after rating the urge supports a more forgiving, structure-friendly approach for someone highly sensitive to stress and evening cues. It complements grounding and the micro-step routine, reinforcing consistency without increasing cognitive load, and nudges progress toward the target pattern this week.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s micro-routine with grounding: name and rate the urge, do the 20-second box-breath, then the 2-minute task and 5-minute non-food action, and finish with a quick log. I’m still dealing with BED triggers from stress, but I’ll keep it simple to build consistency this week and avoid eating in response to urges. My recent guidance actions have been around 4.5, so I’m hopeful this will help me move toward steadier patterns rather than perfection.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7878787878787876,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "Tonight, after you name and rate the urge (0–10), add a 60-second pre-action reset: silently remind yourself 'one tiny step,' take a slow breath, and engage in a quick non-food anchor (such as a brief shoulder roll, a hand shake, or sipping water) for about 60 seconds. Then proceed with the 2-minute task and the 5-minute non-food action, finishing with a quick log. If stress spikes, use the reset to re-center and stay on track toward steadier patterns this week.",
+    "agent_monologue": "Reasoning: You’re close to the target pattern and respond well to micro-steps, but stress remains a trigger. A small, fresh reset can interrupt escalating urges and reinforce consistency without adding cognitive burden. By pairing a brief self-affirmation with a 60-second non-food anchor right after labeling and rating the urge, you create a predictable, compassionate cue that supports urge-surfing and keeps momentum toward steadier patterns.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, tonight I’m trying the 60-second reset after naming and rating the urge. I’ll take a slow breath, do a quick non-food anchor for about a minute, then do the 2-minute task and the 5-minute non-food action, and I’ll log how I felt. I’m not going to eat in response to urges this week and I hope this helps me stay steady.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7878787878787876,
+    "ground_truth_action": null,
+    "inferred_action": 1.0,
+    "compliance_estimate": 0.3
+  }
+]

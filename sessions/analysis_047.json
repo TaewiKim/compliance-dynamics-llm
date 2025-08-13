@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 1.0,
+  "compliance_estimate": 0.4425,
+  "confidence": 0.7,
+  "basis": "The user only stated an intention to log after dinner and place the phone for two taps; there is no evidence of actual logging or eating action in this turn.",
+  "cognitive_dissonance": "No explicit internal conflict detected; user expresses readiness and intent to follow through.",
+  "negative_thought_patterns": "No clear self-defeating beliefs or guilt observed; BED is acknowledged but not framed as insurmountable.",
+  "emotional_triggers": "Meal context and BED concerns may influence motivation; no acute distress signals in this snippet.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Clear, achievable micro-step guidance",
+    "Normalization of setbacks"
+  ],
+  "coaching_notes": "Maintain supportive, non-pressuring tone; validate the plan while normalizing occasional non-execution. In the next session, explore any barriers to performing the post-meal log and reinforce quick, two-tap logging as a reliable routine. Consider adding a gentle check-in if the action was not completed within a specified timeframe."
+}

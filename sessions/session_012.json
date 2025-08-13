@@ -1,0 +1,34 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "For your next eating moment, begin with a protein-first bite as your anchor, then pause for 5 minutes before deciding what to eat next. During the pause, rate your fullness on a 0–5 scale and note any urges. If urges feel strong, extend the pause by another 5 minutes and choose a smaller, protein-backed next bite or a simple non-food distraction. Log the outcome in your habit tracker to reinforce the pattern with kindness and consistency.",
+    "agent_monologue": "High structure and a tendency toward planned routines suggest a small, incremental nudge. Extending the pause after the protein-first bite helps you observe fullness and urges more clearly without overhauling your pattern, which aligns with your profile and current_score trend.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try your protein-first bite plan now and pause for 5 minutes before deciding what to eat next. If I notice urges, I’ll extend the pause and pick a smaller protein bite or do a quick non-food distraction. I’ll log how it goes in my habit tracker and be kind to myself, especially given my recent pattern variability.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Nice job committing to a protein-first bite and a 5-minute pause. For your next moment, start with a protein-forward bite, then pause and check in on fullness before deciding what comes next. If urges pop up, extend the pause by 5 minutes and choose a smaller protein bite or switch to a quick, non-food distraction (such as water, a stretch, or a brief breathing exercise). To support consistency, have a portable protein option ready for busy or stressful times and log your decision right after you decide. Be kind to yourself—structure and gentle flexibility help you stay on track even when patterns vary.",
+    "agent_monologue": "Reasoning: The user benefits from a repeatable, low-friction plan that reinforces structure and reduces impulsivity, especially given evening cues and pattern variability. A protein-first bite with a short, explicit pause leverages existing behavior while gently extending self-regulation when urges arise.",
+    "agent_endkey": false,
+    "user_utterance": "I'm going to start with a protein-forward bite now and pause for 5 minutes as you suggested. I'll log it in my habit tracker and be kind to myself, especially with my BED and recent pattern variability. If urges pop up, I'll extend the pause by another 5 minutes and choose a smaller protein bite or a quick non-food distraction. I've noticed my recent actions have been around 4.5–5.0, so I feel capable of sticking with this approach.",
+    "user_endkey": false,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "You’re doing great. Keep starting with a protein-forward bite and the 5-minute pause. After your pause, use one simple rule for the next move: if hunger feels clear, opt for a tiny protein bite; if not, add a brief non-food distraction for 2–3 minutes and then decide. Log what you chose and be kind to yourself—steady, structured steps tend to move you toward the goal, even when days vary.",
+    "agent_monologue": "Brief rationale: Your profile shows a strong need for structure and sensitivity to stress. Reinforcing a consistent protein-first start with a fixed pause helps reduce urges and decision fatigue, making it easier to move toward the target behavior with manageable, loggable steps.",
+    "agent_endkey": false,
+    "user_utterance": "I'm going to start with a protein-forward bite now and pause for 5 minutes as you suggested. If urges pop up, I'll extend the pause and choose a smaller protein bite or a quick non-food distraction. I'll log it and be kind to myself, especially with BED and my pattern variability.",
+    "user_endkey": true,
+    "planned_suggestion": 3.7373737373737375,
+    "ground_truth_action": 4.5,
+    "inferred_action": 3.2,
+    "compliance_estimate": 0.865
+  }
+]

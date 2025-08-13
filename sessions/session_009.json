@@ -1,0 +1,74 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, when stress or a busy moment hits, do a 60-second pause: take 3 slow breaths, drink a glass of water, and immediately log your hunger. If you’re still hungry after the pause, reach for the smallest pre-portioned option you’ve planned for evenings (for example, a single piece of fruit or a defined small snack) and log it. Keeping this ultra-simple anchor and your hunger rating consistent helps you stay on track and move toward your goal.",
+    "agent_monologue": "I’m keeping the recommendation ultra-simple and anchored, given your higher stress sensitivity and need for structure. A tiny pause, water, and logging reduces decision fatigue and supports calmer choices in the evening, nudging you toward the target habit without an overhaul.",
+    "agent_endkey": false,
+    "user_utterance": "I'll try tonight’s 60-second pause when stress hits: 3 slow breaths, a glass of water, and I’ll log my hunger. If I’m still hungry after that, I’ll choose the smallest pre-portioned evening option I’ve planned (like one piece of fruit) and log it. I’ll keep it simple and honest to support my BED goals.",
+    "user_endkey": false,
+    "planned_suggestion": 4.393939393939394,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Tonight, lean into your ultra-simple evening anchor: when stress hits, do the 60-second pause, drink a glass of water, and log your hunger. If you’re still hungry after the pause, choose the smallest pre-planned evening option you’ve prepared and log it (for example, one piece of fruit). Keep it calm, consistent, and honest—small, predictable steps build toward lasting change and fit your structure-first approach. You’ve got this; each calm, logged choice reinforces your progress.",
+    "agent_monologue": "I can’t share my private step-by-step thoughts, but here’s a concise rationale: your profile shows you benefit from a simple, repeatable evening routine and structured options. Reinforcing the 60-second pause plus a minimal, pre-planned choice aligns with your need for predictability and supports BED goals without increasing cognitive load.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s ultra-simple evening anchor. When stress hits, I’ll do the 60-second pause—three slow breaths, a glass of water, and I’ll log my hunger. If I’m still hungry after that, I’ll choose the smallest pre-planned option (like one piece of fruit) and log it. I like keeping it straightforward and honest to support my BED goals. If I struggle, I’ll remember to pause and log without judgment.",
+    "user_endkey": false,
+    "planned_suggestion": 4.393939393939394,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "You're doing great with the ultra-simple evening anchor. Tonight, follow the 60-second pause, three slow breaths, a glass of water, and log your hunger. If you’re still hungry after the pause, choose the smallest pre-planned option (like one piece of fruit) and log it. After logging, take a moment to acknowledge your effort and note how it felt. This small, consistent pattern reinforces your routine and moves you toward your goal. If stress is high or you struggle, pause and log without judgment—you’ve got this.",
+    "agent_monologue": "Brief CBT-style rationale: Using an ultra-simple anchor reduces decision fatigue during stress, supports a structure-first approach, and non-judgmental logging builds self-efficacy. This nudges toward consistent evening behavior and gradual progress toward the target level without increasing complexity.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s ultra-simple evening anchor. When stress hits, I’ll do the 60-second pause—three slow breaths, a glass of water, and I’ll log my hunger. If I’m still hungry after that, I’ll choose the smallest pre-planned option (like one piece of fruit) and log it. I like keeping it straightforward and honest to support my BED goals, and if I struggle I’ll pause and log without judgment.",
+    "user_endkey": false,
+    "planned_suggestion": 4.393939393939394,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "You're doing well. Tonight, continue with the ultra-simple anchor: 60-second pause, three slow breaths, a glass of water, and log your hunger. If you are still hungry after the pause, choose the smallest pre-planned option and log it. After you log, spend a moment noting one thing that helped you pause (for example your breath, the water, or your environment) and one small adjustment you could try tomorrow. Keeping it straightforward and honest supports your BED goals.",
+    "agent_monologue": "I can't share my private chain-of-thought, but here is a concise rationale: given your high stress sensitivity and strong need for structure, reinforcing the ultra-simple anchor and adding a brief post-log reflection supports consistent habit formation without adding cognitive load, helping you edge toward the target behavior level.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll stick with tonight’s ultra-simple anchor: a 60-second pause with three slow breaths, a glass of water, and I’ll log my hunger. If I’m still hungry after that, I’ll choose the smallest pre-planned option (like one piece of fruit) and log it. I like keeping it straightforward and honest to support my BED goals, and if I struggle I’ll pause and log without judgment.",
+    "user_endkey": false,
+    "planned_suggestion": 4.393939393939394,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Tonight, keep the ultra-simple anchor intact: pause for 60 seconds with three slow breaths, drink a glass of water, and log your hunger. If you’re still hungry after the pause, choose the smallest pre-planned option (like one piece of fruit) and log it. After logging, note one factor that helped you pause (breath, water, environment) and consider one tiny adjustment to try tomorrow. You’re building a calm, predictable routine that supports your BED goals, even on stressful days.",
+    "agent_monologue": "High-level rationale: your profile shows you thrive with structure and benefit from minimizing decisions during stress. The ultra-simple evening anchor reduces decision fatigue, boosts self-monitoring through logging, and gently nudges you toward your target behavior level by reinforcing a calm, repeatable routine. Treat slips as data for small adjustments, not failures.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll stick with tonight’s ultra-simple anchor: a 60-second pause with three slow breaths, a glass of water, and I’ll log my hunger. If I’m still hungry after that, I’ll choose the smallest pre-planned option (like one piece of fruit) and log it. I like keeping it straightforward and honest to support my BED goals, and if I struggle I’ll pause and log without judgment.",
+    "user_endkey": false,
+    "planned_suggestion": 4.393939393939394,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "Nice work keeping the ultra-simple anchor. Tonight, after you log your hunger, add a short 2–3 minute pause before deciding on food. During this pause, take three calm breaths, sip water, and re-check your hunger. If you still want the smallest pre-planned option, log it as usual. If not, wait a bit and revisit at your next check-in. Small reset like this matches your structure-first plan and supports your BED goals by reducing impulsive evening choices.",
+    "agent_monologue": "Reasoning: The user shows high sensitivity to stress and a strong need for structure. They respond best to ultra-simple, predictable steps that fit into the existing logging habit. Since they’re near the target behavior level, a tiny post-log pause leverages their tendency to slow down and reduces impulsive eating in the evening. A brief 2–3 minute reset after logging provides just enough time to re-evaluate hunger and stress without breaking the routine, reinforcing mindful choices and nudging toward the mid-point goal.",
+    "agent_endkey": false,
+    "user_utterance": "Nice work with the ultra-simple anchor. Tonight I’ll add a 2–3 minute pause after logging hunger: three calm breaths, a sip of water, and a quick re-check of how hungry I am before deciding on food. If I still want the smallest pre-planned option, I’ll log it as usual; otherwise I’ll wait and revisit at my next check-in. I like this calm reset—it's helping my BED goals.",
+    "user_endkey": false,
+    "planned_suggestion": 4.393939393939394,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Nice work staying with your ultra-simple anchor. To keep strengthening adherence, add a tiny post-log micro-reflection tonight: after you log hunger and complete the 2–3 minute pause, name one non-food coping tactic you can use if stress rises (for example a quick stretch, a brief walk, or stepping outside for fresh air). If hunger persists, proceed with the smallest pre-planned option and log it as usual. This small extra step supports structure and helps you move toward your BED goals even on tougher evenings.",
+    "agent_monologue": "I can’t reveal my full internal chain-of-thought, but here’s a brief rationale: your profile shows you benefit from structure and subtle cues. A short post-log reflection plus one non-food coping option leverages your routine-focused, stress-sensitive style to reduce impulsive eating and move you toward the target behavior without adding cognitive load.",
+    "agent_endkey": false,
+    "user_utterance": "Nice—I'll add a 2-3 minute post-log pause after logging hunger: three calm breaths, a sip of water, and a quick re-check of how hungry I am before deciding on food. If I still want the smallest pre-planned option, I’ll log it as usual; otherwise I’ll wait and revisit at my next check-in. I like this calm reset—it's helping my BED goals.",
+    "user_endkey": true,
+    "planned_suggestion": 4.393939393939394,
+    "ground_truth_action": 5.0,
+    "inferred_action": 1.0,
+    "compliance_estimate": 0.15
+  }
+]

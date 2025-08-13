@@ -1,0 +1,104 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, at the first hint of evening hunger or stress, pause for 60 seconds, drink a full glass of water, and do a quick 1-minute stretch or a few deep breaths. Then assess if you’re truly hungry. If not, opt for a non-food reset (tea, a short walk, or a tiny protein snack if still hungry) and log one line noting your hunger rating, the action you took, and how you felt. This small, structured step helps you move toward your goal with your preferred routine intact.",
+    "agent_monologue": "Brief rationale: choose a small, structured evening micro-step that fits a high-structure profile and counters stress/evening cues, aiming to nudge toward a steady habit without overhauling routines. Emphasizes self-monitoring and a quick reset to reduce impulsive snacking.",
+    "agent_endkey": false,
+    "user_utterance": "Alright, I’ll try the 60-second pause, drink a full glass of water, and do a quick 1-minute stretch now. If I’m not truly hungry after that, I’ll do a non-food reset (tea, a short walk, or a tiny protein snack) and log my hunger rating, the action I took, and how I felt.",
+    "user_endkey": false,
+    "planned_suggestion": 2.6262626262626263,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Nice work getting the 60-second pause, water, and stretch in. After that, if you determine you’re not truly hungry, choose one quick non-food reset (tea, a short walk, or a tiny protein snack) and log a single line: your hunger rating, the action you took, and how you felt. Keeping the entry brief tonight helps you build a reliable habit and move toward your goal with steady momentum. You’ve got this.",
+    "agent_monologue": "Reasoning: The user exhibits a strong need for structure and is sensitive to evening cues. A single, concrete next step after the pause leverages those traits, reduces decision fatigue, and reinforces self-monitoring without overwhelming them. This incremental approach supports gradual progress toward the target behavior by leveraging consistency and timely logging.",
+    "agent_endkey": false,
+    "user_utterance": "Following your suggestion, I did the 60-second pause, drank a full glass of water, and did a quick stretch. I’ll check if I’m truly hungry now; if not, I’ll do a non-food reset (tea, a short walk, or a tiny protein snack) and log my hunger rating, the action I took, and how I feel.",
+    "user_endkey": false,
+    "planned_suggestion": 2.6262626262626263,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Great job on completing the pause and hydration. If after your hunger check you're not truly hungry, proceed with one quick non-food reset (tea, a short walk, or a tiny protein snack) and log a single line with your hunger rating, the action you took, and how you felt. To further strengthen tonight's routine, add a brief 2-minute cue reflection right after you log: identify one trigger you noticed and one tiny adjustment you can implement tonight (e.g., place tea within easy reach, prepare a small protein option in advance, or schedule a short stretch before bed). You’re building a reliable evening routine step by step. You’ve got this.",
+    "agent_monologue": "I can't share my internal chain-of-thought, but here's a concise rationale: your profile indicates evening cues and stress sensitivity; a brief, structured post-pause check-in with a single next action and a minimal log matches your need for structure and reduces cognitive load, increasing the likelihood you follow through toward the target behavior.",
+    "agent_endkey": false,
+    "user_utterance": "I'm going to try the 60-second pause, a full glass of water, and a quick stretch. After that I will check if I am truly hungry; if not, I will do a non-food reset (tea, a short walk, or a tiny protein snack) and log my hunger rating and how I feel, to support my BED management and keep my routine consistent.",
+    "user_endkey": false,
+    "planned_suggestion": 2.6262626262626263,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Nice plan. After your hunger check, choose one tiny non-food reset you can repeat tonight (for example, sip a warm herbal tea and do a brief 2-minute stretch, or take a short 3-minute walk). Log your hunger rating, the action you took, and how you feel. To bolster BED management and consistency, pair this reset with a simple cue: keep your reset tool in a defined place and set a brief reminder for a few minutes after your usual hunger trigger. You’ve got this.",
+    "agent_monologue": "I can't share my private step-by-step internal thoughts, but here's a concise rationale: your profile shows a high need for structure and sensitivity to evening cues. A small, repeatable non-food reset after the hunger check creates a reliable alternative to eating and reinforces logging, supporting BED management and a stable routine.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’m going to try the 60-second pause, drink a full glass of water, and do a quick stretch. After that I’ll check whether I’m truly hungry, and if I’m not, I’ll do a non-food reset (tea, a short walk, or a tiny protein snack) and log my hunger rating and how I feel to support my BED management and keep my routine steady.",
+    "user_endkey": false,
+    "planned_suggestion": 2.6262626262626263,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Nice plan. After your 60-second pause and full glass of water, try a fresh micro-ritual: spend 1 minute doing box breathing (inhale 4, hold 4, exhale 4, hold 4) with a hand on your chest to notice bodily signals. Then log your hunger rating and how you feel. If you’re not truly hungry, choose a quick non-food reset you haven’t used yet tonight—such as a 2-minute mindful body scan or a short 2-minute walk. Pair this with a simple cue: keep the reset tools in a defined spot and set a brief reminder after your usual hunger trigger. You’ve got this.",
+    "agent_monologue": "I can’t share my internal chain-of-thought, but here’s a concise rationale: the user benefits from a fresh, low-effort self-regulation micro-ritual that leverages structure and reduces stress-driven urges. Introducing a brief breathing/awareness practice and a novel non-food reset helps build resilience without retracing prior steps, aligning with BED management and the need for consistent, measurable actions.",
+    "agent_endkey": false,
+    "user_utterance": "I'm going to try the 60-second pause, drink a full glass of water, and do a quick stretch. After that, I'll check whether I'm truly hungry; if I'm not, I'll do a non-food reset (tea, a short walk, or a tiny protein snack) and log my hunger rating and how I feel to support my BED management and keep my routine steady.",
+    "user_endkey": false,
+    "planned_suggestion": 2.6262626262626263,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "After your hunger check, if you’re not truly hungry, try a new micro-reset you haven’t used yet tonight: a 2-minute mindful body scan with slow diaphragmatic breathing, followed by a small sip of warm herbal tea. Then log your hunger rating and how you feel. Create a simple cue by placing your tea and a comfortable chair in a fixed spot and setting a 1-minute reminder to perform this reset after your usual hunger trigger. This tiny, repeatable step supports BED management and steadies your routine toward your goal.",
+    "agent_monologue": "Given the user’s high sensitivity to stress and their strong need for structure, a fresh, ultra-small ritual after the hunger check can reduce second-guessing and support consistent evenings. Their current score sits near the target zone, so the strongest move is a repeatable, cue-driven micro-step that feels effortless to perform tonight. This leverages habit formation and cognitive-behavioral techniques to gradually nudge behavior toward the goal without increasing cognitive load.",
+    "agent_endkey": false,
+    "user_utterance": "Thanks for the plan. I’m going to start with the 60-second pause, a full glass of water, and a quick stretch. After I check if I’m truly hungry, if I’m not, I’ll try your suggested micro-reset: a 2-minute mindful body scan with slow diaphragmatic breathing, followed by a small sip of warm herbal tea, and I’ll log my hunger rating and how I feel to support my BED management and keep my routine steady.",
+    "user_endkey": false,
+    "planned_suggestion": 2.6262626262626263,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Nice plan. After your pause, water, and stretch, and after you check hunger, if you’re not truly hungry, try this new micro-reset: a 60-second grounding exercise (name 5 things you can see, 4 you can hear, 3 you can feel), followed by a slow sip of water. Then log your hunger rating and how you feel. Create a simple cue by keeping a grounding card and your water in a fixed spot and setting a 1-minute reminder to perform this reset after your usual hunger trigger. This quick, repeatable step supports BED management and helps keep your routine steady.",
+    "agent_monologue": "Brief CBT-style reasoning: Given the user's need for structure and sensitivity to evening cues, introducing a fresh, ultra-brief micro-reset paired with a concrete cue helps reduce reliance on hunger signals and strengthens routine without overwhelming the user. This aligns with their current plan and nudges behavior toward consistency and BED management.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I'm going to start with the 60-second pause, drink a full glass of water, and do a quick stretch. After I check whether I'm truly hungry, if I'm not, I'll try the grounding exercise (name 5 things I can see, 4 I can hear, 3 I can feel) plus a small sip of warm herbal tea, and I'll log my hunger rating and how I feel to support my BED management and keep my routine steady.",
+    "user_endkey": false,
+    "planned_suggestion": 2.6262626262626263,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Nice plan. As a small, concrete next step, after you complete your grounding and tea and log your hunger and how you feel, add a one-line note about a trigger you sensed (even a brief cue like 'stress' or 'fatigue') and place your reset toolkit in a fixed spot within arm’s reach for the rest of the evening. Set a brief 1-minute reminder to perform this reset after your usual hunger cue. This simple, repeatable pattern aligns with your need for structure and should help steady your BED management toward your goal.",
+    "agent_monologue": "Reasoning: Your profile shows a strong need for structure and a sensitivity to evening cues. Your current score is moving upward but still below the target, so a tiny, repeatable ritual that follows your hunger check can reduce hesitancy and cognitive load. By pairing a quick grounding-based action with a simple log and a visible cue cue, you reinforce the habit loop without overloading you.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’m starting with the 60-second pause, a full glass of water, and a quick stretch. After I check whether I’m truly hungry, if I’m not, I’ll try the grounding exercise (name 5 things I can see, 4 I can hear, 3 I can feel) plus a small sip of warm herbal tea, and I’ll log my hunger rating and how I feel to support my BED management and keep my routine steady.",
+    "user_endkey": false,
+    "planned_suggestion": 2.6262626262626263,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "After your hunger check, if you’re not truly hungry, try a quick cognitive-reframe micro-reset: pause for 30 seconds, name one unhelpful thought behind the urge to eat, replace it with a neutral reframe such as 'I can wait for real hunger,' then take a small sip of water and log your hunger rating and how you feel. To make it automatic, place your water and a small note in a fixed spot and set a 1-minute reminder to perform this reset after your usual hunger cue.",
+    "agent_monologue": "Reasoning: You show a solid preference for structure and a moderate openness to new strategies. Introducing a brief cognitive-reframe micro-reset offers a low-burden way to address automatic thoughts that can drive eating despite not being truly hungry. This diversifies your coping toolkit without overwriting the physical resets you’re already using, and it targets the mental triggers that often follow hunger cues in BED. The step is short, concrete, and fits your evening routine, nudging behavior gradually toward the target pattern while honoring your need for predictability and control.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try the 30-second cognitive reframe after my hunger check. I will name one unhelpful thought behind the urge to eat, reframe it to I can wait for real hunger, take a small sip of water, and log my hunger rating and how I feel to support my BED management. I will place the water and a short note in a fixed spot and set a 1-minute reminder to perform this reset after my usual hunger cue.",
+    "user_endkey": false,
+    "planned_suggestion": 2.6262626262626263,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "Nice progress. After your hunger check, try this small, repeatable micro-reset: pause for 30 seconds, name one unhelpful thought behind the urge to eat, reframe it to 'I can wait for real hunger,' take a small sip of water, and then do a 60-second grounding exercise (name 5 things you see, 4 you hear, 3 you feel). Log your hunger rating and how you feel right after. Place the water and a short note in a fixed spot and set a 1-minute reminder to perform this reset after your usual hunger cue. This keeps your BED-management routine steady and supports gradual progress toward your goal.",
+    "agent_monologue": "Brief CBT-style reasoning: The user benefits from a highly structured, cue-driven routine. A small, repeatable micro-reset that combines cognitive reframing, hydration, and grounding leverages both cognitive and physiological tools to reduce urge-driven eating and improve logging consistency. By keeping steps short and anchored to a fixed spot with a reminder, we support gradual progress toward the target behavior while preserving autonomy and reducing friction.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I'll try the 30-second cognitive reframe after my hunger check. I will name one unhelpful thought behind the urge to eat, reframe it to 'I can wait for real hunger,' take a small sip of water, and then do the 60-second grounding exercise (name 5 things I see, 4 I can hear, 3 I can feel). I'll log my hunger rating and how I feel, and place the water and a short note in a fixed spot with a 1-minute reminder to perform this reset after my usual hunger cue.",
+    "user_endkey": false,
+    "planned_suggestion": 2.6262626262626263,
+    "ground_truth_action": null,
+    "inferred_action": 1.0,
+    "compliance_estimate": 0.593
+  }
+]

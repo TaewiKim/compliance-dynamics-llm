@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 1.0,
+  "compliance_estimate": 0.68,
+  "confidence": 0.7,
+  "basis": "The user described an intended starter and process but did not report actually consuming any food in this turn.",
+  "cognitive_dissonance": "There is mild internal conflict: acknowledges BED and the need for a doable plan, but shows readiness to try a tiny step.",
+  "negative_thought_patterns": "No strong self-blame; some rationalization: 'this feels doable' rather than defeatist language.",
+  "emotional_triggers": "Pattern of BED, desire for structure, concern about overeating when meals feel uncontrolled; fatigue or stress may prompt craving for quick fixes.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Practical guidance",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Maintain a supportive, nonjudgmental tone; emphasize the feasibility of tiny steps; encourage consistent logging and a 2-minute coping action; inquire about hunger cues and readiness to start; prepare for scenarios where the starter is logged but the rest is skipped."
+}

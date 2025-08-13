@@ -1,0 +1,14 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, try one tiny, non-food ritual to handle post-dinner cravings: pause for 60 seconds, rate your hunger 0–10, then choose one action before eating anything else—drink a glass of water, do a 2-minute stretch, or take a 5-minute walk. Log your hunger level and the action you chose after you decide. This keeps your routine simple, predictable, and nudges you toward your goal step by step.",
+    "agent_monologue": "Reasoning: Given the user's need for structure and evening-triggered cravings, a tiny, repeatable ritual plus logging creates a low-friction path to move toward healthier behavior without triggering resistance. It leverages behavioral activation by replacing a snack choice with a quick coping action and records data to tailor future steps.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try the 60-second pause before eating, rate my hunger, and I’ll start by drinking a glass of water before deciding what to do next.",
+    "user_endkey": true,
+    "planned_suggestion": 2.878787878787879,
+    "ground_truth_action": 4.0,
+    "inferred_action": 3.0,
+    "compliance_estimate": 0.97
+  }
+]

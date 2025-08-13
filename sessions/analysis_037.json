@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 2.0,
+  "compliance_estimate": 0.49,
+  "confidence": 0.7,
+  "basis": "User avoided binge and engaged in non-eating coping behaviors (breathing, fullness rating, 10-minute walk, water) after lunch; no additional food intake described.",
+  "cognitive_dissonance": "No explicit internal conflict; user expresses alignment with goal and reports relief from urge.",
+  "negative_thought_patterns": "No explicit self-defeating beliefs; mild cravings mentioned but not accompanied by blame or hopelessness.",
+  "emotional_triggers": "Post-meal cravings/an urge to binge; relief and sense of control following walking and hydration.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalization of setbacks"
+  ],
+  "coaching_notes": "Maintain a warm, collaborative tone; keep post-meal cues short and actionable; consider adding an 'urge-action' plan (e.g., pause, breathe, move, message a support buddy) and track cravings to tailor interventions over time."
+}

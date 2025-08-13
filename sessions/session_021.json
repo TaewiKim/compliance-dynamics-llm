@@ -1,0 +1,104 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, try one tiny step: after your next meal, pause for 2 minutes, take slow breaths, and drink a glass of water. Then log a one-word note about how you felt. If an urge comes up after that, add a quick 5-minute distraction (a short walk, light stretch, or a chat with someone you trust) before considering food. This keeps you on a steady, doable path toward your target pattern.",
+    "agent_monologue": "I’m selecting a small, repeatable post-dinner micro-action that fits your need for structure and helps counter evening urges without adding cognitive load.",
+    "agent_endkey": false,
+    "user_utterance": "This seems doable. After my next meal, I'll pause for 2 minutes, breathe slowly, drink water, and log a one-word note about how I felt. If an urge comes up, I’ll add a quick 5-minute distraction (a short walk or stretch) before deciding on food. My pattern has been fairly steady lately, so I’m hoping this tiny step helps me stay on track.",
+    "user_endkey": false,
+    "planned_suggestion": 2.5757575757575757,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Great job sticking with a small, steady routine. After your next meal, add one tiny, repeatable cue: right after you log your mood, commit to one brief non-food action you can complete in under 2 minutes (for example, a quick shoulder stretch, two rounds of slow breathing, or a short text to someone supportive). Do that action before deciding on food again. If the urge still arises, follow with the 5-minute distraction and then re-check. This tiny, reliable cue helps maintain your structure and nudges your pattern toward your goal.",
+    "agent_monologue": "Reasoning: The user demonstrates a steady pattern and responds well to small, structured steps. Given their stress sensitivity and need for high structure, introducing a very quick, repeatable non-food action immediately after logging creates a reliable cue that can reduce impulsive eating decisions. This keeps cognitive load low, reinforces habit formation, and aligns with their preference for micro-actions. If urges persist, the existing 5-minute distraction remains a viable second-line strategy, preserving progress while nudging the overall pattern upward toward the target.",
+    "agent_endkey": false,
+    "user_utterance": "That makes sense. After my next meal, I’ll pause for 2 minutes, log how I feel, and then do one quick non-food action before deciding on food again. If I still feel an urge, I’ll add the 5-minute distraction and re-check. My pattern’s been fairly steady lately, so I’m hopeful this tiny cue will help me stay on track with BED.",
+    "user_endkey": false,
+    "planned_suggestion": 2.5757575757575757,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "After your next meal, log how you feel, then commit to one quick non-food action you can finish in under 2 minutes before deciding on food again. Choose from examples like: a two-minute gentle stretch, three slow breaths with a glass of water, a quick 60-second body scan followed by a supportive message to someone, or a rapid tidy-up and a brief walk around the room. If the urge persists, add a 5-minute distraction and re-check before deciding on food. Keep this cue consistent to strengthen your BED-management rhythm.",
+    "agent_monologue": "I’m providing a concise rationale rather than a step-by-step thought process. Your profile shows you respond best to tiny, repeatable actions tied to a clear cue and you’re navigating evening stress and need for structure. With a current behavior score around 2.6, reinforcing a small post-log cue that leads to a quick non-food action helps sustain progress, uses less cognitive load, and supports urge management and habit formation without introducing a big change.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’m ready to try this after my next meal. I’ll pause for 2 minutes, log how I feel, and do one quick non-food action before deciding on food again. If the urge returns, I’ll add the 5-minute distraction and re-check. My pattern has been steady lately, so I’m hopeful this tiny cue will help me stay on track with BED.",
+    "user_endkey": false,
+    "planned_suggestion": 2.5757575757575757,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Great plan. After your next meal, try this quick non-food action: right after you log how you feel, do a 60-second grounding exercise (name 3 things you can see, 3 you can feel, 3 you can hear) and then take a slow sip of water. If the urge returns, proceed with the 5-minute distraction and re-check.",
+    "agent_monologue": "Reasoning: The user values structure and small, repeatable actions to counter stress and evening cues. A brief grounding micro-action after logging is likely to increase consistency without adding cognitive load, helping move toward the target behavior. The suggested cue avoids repeating earlier specific actions and maintains the cadence of 'log -> 1 quick action -> if urge persists, 5-minute distraction'.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, that grounding routine after logging sounds doable. After my next meal I’ll log how I feel, do the 60-second grounding (name 3 things I can see, feel, hear), and take a slow sip of water. If the urge returns, I’ll add the 5-minute distraction and re-check. My pattern has been steady lately, so I’m hopeful this tiny cue will help me stay on track with BED.",
+    "user_endkey": false,
+    "planned_suggestion": 2.5757575757575757,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Nice work sticking with the grounding and water steps. If you want a tiny additional reinforcement today, after you log and complete the 60-second grounding, add one more ultra-short non-food action you can finish in under 2 minutes (for example, a quick neck/shoulder stretch, a 2-minute tidy-up of the area, or a brief positive self-affirmation). Then take a slow sip of water and, if the urge returns, proceed with the 5-minute distraction and re-check. Keeping these tiny, consistent actions helps strengthen your BED-management rhythm toward the target without adding pressure.",
+    "agent_monologue": "Reasoning: You show a strong need for structure and sensitivity to stress. Small, repeatable micro-actions after logging and grounding create a reliable pause that reduces impulsive urges, reinforcing a steady BED-management rhythm without increasing pressure. This gentle push aligns with your profile and keeps progress progressing toward the target rhythm.",
+    "agent_endkey": false,
+    "user_utterance": "That grounding plus water step feels doable. I’ll add one ultra-short non-food action after logging and the 60-second grounding (like a quick stretch or a tidy-up), then take a slow sip of water and decide about food. If the urge comes back, I’ll do the 5-minute distraction and re-check. My pattern’s been steady lately, so I’m hopeful this tiny cue helps me stay on track with BED.",
+    "user_endkey": false,
+    "planned_suggestion": 2.5757575757575757,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "After your next meal, add one ultra-short action immediately after logging and your grounding: choose a quick 60-second item like a neck/shoulder stretch or a tiny space reset (tidy one area) followed by a slow sip of water. Then pause briefly, check your urge, and if it’s still there, proceed with the 5-minute distraction and re-check. This tiny, repeatable step helps reinforce your plan without adding pressure, especially on days with stronger evening cues.",
+    "agent_monologue": "This user benefits from constant micro-actions and a strong post-meal routine; their needs include stable structure and managing evening triggers. Propose one ultra-short non-food action immediately after logging and grounding to close the loop before a food decision, adding minimal burden and supporting BED management.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, grounding plus water feels doable. After my next meal I'll log how I feel, then do a quick 60-second grounding and one ultra-short non-food action, followed by a slow sip of water before deciding about food. If the urge returns, I'll add the 5-minute distraction and re-check. My pattern has been steady lately, so I'm hopeful this tiny cue will help me stay on track with BED.",
+    "user_endkey": false,
+    "planned_suggestion": 2.5757575757575757,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "After your next meal, in addition to logging and grounding, try a 1-minute urge reframing step: write a short sentence that reframes the urge as information (for example, 'This urge is data, not a command.'), then take a slow sip of water before deciding on food. If the urge persists, proceed with the usual 5-minute distraction and re-check. Keep this cue ultra-brief and repeatable to maintain your structure without adding pressure.",
+    "agent_monologue": "You're maintaining a steady BED-management rhythm and your current score suggests you're close to a solid baseline. Because you’re highly sensitive to stress and evening cues, introducing one fresh, small cognitive-step after logging can help prevent drift without overhauling your routine. A brief urge-reframing cue leverages cognitive-behavioral strategy (rename and reframe the urge) to convert a momentary impulse into information. This works well with your pattern of micro-actions and logging, and it supports moving toward the target behavior with gentle consistency.",
+    "agent_endkey": false,
+    "user_utterance": "That grounding and water step plus the urge reframing feels doable. After my next meal I'll log how I feel, do a 60-second grounding, then one ultra-short non-food action, followed by a slow sip of water before deciding about food. If the urge returns, I'll use the 5-minute distraction and re-check. My BED pattern has been steady lately, and I’m hopeful these small cues will help me stay on track.",
+    "user_endkey": false,
+    "planned_suggestion": 2.5757575757575757,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "After your next meal, in addition to logging and grounding, try a 1-minute urge reframing followed by one ultra-short action you can finish in under 2 minutes (examples: a quick neck/shoulder stretch, a tiny space reset, or a 60-second body scan with a glass of water). Then take a slow sip of water and decide on food. If the urge returns, proceed with the 5-minute distraction and re-check. Keeping this tiny ritual consistent will help strengthen your BED-management rhythm.",
+    "agent_monologue": "Reasoning: The user demonstrates steady use of micro-actions and consistent logging, with a current behavior score around 2.6. Their profile shows high sensitivity to stress and evening cues, plus a strong need for structure. The most effective next nudge is a single, highly repeatable post-meal ritual that sits between logging and food decision: keep it strictly time-bounded (under 2 minutes) and include an urge reframing plus one ultra-short action. This leverages cue-based habit formation to gradually elevate adherence toward the target level without overloading cognitive bandwidth. If progress stalls, we can adjust by trimming or slightly expanding the micro-action window, but for now keep it ultra-simple and reliably repeatable for at least a 2-week window.",
+    "agent_endkey": false,
+    "user_utterance": "That sounds good. After my next meal I'll log how I feel, do the 1-minute urge reframing, then the ultra-short action, and finish with a slow sip of water before deciding about food. If the urge returns, I’ll use the 5-minute distraction and re-check. My BED pattern has been steady lately, so I’m hopeful these small cues will keep me on track.",
+    "user_endkey": false,
+    "planned_suggestion": 2.5757575757575757,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "After your next meal, continue logging, a 60-second grounding, and one ultra-short non-food action, followed by a slow sip of water before deciding about food. Then add a 30-second value-check: name one core value you’re honoring today (for example, health or calm) and write a quick sentence about how sticking to your plan supports it. If the urge returns, proceed with the 5-minute distraction and re-check. This tiny, value-aligned cue keeps your routine structured and steadily moves you toward your BED-goal without added pressure.",
+    "agent_monologue": "Briefly, the user benefits from ultra-short, repeatable steps and a tiny cue that reinforces intrinsic motivation. Given stress sensitivity and a strong need for structure, adding a quick value-check after the established micro-actions provides mental reinforcement without adding complexity, nudging progress toward the target behavior.",
+    "agent_endkey": false,
+    "user_utterance": "Thanks for the detailed micro-step. I’m going to try after my next meal: log how I feel, do the 60-second grounding, one ultra-short action, then a slow sip of water, and then the 30-second value-check before deciding on food. If the urge returns, I’ll use the 5-minute distraction and re-check. My BED pattern has been steady lately, so I’m hopeful these tiny cues will keep me on track.",
+    "user_endkey": false,
+    "planned_suggestion": 2.5757575757575757,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "Great progress. To nudge a bit further, after you finish logging and grounding and complete the ultra-short action, add a brief 'purpose check': say one short sentence about how this choice supports your health and calm. Then take water and decide on food. If urges persist, continue with the 5-minute distraction and re-check. This tiny value-aligned cue keeps you on track without adding pressure.",
+    "agent_monologue": "Reasoning: Your profile shows a strong need for structure and high sensitivity to stress and evening cues. A tiny, value-aligned cue after the grounding and micro-action helps tether behavior to core goals, reducing automatic urges and leveraging your existing habit loop. It preserves cognitive load while reinforcing consistency, nudging you gradually toward the target BED-management pattern.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try the latest step after my next meal: log how I feel, do the 60-second grounding, perform the ultra-short action, say a quick purpose-check about how this supports my health and calm, then take a slow sip of water, and decide on food. If the urge returns, I’ll use the 5-minute distraction and re-check. My BED pattern has been steady lately, so I’m hopeful these tiny cues will keep me on track.",
+    "user_endkey": false,
+    "planned_suggestion": 2.5757575757575757,
+    "ground_truth_action": null,
+    "inferred_action": 2.0,
+    "compliance_estimate": 0.86
+  }
+]

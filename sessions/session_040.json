@@ -1,0 +1,24 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Try a tiny, structured step tonight: before your next meal, pick one specific, satisfying plate you can realistically prepare (for example, protein + vegetables) and have the ingredients ready. Eat that as your main portion and log it afterward. If cravings rise, pause for 1 minute, take a few slow breaths, and use a quick coping step (drink water or take a short 2‑minute walk) before continuing. This simple, repeatable plan supports gradual progress toward your goal without added pressure.",
+    "agent_monologue": "High-level rationale: the user benefits from structure and gentle progression. A small, loggable, plan-driven action reduces evening cue sensitivity and builds steady consistency toward the goal without triggering guilt or overwhelm.",
+    "agent_endkey": false,
+    "user_utterance": "That sounds doable. I’ll keep tonight simple with one main plate (protein + veggies), like grilled chicken with roasted vegetables, and I’ll log it afterward. If cravings hit, I’ll pause for a minute and use a quick coping step (water or a 2‑minute walk) before continuing. I’ve been fairly consistent with guidance lately, so I’m hoping to keep that steady.",
+    "user_endkey": false,
+    "planned_suggestion": 3.6363636363636362,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Amazing plan tonight. To nudge your momentum, add a 2-sentence post-meal log after you finish: (1) 'How satisfied am I with this plate on a 0–10 scale?' (2) 'One tiny tweak I can do tomorrow to stay on track.' Keeping this quick and repeatable supports your structure and cravings plan, and helps move you a bit closer to your goal.",
+    "agent_monologue": "Reasoning: Your profile shows you value fixed structure and mild flexibility, with sensitivity to stress and evening cues. The current plan is solid but could be strengthened with a tiny post-meal reflection that reinforces satisfaction and a concrete next-step, without adding decision fatigue. A brief, consistent check-in leverages behavioral activation and can raise your sense of control, which is linked to gradual improvements in routine and cravings management. So I’m nudging toward a micro-habit that stays within your capacity and scales gently toward your target.",
+    "agent_endkey": false,
+    "user_utterance": "Tonight I’m keeping it simple with grilled chicken and roasted vegetables, and I’ll log it right after. If cravings pop up, I’ll pause for a minute and drink water or take a quick 2‑minute walk before continuing. I’m hopeful I can stay steady today, even with BED challenges.",
+    "user_endkey": true,
+    "planned_suggestion": 3.6363636363636362,
+    "ground_truth_action": 4.5,
+    "inferred_action": 3.5,
+    "compliance_estimate": 0.965
+  }
+]

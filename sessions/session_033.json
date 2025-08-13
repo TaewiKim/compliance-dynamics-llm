@@ -1,0 +1,34 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, choose one go-to, plate-based option that you can prepare in under 5 minutes (protein + vegetables + whole grain or fruit). Make it before you start eating, and write a quick log note that you planned it. If stress hits, lean on this single-plate anchor rather than trying multiple changes—consistency over intensity.",
+    "agent_monologue": "Your pattern suggests that ultra-simple, repeatable steps work best when stress or evening cues hit. You’re near the target but mood swings can derail big changes, so a micro-commitment that requires minimal decision-making should help you move toward the goal without overload. This lever creates a reliable routine and quick reinforcement through logging, which fits your need for structure and low cognitive load.",
+    "agent_endkey": false,
+    "user_utterance": "I like the single-plate anchor idea. Tonight I'll keep it simple: a quick plate with protein + vegetables + a carb or fruit (like grilled chicken + steamed broccoli + quinoa or an apple), ready in under 5 minutes. I’ll log it after I eat and lean on this anchor if stress hits.",
+    "user_endkey": false,
+    "planned_suggestion": 4.444444444444445,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Nice work sticking with the anchor idea. Tonight, keep it ultra-simple: a plate with protein + vegetables + a carb or fruit, ready in under 5 minutes. Example options: grilled chicken + steamed broccoli + quinoa, or salmon + mixed vegetables + an apple. Start the meal with a quick intention to log afterward, and after you’re done, jot a short note about how you followed the plan. If stress spikes, rely on this single anchor and avoid adding new choices—consistency beats perfection.",
+    "agent_monologue": "I can't share my full internal chain-of-thought, but here's a concise rationale: your profile shows high sensitivity to stress and a strong need for structure. The best next step is a consistent, ultra-simple anchor (protein + vegetables + a carb/fruit) that you can execute in minutes, plus a quick post-meal log to reinforce the habit. This supports stability and reduces decision fatigue on tougher days.",
+    "agent_endkey": false,
+    "user_utterance": "Tonight I'm sticking with the single-plate anchor: quick protein + veggies + carb or fruit, ready in under 5 minutes. I’ll log after I eat and lean on this plan if stress hits. If cravings or binge thoughts pop up, I’ll remind myself: one plate, one step, and no extra choices.",
+    "user_endkey": false,
+    "planned_suggestion": 4.444444444444445,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Tonight, reinforce your single-plate anchor with a simple visual cue: place a sticky note or phone reminder that says 'One plate, one step.' Cook and plate protein + vegetables + a carb or fruit in under 5 minutes, then log right after you finish. If cravings pop up, repeat the cue: one plate, one step, and no extra choices.",
+    "agent_monologue": "Reasoning: The user benefits from ultra-structure to counter stress-related urges. Reinforcing the single-plate anchor with a quick visual cue and a post-meal log supports habit formation and reduces decision fatigue, aligning with their high structure needs and mood-shift risk.",
+    "agent_endkey": false,
+    "user_utterance": "I'm sticking with the single-plate anchor tonight: grilled chicken + steamed broccoli + quinoa, ready in under 5 minutes. I’ll log after I eat and lean on this plan if stress hits. If cravings pop up, I’ll remind myself: one plate, one step, and no extra choices.",
+    "user_endkey": true,
+    "planned_suggestion": 4.444444444444445,
+    "ground_truth_action": 4.5,
+    "inferred_action": 4.5,
+    "compliance_estimate": 0.985
+  }
+]

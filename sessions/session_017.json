@@ -1,0 +1,104 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, when you notice the urge to snack, pause for 3 minutes, take four slow breaths, and drink a small glass of water. Then jot a one-line note in your log: 'Is this hunger or stress?' If the urge remains, choose a quick non-food comfort for about 5 minutes—stretch, a short walk, or a warm, non-caffeinated tea—and log how you feel afterward. This small, structured step helps you stay on track without derailing your plan.",
+    "agent_monologue": "I can’t share my internal step-by-step reasoning, but here’s a concise rationale: your profile shows a strong preference for structure and sensitivity to stress. A brief urge-regulation micro-routine followed by a non-food coping option aligns with your need for predictable steps, reduces the chance of impulsive eating during evening cues, and keeps log-logging simple to support memory consistency.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s plan: when the urge to snack hits, I’ll pause for 3 minutes, take four slow breaths, and drink a small glass of water. If the craving persists, I’ll pick a quick non-food comfort like stretching or a short walk and log how I feel.",
+    "user_endkey": false,
+    "planned_suggestion": 3.5858585858585856,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Tonight, when the urge to snack hits, add a short grounding drill: slowly name 5 things you see, 4 you hear, and 3 things you feel in your body. Then label the urge (e.g., stress, fatigue, hunger) in your log and immediately pick a quick, non-food action you can finish in 4–5 minutes (such as tidying a small area, sorting one task, or a brief mobility sequence). Log how you feel after and what action you chose. This small, structured interruption can help you stay on track without relying on food.",
+    "agent_monologue": "This user has moderate suggestibility but a high sensitivity to stress and evening cues, plus a strong need for structure. Adding a brief grounding step can interrupt automatic snacking thoughts, support urge-surfing, and build self-efficacy without relying on food. The step should be quick, concrete, and easy to log to fit their routine and memory pattern.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s plan: I’ll pause for 3 minutes, take four slow breaths, and drink a small glass of water. If the craving sticks around, I’ll do a quick grounding or non-food activity like stretching or a short walk, and I’ll log how I feel afterward. I know BED can make this hard, but I’m going to test this small interruption and see if I can ride it out without snacks.",
+    "user_endkey": false,
+    "planned_suggestion": 3.5858585858585856,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Nice work sticking with your plan. Tonight, after your initial pause and breathing, add one tiny non-eating task you can finish in about 4 minutes—such as tidying a small area, laying out the next meal plan for tomorrow, or a quick 4-minute stretch sequence—then log what you did and how you felt. That small, reliable win helps build momentum toward feeling in control during urges without snacks.",
+    "agent_monologue": "Reasoning: The user shows a moderate to solid commitment to urge-regulation and has strong structure needs, with BED-related cues in the evening. To nudge toward the target behavior, offer a small, deterministic micro-step that yields a quick win, reinforces control, and is easy to repeat tonight. This leverages behavioral activation and reduces cognitive load during cravings, while staying aligned with their need for structure and logging.",
+    "agent_endkey": false,
+    "user_utterance": "Thanks for the plan. I’ll give tonight’s interruption steps a try. BED is tough, but I’ll pause, breathe, and drink water. If the craving sticks around, I’ll do a quick grounding activity like stretching or a short walk and log how I feel. I’ll keep aiming for snack-free steps and use this plan to ride out urges.",
+    "user_endkey": false,
+    "planned_suggestion": 3.5858585858585856,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Nice progress tonight. After your pause and breathing, add a single 4-minute non-food action you can finish now—for example, a quick 4-minute stretch sequence to reset your body. Then log what you did and how you felt, focusing on the sense of choice you exercised. If the craving sticks around, repeat the same micro-step or switch to another brief, non-food task (e.g., outline tomorrow's breakfast plan or tidy a small area) and log again. Small, consistent steps move you toward snack-free evenings.",
+    "agent_monologue": "I can't share my full internal chain-of-thought, but here's a brief rationale: the user responds well to short, concrete actions and values structure. A 4-minute non-food micro-task after the urge cue reduces impulsivity, reinforces self-efficacy, and aligns with BED-related triggers (stress, evening cues). This keeps momentum toward snack-free evenings without escalating urges.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s interruption steps: pause, breathe, and then do a quick 4-minute non-food task. If the craving sticks around, I’ll switch to a brief grounding activity like stretching or a short walk and log how I feel. BED is tough, but I’m going to ride out the urge without snacks and see how it goes.",
+    "user_endkey": false,
+    "planned_suggestion": 3.5858585858585856,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Nice job sticking with the plan. Tonight, after your pause and breath, choose one small non-food action you can complete in about four minutes—such as tidying a small area, outlining tomorrow's breakfast, or a quick stretch. Then log what you did and how you felt. If the craving sticks around, add a brief grounding moment (like a quick 60-second body scan) and log again. Small, consistent micro-wins like this keep you moving toward snack-free evenings.",
+    "agent_monologue": "From a CBT perspective, the user benefits from consistent, manageable micro-choices that reinforce a sense of control, especially given BED and evening triggers. Their profile favors structure and explicit urge labeling, so a brief, concrete step paired with immediate logging supports momentum without triggering all-or-nothing thinking. The suggestion aims to preserve progress, reduce escalation, and build reliability through small wins.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s interruption steps: pause, breathe, and then do a quick 4-minute non-food task. If the craving sticks around, I’ll switch to a brief grounding activity like stretching or a short walk and log how I feel. BED is tough, but I’m going to ride out the urge without snacks and see how it goes.",
+    "user_endkey": false,
+    "planned_suggestion": 3.5858585858585856,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "Tonight, try a small 'urge-label then switch' micro-step: after your pause and breathing, jot a one-line note in your log naming the trigger (for example, 'stress' or 'evening cue'), then immediately start a 4-minute non-food task you can finish now (choices: quick tidy, outline tomorrow's breakfast plan, or a brief mobility sequence). Log what you did and how you felt after. If the urge sticks around, repeat the same micro-step or switch to another brief non-food task. The goal is steady, tiny wins that gradually shift evenings away from snacks.",
+    "agent_monologue": "Given the user's BED context and evening cue sensitivity, the plan should favor a low-friction, high-probability micro-step that reinforces control and logging without triggering resistance. A label-and-action sequence leverages cognitive awareness (urge labeling) and creates a tangible, repeatable win (a short non-food task) to steadily build momentum and data for future adjustments. This aligns with their preference for structure and minimizes risk of all-or-nothing thinking by emphasizing small, doable steps.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s interruption steps: pause, breathe, then do a quick 4-minute non-food task. If the craving sticks around, I’ll switch to a brief grounding activity like stretching or a short walk and log how I feel. BED is tough, but I’m going to ride out the urge without snacks and see how it goes.",
+    "user_endkey": false,
+    "planned_suggestion": 3.5858585858585856,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Tonight, after your pause and breath, try a two-step micro-step: first, jot one-word label of the trigger in your log (for example, 'evening stress' or 'boredom'), then immediately start a fresh, finishable 4-minute non-eating task you haven’t focused on recently (examples: tidy a small shelf, organize one drawer, lay out tomorrow's outfits, or a quick 4-minute mobility sequence). After finishing, log what you did and how you felt. If the craving sticks around, repeat with another new quick task or add a brief grounding moment. Small, varied wins build a snack-free pattern over time.",
+    "agent_monologue": "The user shows consistent use of urge interruption and values structure, but needs variety to keep engagement and prevent stagnation. By adding a small trigger label and a fresh, finishable micro-task, we leverage cognitive labeling and habit formation to reduce escalation from stress/evening cues. This aligns with BED management by promoting control through tiny, repeatable wins and a flexible repertoire of actions.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, that sounds doable. I’ll label the trigger after pausing and breathing, then start a fresh 4-minute non-eating task. If the craving sticks around, I’ll switch to another quick task or a brief grounding moment and log how I feel. BED is tough, but I’ll keep trying these micro-steps and see what changes.",
+    "user_endkey": false,
+    "planned_suggestion": 3.5858585858585856,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Tonight, after your pause and breath, try a fresh micro-step: label the trigger with a single word in your log, then pick a brand-new 4-minute non-food task that shifts your focus (for example: set up tomorrow's lunch idea, rearrange a small shelf, or complete a brief mobility flow). After finishing, log what you did and how you felt. If the craving sticks around, switch to another quick non-eating task or add a brief grounding moment (like a 60-second breath scan) and log again. Small, varied wins help build a snack-free rhythm over time.",
+    "agent_monologue": "I'm not able to share my full internal chain-of-thought, but here's a concise justification: given the user's BED context and high sensitivity to evening cues, a varied, low-effort micro-step that creates an immediate sense of control and a change of environment is most likely to reduce cue-reactivity and build a snack-free rhythm over time.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, that makes sense. Tonight I’ll pause and breathe, label the trigger in my log, and pick a fresh 4-minute non-food task. If the craving sticks around, I’ll switch to another quick task or do a quick grounding moment and log how I feel. BED is tough, but I’m going to ride this out and see how it goes.",
+    "user_endkey": false,
+    "planned_suggestion": 3.5858585858585856,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "Tonight's micro-step: after your pause and breathing, name the trigger with a single word in your log, then pick a fresh 4-minute non-food task you haven't tried recently (for example: tidy a small shelf, draft tomorrow's simple breakfast idea, lay out tomorrow's outfit, or run through a quick mobility flow). Finish the task, then log what you did and how you felt. If the craving sticks around, repeat with another new quick task or add a brief grounding moment. These small, varied wins help build a snack-free evening rhythm.",
+    "agent_monologue": "Reasoning: The user has high structure needs and elevated sensitivity to evening triggers. A varied micro-step keeps engagement fresh and reinforces a sense of control without relying on food. By framing the action as a small, finishable task after a quick trigger check, we support habit formation and reduce cognitive load during BED-related urges.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, that sounds doable. Tonight I’ll pause and breathe, label the trigger in my log, and pick a fresh 4-minute non-food task. If the craving sticks around, I’ll switch to another quick task or do a quick grounding moment and log how I feel. BED is tough, but I’m going to ride this out and see what changes.",
+    "user_endkey": false,
+    "planned_suggestion": 3.5858585858585856,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "Tonight's gentle nudge: after pausing and breathing, label the trigger with one word in your log, then start a fresh 4-minute non-food task you haven’t tried recently (for example, a quick desk reset in a new area, drafting a simple plan for tomorrow's self-care, or sketching a tiny daily routine). Finish the task and log what you did and how you felt. If the craving returns, switch to another brief task or add a short grounding moment (like a 60-second body scan). Small, varied wins build a snack-free evening rhythm.",
+    "agent_monologue": "Reasoning: Your profile shows high sensitivity to evening cues and a strong need for structure. A single, finishable micro-step that names a trigger and then completes a new non-food task creates a small success experience, reducing impulsive snacking and reinforcing self-efficacy. By varying the task each time, you counter habituation and keep engagement high enough to move your behavior toward the target level gradually without overwhelming you.",
+    "agent_endkey": false,
+    "user_utterance": "I can do this tonight. I’ll pause and breathe, label the trigger in my log, and pick a fresh 4-minute non-food task. If the craving sticks around, I’ll switch to another quick task or do a quick grounding moment and log how I feel. BED is tough, but I’m going to ride this out and see what changes.",
+    "user_endkey": false,
+    "planned_suggestion": 3.5858585858585856,
+    "ground_truth_action": null,
+    "inferred_action": 1.0,
+    "compliance_estimate": 0.35
+  }
+]

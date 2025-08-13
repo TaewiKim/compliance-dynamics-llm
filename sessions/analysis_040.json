@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 3.5,
+  "compliance_estimate": 0.965,
+  "confidence": 0.65,
+  "basis": "User describes the intention to eat a simple protein+vegetable plate (grilled chicken and roasted vegetables) and to log after, but does not report having completed the meal in this turn.",
+  "cognitive_dissonance": "No explicit internal conflict; user acknowledges BED challenges but stays hopeful and committed.",
+  "negative_thought_patterns": "No overt negative self-talk; mentions BED challenges, suggesting ongoing struggle but not self-defeating beliefs stated here.",
+  "emotional_triggers": "Cravings are acknowledged as a potential trigger; BED-related stress mentioned but not elaborated in detail.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Structure/plan",
+    "Positive framing"
+  ],
+  "coaching_notes": "Maintain brief, actionable guidance; validate progress and ongoing BED challenges; reinforce meal logging habit; offer simple cravings coping strategies; consider next-session check-in on whether the meal was actually logged and how cravings were managed."
+}

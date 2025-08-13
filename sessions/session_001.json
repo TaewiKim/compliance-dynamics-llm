@@ -1,0 +1,24 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight, set up one simple, ready-to-eat healthy snack you can grab before your evening routine. For example, place a pre-portioned protein-rich option (like a small yogurt cup or a handful of almonds with an apple) in an obvious spot. If you feel the urge to snack, choose this option first and log it afterward.",
+    "agent_monologue": "I’m offering a small, structure-focused nudge that respects her need for routine and stress sensitivity. A single, pre-placed option reduces decision fatigue in the evening and gently nudges toward the target behavior without introducing spontaneity.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I can try that. Tonight I'll set out a simple, ready-to-eat snack—like a small yogurt or almonds with an apple—in a visible spot. If I feel the urge to snack, I'll grab that first and log it after.",
+    "user_endkey": false,
+    "planned_suggestion": 4.646464646464646,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Nice progress. Tonight, when the urge hits, choose your prepped snack and log it right away (aim for a quick 2-minute entry). If stress or evening cues feel strong, add a tiny, 2-minute ritual first—like a slow breath or a gentle stretch—to give your brain a moment of pause before deciding. This keeps you rooted in your routine and nudges you toward consistent, planned choices.",
+    "agent_monologue": "Brief, non-step-by-step rationale: leverage her evening cue sensitivity and need for structure by pairing a simple, prepped snack with an immediate log and a tiny ritual to pause before mindless grazing, supporting gradual progress toward steadier routine.",
+    "agent_endkey": false,
+    "user_utterance": "That sounds doable. Tonight I'll grab the prepped snack (yogurt or almonds with an apple) and log it right away. If the urge hits, I'll pause with a quick two-minute ritual (breath or stretch) before deciding. I want to use this planned, healthy choice to support my BED management.",
+    "user_endkey": true,
+    "planned_suggestion": 4.646464646464646,
+    "ground_truth_action": 4.5,
+    "inferred_action": 2.5,
+    "compliance_estimate": 0.46
+  }
+]

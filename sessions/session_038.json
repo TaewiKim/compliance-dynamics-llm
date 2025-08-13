@@ -1,0 +1,84 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Great job so far. After your next meal, try a simple urge-action: pause for a moment, take a few slow breaths, drink a glass of water, and choose a light movement break (a short walk or gentle stretch). Then jot down what helped and how the craving shifted.",
+    "agent_monologue": "Reasoning: Given her strong need for structure and sensitivity to post-meal urges, a compact post-meal urge-action plan using non-food coping (pause, breathing, water, short movement) aligns with what has helped before while introducing a fresh, repeatable ritual. Adding a quick log reinforces memory and accountability without overwhelming her.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try your urge-action after my next meal. I’ll pause, take a few slow breaths, drink a glass of water, and do a short walk or some gentle stretches. I’ll note what helped and how the craving shifts, and I’ll reach out if I need extra support.",
+    "user_endkey": false,
+    "planned_suggestion": 2.2727272727272725,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "After your next meal, try this small, structured post-meal routine: 1) pause and take two slow breaths, 2) do a 5-minute light activity (short walk or gentle stretch), 3) drink a glass of water, 4) jot a one-line note: your craving intensity (0–10) and one thing that helped. Repeat this the same way for the next 5–7 days. If cravings spike, add one extra tiny step (another stretch or extra water) or reach out for quick support. This keeps you on a steady path toward your goal while honoring your need for structure.",
+    "agent_monologue": "I’m keeping this concise and aligned with your preference for structure. Because you respond well to predictable routines and feel cravings after meals, a brief, consistent post-meal micro-routine helps bridge toward your goal by adding reflection and light movement without adding overwhelm. It’s designed to be repeatable and adjust to how you’re feeling post-meal.",
+    "agent_endkey": false,
+    "user_utterance": "Got it—I'll try the urge-action after my next meal: pause briefly, take a couple slow breaths, drink a glass of water, and do a short walk or gentle stretch. I'll jot down what helped and how the craving shifts, and I’ll reach out if I need extra support.",
+    "user_endkey": false,
+    "planned_suggestion": 2.2727272727272725,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Nice work sticking with the urge-action. To nudge you a bit closer to your mid-range goal, add a small post-meal anchor: after your urge-action (pause, a few slow breaths, water, and a short walk or gentle stretch), take 60 seconds to log two tiny notes—one word about how you feel now and one word about what helped. If the craving remains, do a brief extra 2-minute walk or stretch and text your support buddy. Keep repeating this pattern consistently for the next 5–7 days.",
+    "agent_monologue": "Brief rationale: The user thrives on structure and benefits from small, repeatable steps. A compact post-meal anchor plus a quick log provides immediate feedback, supports emotional regulation after meals, and leverages social support if needed. This aligns with their profile and nudges toward a mid-range behavior level without overwhelming them.",
+    "agent_endkey": false,
+    "user_utterance": "Thanks for the extra structure. I’ll try the post-meal anchor you suggested: after my next meal I’ll log two brief notes about how I feel and what helped, and if the craving sticks I’ll do a quick extra 2-minute walk and text my support buddy. I’ll do this consistently for the next 5–7 days and share how it goes.",
+    "user_endkey": false,
+    "planned_suggestion": 2.2727272727272725,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "After you complete your post-meal notes, add one tiny, fixed post-meal micro-action from this list and do it within 60 seconds: A) 60 seconds of light mobility (neck and shoulder rolls, gentle arm circles), B) 60 seconds of quick kitchen tidy-up (wipe a surface, put away anything left out), C) 60 seconds of a warm beverage break (sip herbal tea and mindfully notice the taste), or D) a 1-minute social check-in text to your buddy. Then log which micro-action you chose and one word about how it affected cravings. Try this consistently for 5–7 days.",
+    "agent_monologue": "Given the user’s strong need for structure, sensitivity to evening cues, and a current behavior score near the lower end of the target, a tiny, fixed post-meal extension can gradually build the habit loop without adding cognitive load. This leverages habit stacking (post-meal routine → micro-action) to push consistency upward toward the mid-range while keeping the process feel-safe and manageable.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll give the post‑meal micro-actions a real try. After my next meal, I’ll pause, breathe, do a quick 60‑second action (mobility or a tiny tidy‑up), log two short notes on how I feel and what helped, and reach out if cravings linger. I’ll stick with this for 5–7 days and share how it goes, given my BED concerns.",
+    "user_endkey": false,
+    "planned_suggestion": 2.2727272727272725,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "After your post-meal urge-action and notes, try one fixed 60-second post-meal micro-action from this fresh set (choose and rotate through for the next 5–7 days): A) Grounding sweep: name 3 things you can see, 3 you can hear, and 3 you can feel. B) 60 seconds of a gentle chair-to-standing stretch sequence (neck, shoulders, arms, hips). C) 60 seconds of mindful beverage tasting: mindfully notice temperature, aroma, and flavor of water or herbal tea. D) 60 seconds of a quick 'future-self' pep talk either aloud or in your head. Then log which micro-action you chose and one word about how cravings shifted. If cravings linger or BED concerns rise, reach out to your buddy or add a 2-minute extra walk. Continue this pattern for 5–7 days to support gradual progress toward your target.",
+    "agent_monologue": "Given BED concerns and your need for steady structure, I’m proposing a tiny, non-eating post-meal anchor that rotates nightly but stays quick and predictable. It reinforces a calm, controlled routine without increasing cognitive load, nudging you toward a balanced mid-range pattern.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try the new 60-second post-meal micro-actions after my next meal. I’ll rotate A through D, log which micro-action I chose and how cravings shifted, and keep this pattern for 5–7 days. If cravings linger or my BED feels more challenging, I’ll reach out to my buddy for support. Thanks for the structure—it helps me stay consistent.",
+    "user_endkey": false,
+    "planned_suggestion": 2.2727272727272725,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "This week, after you finish your post-meal micro-action and your two quick notes, add a 30-second post-meal closure: silently name one personal benefit of sticking with your plan tonight and silently express gratitude for your body. Then continue with your rotating A–D micro-actions and your craving check-in. Keep this pattern for 5–7 days. If cravings linger, reach out to your buddy or add the 2-minute walk as you’ve planned. You’ve got this—small, steady steps add up.",
+    "agent_monologue": "Your profile shows a very high need for structure and sensitivity to stress, with BED concerns making consistency crucial. A tiny post-meal closure ritual leverages habit formation by adding a brief, predictable reward after the routine, helping your brain encode a successful end to meals and reducing post-meal vulnerability. This nudges you toward steady progress without adding cognitive load.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try the new rotating 60-second post-meal micro-actions (A–D) after my next meal, log which one I chose and how cravings shifted, and stick with it for 5–7 days. If cravings linger or BED feels tougher, I’ll reach out to my buddy. Thanks for the structure — it helps me stay consistent.",
+    "user_endkey": false,
+    "planned_suggestion": 2.2727272727272725,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Fantastic progress. After you rotate and log your A–D micro-actions, add a fixed 60-second post-meal closure: silently name one personal benefit of sticking with your plan tonight, and one small, concrete action you’ll take in the next hour to support your goal (e.g., a brief 5-minute walk, another glass of water, or a quick tidy). Then continue with your A–D actions and craving check-in. Try this daily for 5–7 days, and if cravings linger, reach out to your buddy for support.",
+    "agent_monologue": "To support the user's strong need for structure and to help BED concerns without overloading them, I’m proposing a light, fixed post-meal closure that reinforces positive reinforcement and a concrete next-step plan. This adds a reliable cue after the rotating micro-actions, helping with consistency and reducing post-meal rumination. I’m keeping it simple and action-oriented to avoid cognitive burden and to align with their profile that values structure and clear steps.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll rotate A–D and log which one I chose and how cravings shifted, and add the 60-second post-meal closure. I’ll keep this pattern for 5–7 days, and reach out to my buddy if cravings linger.",
+    "user_endkey": false,
+    "planned_suggestion": 2.2727272727272725,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Proposed step: Before your next meal, take 60 seconds to set a clear intention like 'I will follow through with an A–D micro-action after eating and log cravings.' Then complete your post-meal micro-actions, rotate A–D, and note cravings as you’ve been doing. If cravings arise, default to the micro-action first or add the quick 2-minute walk. Try this for 5–7 days and share how it goes.",
+    "agent_monologue": "I can't share my internal step-by-step thoughts, but here is a concise rationale: your profile shows you respond well to structure and proactive planning. A brief pre-meal cue to anchor your post-meal routine can reduce spontaneous snacking by setting intentions ahead of time. This complements your rotating A–D micro-actions and post-meal closure, helping you move steadily toward your target behavior level without adding burden.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try that: before my next meal I’ll set a clear intention to follow through with an A–D micro-action after eating, then rotate through A–D after each meal and log cravings. I’ll stick with this for 5–7 days and report back, and if cravings linger I’ll default to the micro-action or the 2-minute walk and reach out for support because of my BED concerns.",
+    "user_endkey": true,
+    "planned_suggestion": 2.2727272727272725,
+    "ground_truth_action": 4.0,
+    "inferred_action": 2.5,
+    "compliance_estimate": 0.94
+  }
+]

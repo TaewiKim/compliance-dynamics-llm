@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 1.5,
+  "compliance_estimate": 0.97,
+  "confidence": 0.65,
+  "basis": "User stated intention to implement water, stretch, and a hunger-check tonight but has not reported actual execution yet.",
+  "cognitive_dissonance": "No explicit conflict; user expresses readiness and commitment to the plan.",
+  "negative_thought_patterns": "No evident negative beliefs or self-sabotaging thoughts in this turn; planning indicates proactive coping.",
+  "emotional_triggers": "Hunger serves as the immediate trigger for decision-making; emotional context (stress, fatigue) is not named but may influence hunger ratings.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Structured planning",
+    "Encouragement of self-monitoring"
+  ],
+  "coaching_notes": "Maintain a warm, non-judgmental tone; build on concrete, measurable steps. Encourage timely post-action logging tonight and brief emotion/cue journaling. Prepare for common barriers (evening routines, social dining) and offer quick resets as default options."
+}

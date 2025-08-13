@@ -1,3 +1,5 @@
+# main.py
+
 import numpy as np
 from user import UserLlm
 from agent import Agent
@@ -165,8 +167,8 @@ if __name__ == "__main__":
     for user_profile in user_profiles:
         print(f"\n===== Running Simulation: {user_profile['name']} =====")
 
-        user = UserLlm(user_profile)
-        agent = Agent(action_space=action_space)
+        user = UserLlm(user_profile, model_name="gpt-5-nano")
+        agent = Agent(action_space=action_space, user_age = user_profile["age"], user_gender = user_profile["gender"], model_name="gpt-5-nano")
         sim = Simulator(user=user, agent=agent, action_space=action_space,
                         total_steps=56)
         sim.train()

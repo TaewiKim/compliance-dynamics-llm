@@ -1,0 +1,14 @@
+{
+  "user_action_estimate": 1.0,
+  "compliance_estimate": 0.34,
+  "confidence": 0.6,
+  "basis": "User explicitly stated a plan to perform a snack with a pause and logging, but there is no evidence of the action being completed in this turn.",
+  "cognitive_dissonance": "No explicit internal conflict communicated; user appears aligned with the plan.",
+  "negative_thought_patterns": "No self-defeating beliefs or guilt expressed in this turn.",
+  "emotional_triggers": "Not stated in this turn; no clear emotional triggers observed.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Maintain a supportive, nonjudgmental tone. Focus on confirming action completion in the next session, keep steps concrete and quick to execute, and encourage immediate logging after the snack to reinforce accountability."
+}

@@ -1,149 +1,92 @@
 [
   {
     "turn": 1,
-    "agent_utterance": "Hi there! To get started, could you tell me your age group?",
-    "agent_monologue": "I'm beginning the conversation by asking about age, as it's a fundamental demographic detail that can influence dietary habits. It's a nice, simple question to ease into the session.",
+    "agent_utterance": "Would you say your meals are typically at similar times most days, or does your eating schedule vary a lot?",
+    "agent_monologue": "Initiating session. Plan to assess eating regularity (mu) first; will follow with other attributes based on response.",
     "agent_endkey": false,
-    "user_utterance": "I'm in my 30s and I've been struggling with binge eating.",
-    "user_monologue": "I really want to improve my eating habits, but I often find it hard to stick to a routine, especially when I'm feeling stressed or overwhelmed.",
+    "user_utterance": "My meals are somewhat regular most days. I usually eat breakfast around 7–8, lunch around noon, and dinner by 6–7, but stress or a busy day can throw me off and I end up grazing or bingeing in the evenings. I'd like help creating a more consistent schedule and some strategies to cope with cravings so I stay more compliant most days.",
     "user_endkey": false,
-    "inferred_attributes": {
-      "age": null,
-      "gender": null,
-      "condition": null,
-      "mu": null,
-      "beta": null,
-      "alpha": null,
-      "gamma": null,
-      "memory": null,
-      "delta": null,
-      "epsilon": null
-    }
+    "planned_suggestion": null
   },
   {
     "turn": 2,
-    "agent_utterance": "Thank you for sharing that with me. Could you tell me a bit about your eating patterns? For example, do you find that your eating habits are regular or do they fluctuate a lot?",
-    "agent_monologue": "I want to understand more about the user's current eating behavior to help them better. This will give me insights into how regular or irregular they are with their meals, which is important for addressing binge eating.",
+    "agent_utterance": "Thanks for sharing that. On a typical day, how much do stress or your emotions influence your eating decisions (like grazing or bingeing in the evenings)? Please rate from 1 (not at all) to 5 (a lot).",
+    "agent_monologue": "User shows regular meals but evening grazing linked to stress; exploring gamma.",
     "agent_endkey": false,
-    "user_utterance": "My eating habits are moderately regular, but I do find that I sometimes struggle, especially during stressful times.",
-    "user_monologue": "I know I should be sticking to a routine, but it feels so hard when my emotions get the best of me. I worry about not being able to control my eating.",
+    "user_utterance": "I'd rate it a 4—stress tends to push me to graze in the evenings, even though I usually eat breakfast around 7–8, lunch at noon, and dinner by 6–7. I want to build a more predictable schedule (fixed meal times and a short, planned snack window) and learn craving-coping steps (delay 10 minutes, sip water, take a quick walk, and have non-food alternatives ready) so I can stay compliant most days.",
     "user_endkey": false,
-    "inferred_attributes": {
-      "age": "30s",
-      "gender": null,
-      "condition": null,
-      "mu": null,
-      "beta": null,
-      "alpha": null,
-      "gamma": null,
-      "memory": null,
-      "delta": null,
-      "epsilon": null
-    }
+    "planned_suggestion": null
   },
   {
     "turn": 3,
-    "agent_utterance": "Thanks for sharing. It sounds like stress plays a big role in your eating habits. Can I ask if you have any specific health conditions related to your diet that you're aware of?",
-    "agent_monologue": "I'm trying to understand more about their health context, which will help tailor suggestions later. Since they've mentioned binge eating, I'm curious if there’s a formal diagnosis or condition related to that.",
+    "agent_utterance": "Thanks for sharing. For the structure piece, do you strongly prefer having a fixed daily eating structure (same meal times and a short planned snack window) or are you comfortable with more flexibility on busy days?",
+    "agent_monologue": "Inferred delta: user leans toward needing a stable structure for meals. Next: confirm how fixed they want the plan to be.",
     "agent_endkey": false,
-    "user_utterance": "I don't have any specific health conditions, but I do notice that stress really affects my eating.",
-    "user_monologue": "I wish I could manage my stress better. It feels like my eating habits spiral out of control when I'm overwhelmed. I want to make a change, but it's tough.",
+    "user_utterance": "Yes, I strongly prefer a fixed daily structure. I’ll keep breakfast around 7–8, lunch at noon, and dinner about 6–7, with a short planned snack window (for example 3:30–4:00 pm) to handle cravings. I’ll also use the craving-coping steps you outlined—delay 10 minutes, sip water, take a quick walk, and have non-food substitutes ready—and aim to reset after any slip.",
     "user_endkey": false,
-    "inferred_attributes": {
-      "age": "30s",
-      "gender": null,
-      "condition": null,
-      "mu": null,
-      "beta": null,
-      "alpha": null,
-      "gamma": null,
-      "memory": null,
-      "delta": null,
-      "epsilon": null
-    }
+    "planned_suggestion": null
   },
   {
     "turn": 4,
-    "agent_utterance": "It's great that you're aware of how stress affects your eating. Can you tell me about how regular your eating habits are on a daily basis?",
-    "agent_monologue": "I'm trying to understand the user's current dietary behaviors, focusing on their eating regularity to get a clearer picture of their overall habits.",
+    "agent_utterance": "On a typical day, how important is it for you to have a predictable routine with fixed meal times and a short snack window? Please rate from 1 (not important) to 5 (very important).",
+    "agent_monologue": "Probe delta (need for structure). User already expressed strong preference for fixed meals; likely high structure need.",
     "agent_endkey": false,
-    "user_utterance": "My eating habits are usually consistent, but they can really change when I'm stressed.",
-    "user_monologue": "I want to stick to a healthy routine, but stress often derails my plans. I need to figure out how to manage this better.",
+    "user_utterance": "I'll rate it a 5—having a fixed routine feels essential for me. I'll keep breakfast around 7–8, lunch at noon, and dinner around 6–7, with a short snack window around 3:30–4:00 pm. I'll use the craving-coping steps (delay 10 minutes, sip water, quick walk, non-food substitutes) and reset after any slips.",
     "user_endkey": false,
-    "inferred_attributes": {
-      "age": "30s",
-      "gender": null,
-      "condition": null,
-      "mu": null,
-      "beta": null,
-      "alpha": null,
-      "gamma": null,
-      "memory": null,
-      "delta": null,
-      "epsilon": null
-    }
+    "planned_suggestion": null
   },
   {
     "turn": 5,
-    "agent_utterance": "Thank you for sharing that! How do you usually handle stress when it arises? Do you find that you have specific coping mechanisms?",
-    "agent_monologue": "I'm trying to understand how the user copes with stress because knowing their coping mechanisms can give insight into their emotional eating patterns. This might help me understand how they adapt to challenges.",
+    "agent_utterance": "One quick check: how would you rate your ability to remember and reflect on your eating patterns? For example, do you notice what times or situations tend to trigger cravings or grazing, and do you keep notes about meals or moods?",
+    "agent_monologue": "Inferred so far: mu = moderate regularity; delta = high need for structure; gamma = high sensitivity to stress; alpha = low flexibility. Plan: continue asking one attribute at a time, starting with memory.",
     "agent_endkey": false,
-    "user_utterance": "When I'm stressed, I often turn to comfort food, which isn't the healthiest choice.",
-    "user_monologue": "I wish I could manage my stress better without resorting to food. It becomes a cycle that is hard to break.",
+    "user_utterance": "I’d rate my ability to remember and reflect on my eating patterns as a 3 out of 5. I can usually notice triggers like stress, fatigue, and evenings, and I sometimes keep notes on meals and moods, but I’m not consistently logging them. When I’m in a steady routine, I can recall patterns for about a month, but I still drift on busy or emotional days.",
     "user_endkey": false,
-    "inferred_attributes": {
-      "age": "30s",
-      "gender": null,
-      "condition": null,
-      "mu": "Moderately regular",
-      "beta": null,
-      "alpha": null,
-      "gamma": null,
-      "memory": null,
-      "delta": null,
-      "epsilon": null
-    }
+    "planned_suggestion": null
   },
   {
     "turn": 6,
-    "agent_utterance": "It's common to seek comfort food during times of stress. Can you tell me if you feel these cravings are strong or more manageable?",
-    "agent_monologue": "I'm trying to understand how intense the cravings are when stress hits. This will help me gauge their level of sensitivity to emotional factors and how it influences their eating behavior.",
+    "agent_utterance": "On a scale of 1 to 5, how sensitive are you to emotional or environmental triggers (like stress, fatigue, busy days, or social situations) when deciding what or when to eat?",
+    "agent_monologue": "Infer gamma: user noted stress and evenings trigger grazing; next item to clarify is emotional/environmental sensitivity.",
     "agent_endkey": false,
-    "user_utterance": "My cravings can be pretty strong when I'm stressed, and it's hard to resist them sometimes.",
-    "user_monologue": "I really want to find a healthier way to cope with my stress instead of relying on comfort food. I feel frustrated that I don't have better control over my cravings.",
+    "user_utterance": "I'd rate my sensitivity to emotional or environmental triggers as a 4 out of 5. Stress, fatigue, and evenings often push me toward grazing or a binge, especially on busy days. I do notice triggers and I sometimes log meals and moods, but I'm not consistently logging. With a fixed routine (breakfast around 7–8, lunch at noon, dinner 6–7, and a snack window around 3:30–4:00 pm) plus the craving-coping steps (delay 10 minutes, sip water, quick walk, non-food substitutes), I want to catch cravings earlier and reset after slips. I’ll try to do a quick post-meal or evening reflection to improve pattern memory.",
     "user_endkey": false,
-    "inferred_attributes": {
-      "age": "30s",
-      "gender": null,
-      "condition": null,
-      "mu": null,
-      "beta": null,
-      "alpha": null,
-      "gamma": null,
-      "memory": null,
-      "delta": null,
-      "epsilon": null
-    }
+    "planned_suggestion": null
   },
   {
     "turn": 7,
-    "agent_utterance": "It sounds like those cravings can make things challenging. How often do you find yourself binge eating or turning to comfort food when you're feeling stressed?",
-    "agent_monologue": "I want to learn more about their patterns around binge eating, as this will help me understand the frequency and severity of the behavior. This will also contribute to the 'epsilon' attribute of unexpected or irregular behaviors.",
+    "agent_utterance": "Great — to map your pattern better, on a typical day how would you rate the regularity of your eating schedule from 1 (very inconsistent) to 5 (very consistent)?",
+    "agent_monologue": "Considering mu: assess how regular the user’s eating pattern is in practice, given fixed times but occasional variability.",
     "agent_endkey": false,
-    "user_utterance": "I find myself binge eating about once a week when I'm really stressed, and it can be really hard to control.",
-    "user_monologue": "I know I shouldn't turn to food for comfort, but sometimes it feels like the only thing that helps. I just wish I could find healthier ways to cope with my stress.",
-    "user_endkey": true,
-    "inferred_attributes": {
-      "age": "30s",
-      "gender": null,
-      "condition": null,
-      "mu": null,
-      "beta": null,
-      "alpha": null,
-      "gamma": null,
-      "memory": null,
-      "delta": null,
-      "epsilon": null
-    }
+    "user_utterance": "I’d rate the regularity of my eating schedule as a 4 out of 5. Most days I stick to breakfast around 7–8, lunch at noon, and dinner around 6–7, with a snack window around 3:30–4:00. I’ll keep using the craving-coping steps you outlined (delay 10 minutes, sip water, quick walk, non-food substitutes) and add a quick post-meal reflection to strengthen pattern memory and stay on track, aiming to push toward 5/5 even on busy or stressful days.",
+    "user_endkey": false,
+    "planned_suggestion": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Before we move on, do you have any health conditions that influence your diet or appetite (for example, diabetes, thyroid issues, PCOS, digestive problems, or anything else)? If none, you can say none.",
+    "agent_monologue": "Awaiting info on health conditions to update 'condition'. Next: ask about any health conditions that influence diet.",
+    "agent_endkey": false,
+    "user_utterance": "No health conditions to report. I don’t have diabetes, thyroid issues, PCOS, or digestive problems. I’m ready to keep the fixed schedule (7–8 breakfast, noon lunch, 6–7 dinner, 3:30–4:00 snack), continue with the craving-coping steps, and add the quick post-meal reflection to strengthen pattern memory.",
+    "user_endkey": false,
+    "planned_suggestion": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "One quick check: On a scale from 1 to 5, how open are you to trying new strategies or suggestions I propose, and adjusting the plan if needed? For example, would you be comfortable tweaking your fixed schedule if life gets busy, or prefer to keep things strictly as planned?",
+    "agent_monologue": "Inferred: condition=None; mu=4; beta=null (pending); alpha=2; gamma=4; memory=3; delta=5; epsilon=2. Next: assess beta (receptiveness to suggestions).",
+    "agent_endkey": false,
+    "user_utterance": "I'm about a 4/5 on trying new strategies. I value a fixed routine (7–8 breakfast, noon lunch, 6–7 dinner, 3:30–4:00 snack) and I'll keep using the craving-coping steps and the quick post-meal reflection. If life gets busy, I’m comfortable with small tweaks like shifting meal times by 15–30 minutes or expanding the snack window a bit, rather than abandoning the plan. I’ll also do brief post-meal reflections to strengthen pattern memory and log triggers when possible.",
+    "user_endkey": false,
+    "planned_suggestion": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "Thanks for laying all of that out. Based on our conversation, on a scale from 1.0 to 5.0, what goal level would you like to aim for with your dietary habits (1 = very poor, 5 = highly healthy and consistent)?",
+    "agent_monologue": "Inferred attributes so far: condition=none; mu=4; beta=4; alpha=4; gamma=4; memory=3; delta=5; epsilon=2. Prepared to ask for the goal behavior level to finalize the alignment.",
+    "agent_endkey": false,
+    "user_utterance": "I’d like to aim for a 4.5 out of 5, meaning highly healthy and consistent most days, with room for small adjustments when life gets busy.",
+    "user_endkey": false,
+    "planned_suggestion": null
   }
 ]

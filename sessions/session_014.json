@@ -1,0 +1,104 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "You're doing well today. To take a small, doable step, try an evening pause-and-log routine: 60 seconds before you snack, check in with your hunger. If you’re actually hungry, pick a small, pre-portioned option (like a handful of nuts or a piece of fruit) or a warm non-snack alternative (tea or water). Then log the snack immediately in your app, within two minutes. Keeping this simple and fixed taps into your need for structure and helps move you toward your goal.",
+    "agent_monologue": "I can’t share my full internal chain-of-thought, but here’s a concise rationale: given the user’s high sensitivity to stress and strong need for structure, a brief pause before snacking plus immediate logging with a pre-portioned option supports evening cues and reinforces a stable habit without overhauling the routine.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I can try that pause-and-log habit tonight. I’ll pause 60 seconds before snacking, check if I’m truly hungry, and if I am, choose a small, pre-portioned option (like fruit or a handful of nuts) and log it right away. If I’m not hungry, I’ll skip the snack and note the pause. Let’s see how this changes my pattern.",
+    "user_endkey": false,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Nice plan. Tonight's gentle nudge: after your 60-second pause, act on one clear choice right away. If you’re truly hungry, grab a single pre-portioned option (fruit or nuts), eat it, and log it within two minutes with a one-word hunger tag and a very brief note on how it felt. If you’re not hungry, skip the snack and log 'skipped—not hungry' along with a quick note about the pause. Keeping it lean and immediate supports your structure-seeking style and nudges you toward the desired pattern.",
+    "agent_monologue": "I can’t share my detailed internal chain-of-thought, but here’s a concise rationale: your profile shows a strong need for structure and quick, concrete actions, especially in the evening. A tiny, immediately logged decision after a brief pause reinforces the habit without overload, helping you steadily move toward the target behavior.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’m in. Tonight I’ll pause 60 seconds, check hunger, and if I’m hungry I’ll pick a single pre-portioned option (fruit or nuts) and log it right away; if I’m not hungry I’ll skip and log the pause. I’m hoping this steadies my BED pattern and nudges my behavior toward the more consistent range we’ve been aiming for.",
+    "user_endkey": false,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Tonight, after your 60-second pause, keep it ultra-simple: if you’re hungry, grab one pre-portioned item, eat it, and log it immediately with a short note. If you’re not hungry, skip the snack and log the pause. This steady, low-friction routine helps move toward your target pattern with consistency.",
+    "agent_monologue": "Brief rationale (concise and non-deliberative): This cue-focused approach uses your need for structure and reduces evening decision fatigue by anchoring behavior to a tiny, repeatable action, supporting a steadier BED pattern without overcomplication.",
+    "agent_endkey": false,
+    "user_utterance": "I did the 60-second pause, checked my hunger, and I wasn’t hungry, so I skipped the snack and logged the pause.",
+    "user_endkey": false,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Nice work sticking to the plan tonight. The next gentle nudge: after your 60-second pause, if you’re hungry, grab one small, pre-portioned item and log it immediately with a brief note. If you’re not hungry, skip the snack and log the pause with a short note about what you noticed (e.g., mood or cue). Keeping this ultra-simple and consistently logged supports steady progress toward your target pattern over time.",
+    "agent_monologue": "Brief reasoning: your score sits in the mid-range and your history shows you respond well to ultra-simple, immediate actions with quick logging. Maintaining a fixed, low-friction routine helps reduce cognitive resistance and nudges behavior toward the target pattern while respecting your need for structure.",
+    "agent_endkey": false,
+    "user_utterance": "Yeah, I did the 60-second pause again tonight. I wasn’t hungry, so I skipped the snack and logged the pause. I’m noticing that evening stress can trigger urges, but sticking to the pause helps me feel more in control. I’ll keep the plan going and keep logging what I notice.",
+    "user_endkey": false,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Nice progress tonight. To strengthen your pause-and-log routine during evening stress, add a tiny non-food reset after the 60-second pause: if you feel an urge, drink a glass of water, take 5 slow breaths, and log a one-word cue (like 'urge' or 'stress') plus one brief outcome. Keep it to about 2 minutes total, and log immediately. This keeps the routine lean, honors your structure, and helps reduce the impulse to snack while nudging you toward your goal.",
+    "agent_monologue": "High-level CBT rationale: evening stress heightens urges, so reinforcing a tiny, non-food coping step after the pause helps decouple urge from action. This leverages the user's need for structure and consistent logging, providing a quick, reliable way to maintain control and move toward the target pattern.",
+    "agent_endkey": false,
+    "user_utterance": "That suggestion landed tonight. After the 60-second pause, I felt the urge again with evening stress, but I tried the tiny non-food reset: I drank a glass of water, took 5 slow breaths, and logged a quick 'urge' cue plus a brief note on the outcome. It took about 2 minutes total and I didn't snack. Logging everything helped me feel more in control. I'll keep this up and keep noting what I notice, especially how stress triggers urges.",
+    "user_endkey": false,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "Tonight, after your 60-second pause, if stress triggers an urge, try a tiny two-step reset: (1) drink a glass of water and do 5 slow breaths, then (2) pause for 60 seconds before deciding about food. In your log, rate the urge from 1–5 and note how you feel. If you’re truly hungry after the reset, grab one small pre-portioned item and log immediately with a brief note. If not hungry, skip and log the pause. This small, repeatable ritual keeps you in control and moves you toward a steadier evening pattern.",
+    "agent_monologue": "I can’t share my private chain-of-thought, but here’s a concise rationale: for someone with high stress sensitivity and a strong need for structure, a short, repeatable post-pause ritual that includes both a non-food reset and a simple logging cue helps reduce impulsive snacking and strengthens consistent logging, nudging toward a steadier evening pattern.",
+    "agent_endkey": false,
+    "user_utterance": "Tonight I did the tiny two-step reset after the 60-second pause. Evening stress brought an urge, I drank water, did 5 slow breaths, and logged \"urge\" with a quick note on the outcome. It took about 2 minutes and I didn't snack. Logging helped me feel more in control. I'll keep this up and keep noting what I notice about triggers.",
+    "user_endkey": false,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Excellent progress tonight. To further anchor your pattern, add a tiny 2-minute post-reset decision window after your 60-second pause: if an urge arises, perform the water + 5 breaths reset again, then wait 2 minutes before deciding about food. If you’re still hungry after the wait, choose one small pre-portioned item and log it immediately; if not hungry, skip and log the pause. In your log, note the evening trigger (e.g., 'stress') and a brief plan for the next time you notice it. This keeps your routine tight, supports control under stress, and nudges your evenings toward steadier behavior.",
+    "agent_monologue": "The user shows strong adherence to a fixed, low-friction routine and reports stress-related urges in the evening. A brief, structured extension that keeps the process tangible (short reset, a brief decision window, immediate logging) should reinforce-control without increasing cognitive load. This aligns with their need for structure and gradual stabilization toward the target pattern.",
+    "agent_endkey": false,
+    "user_utterance": "Nice progress tonight. I did the two-step reset after the 60-second pause; the urge came with evening stress, but I drank water and took 5 slow breaths, logged the urge with a quick note, and did not snack. I will keep this up and continue noting what triggers come up so I can plan for the next time.",
+    "user_endkey": false,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Nice progress tonight. Try a new micro-step after the pause: add a brief grounding check before deciding about food. Do a quick sweep of your senses (name a few things you can see or hear and notice how your body feels) and then log a one-word trigger like 'stress' plus a brief outcome. If you still feel hungry after the grounding, have one small pre-portioned snack and log immediately; if not hungry, skip and log the pause. Keeping this ultra-simple and quick helps you build steady control toward your evening pattern.",
+    "agent_monologue": "I can't share my private chain-of-thought, but here's a concise rationale: your profile shows a strong need for structure and a high sensitivity to evening stress. Introducing a fresh, ultra-simple grounding ritual after the pause provides a non-food alternative that requires minimal effort, supports mindful awareness, and keeps logging consistent, all driving progress toward a steadier evening pattern.",
+    "agent_endkey": false,
+    "user_utterance": "Nice progress tonight. I did the grounding check after the 60-second pause; even with evening stress I followed the plan, logged the urge, and did not snack. I’ll keep this micro-step going and keep noting triggers so I can plan for next time.",
+    "user_endkey": false,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "Nice progress tonight. After your grounding check, add a brief 30-second value check: ask yourself 'Does choosing food align with my goal for steadier evenings?' Then log a one-word decision ('wait' or 'snack') plus a short note on the reason. If you choose 'wait', commit to using the full 2-minute wait before deciding about food. This ultra-simple step ties awareness to action and supports your evenings staying on track.",
+    "agent_monologue": "Reasoning: The user demonstrates solid self-regulation with grounding under evening stress and values structure. To nudge toward the target behavior without adding friction, a tiny post-grounding check that ties actions to core values leverages their need for clarity and keeps the routine low-cost. This supports consistency and gradual progress toward the goal without overwhelming the existing habit.",
+    "agent_endkey": false,
+    "user_utterance": "Nice progress tonight. I tried the grounding check after the 60-second pause, followed by the 30-second value check. Evening stress still came up, but I stuck to the plan, logged the urge, and didn’t snack. I’ll keep this micro-step going and keep noting triggers so I can plan for next time.",
+    "user_endkey": false,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "After your grounding check, add a final tiny decision point: log one-word 'wait' or 'snack' and a brief note on why you chose it. If you choose 'wait', commit to a short non-food reset during that wait (such as sipping water and taking a few slow breaths) before deciding about food. If you choose 'snack', limit yourself to one small pre-portioned item and log immediately with a brief note. Keep this ultra-simple to reinforce control and move your evenings toward steadier behavior.",
+    "agent_monologue": "Based on your profile (high sensitivity to stress, strong need for structure, and consistent logging), a brief, final decision point helps convert awareness into action without adding cognitive load. This keeps the pattern lean, supports your sense of control, and nudges toward the steadier evenings you’re aiming for.",
+    "agent_endkey": false,
+    "user_utterance": "Nice progress tonight. I tried the grounding check after the 60-second pause, followed by the 30-second value check. Evening stress still came up, but I stuck to the plan, logged the urge, and didn't snack. I'll keep this micro-step going and keep noting triggers so I can plan for next time.",
+    "user_endkey": false,
+    "planned_suggestion": 3.2323232323232323,
+    "ground_truth_action": null,
+    "inferred_action": 5.0,
+    "compliance_estimate": 0.56
+  }
+]

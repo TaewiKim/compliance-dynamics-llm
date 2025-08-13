@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 4.5,
+  "compliance_estimate": 0.65,
+  "confidence": 0.7,
+  "basis": "User indicated 'after dinner' they moved their phone, did a 60-second slow-breath pause, and logged the meal as 'meal logged,' which implies they consumed a dinner and completed the logging step.",
+  "cognitive_dissonance": "No explicit inner conflict or justification fragment observed.",
+  "negative_thought_patterns": "None explicitly observed (no self-blame, hopelessness, or all-or-nothing thinking in the log).",
+  "emotional_triggers": "No specific emotional triggers described; context suggests routine evening behavior with no stated stressor.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Clear, actionable steps",
+    "Normalization of setbacks"
+  ],
+  "coaching_notes": "Maintain a supportive, non-judgmental tone with brief, achievable steps after meals. Highlight that logging is a separate action from eating and reinforce consistency over perfection. In the next session, explore hunger/satiety cues, portion awareness, and any barriers to logging or following steps on busy evenings."
+}

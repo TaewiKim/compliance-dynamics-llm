@@ -1,0 +1,16 @@
+{
+  "user_action_estimate": 1.0,
+  "compliance_estimate": 0.38,
+  "confidence": 0.65,
+  "basis": "The user repeats plans to snack and log within 5 minutes but does not report an actual eating action completed in this turn; the observed behavior is planning and commitment rather than action.",
+  "cognitive_dissonance": "No clear internal conflict; user stays aligned with the plan and acknowledges BED challenges without self-blame.",
+  "negative_thought_patterns": "Minimal; mentions BED challenges and strives for simplicity and steady progress. Potential minor risk of all-or-nothing thinking around maintaining a precise consistency level.",
+  "emotional_triggers": "Stress and evening cues are cited as triggers; BED-related urges tied to these contexts; labeling is used as a coping strategy.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Positive framing",
+    "Concrete micro-action guidance",
+    "Normalization of setbacks"
+  ],
+  "coaching_notes": "Maintain a calm, supportive tone with a focus on micro-actions and cue-labeling. Reinforce self-compassion and flexibility to accommodate BED variability. If slips occur, guide the user back to the exact micro-step sequence and consider adding a brief mood/sleep check-in to tailor support."
+}

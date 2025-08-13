@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 3.2,
+  "compliance_estimate": 0.865,
+  "confidence": 0.7,
+  "basis": "User states intention to start with a protein-forward bite and to pause; no explicit actual ingestion is reported in this turn, only planning and logging intent.",
+  "cognitive_dissonance": "Minimal explicit cognitive dissonance. The user acknowledges BED and pattern variability and frames steps with kindness, which reduces internal conflict. If any tension exists, it is around staying consistent amid variability.",
+  "negative_thought_patterns": "References to BED and pattern variability suggest concern about relapse and fluctuating eating patterns. No strong self-blame or hopeless statements; some focus on struggle, which is common but not pathological in this context.",
+  "emotional_triggers": "Urges to eat, stress or emotional discomfort linked to BED concerns; variability in patterns can amplify anxiety about staying on track.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalization of setbacks"
+  ],
+  "coaching_notes": "Maintain a warm, nonjudgmental tone. Emphasize small, concrete steps and urge-surfing techniques. Encourage immediate logging after decisions, prep portable protein options for busy periods, and consider adding mood/hunger tracking to anticipate triggers. Reinforce self-compassion and progress over perfection, especially when variability occurs."
+}

@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 1.0,
+  "compliance_estimate": 0.32,
+  "confidence": 0.7,
+  "basis": "The user description focuses on diaphragmatic breathing and micro-actions with no reported eating episode; action is aligned with BED management, not eating.",
+  "cognitive_dissonance": "No explicit internal conflict detected; user consistently expresses plan adherence.",
+  "negative_thought_patterns": "None observed in this turn.",
+  "emotional_triggers": "Historical trigger: post-dinner tension and urges ~6/10; current emphasis on maintaining an adherence rhythm (4.5) suggests concern about consistency under stress.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Clear structure",
+    "Normalization of setbacks"
+  ],
+  "coaching_notes": "Maintain a warm, encouraging tone; emphasize very small, repeatable actions; continue prompting logging of urge and mood; monitor for rising urges and be prepared to introduce additional micro-actions or adjust duration if needed to preserve engagement and progress."
+}

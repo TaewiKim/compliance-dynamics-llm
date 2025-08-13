@@ -1,0 +1,104 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Tonight’s gentle step: after dinner, spend 60 seconds writing one brief sentence in your notes app that captures what you ate and how full you felt (e.g., 'Dinner: chicken and vegetables; fullness 4/5'). Keep it to one line, save it, and use tomorrow’s reflection as your momentum boost. If you miss it, simply try again after the next meal.",
+    "agent_monologue": "Reasoning: For this client, a micro-step that is quick, concrete, and anchored to an existing routine (dinner) reduces friction and supports gradual habit formation. A single, brief post-meal reflection leverages her need for structure, minimizes cognitive load, and creates a small win that can compound toward the target behavior over time.",
+    "agent_endkey": false,
+    "user_utterance": "That sounds doable—I'll try the 60-second post-dinner note tonight and jot a single line about what I ate and how full I felt. If I miss it, I'll reset at the next meal and treat it as a small momentum boost.",
+    "user_endkey": false,
+    "planned_suggestion": 1.9191919191919191,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Nice next move. Tonight, try a fresh micro-step after dinner: take a brief moment to jot a single-line note in your notes app that includes what you ate, your fullness on a 0–5 scale, and one small tweak you’ll try tomorrow (e.g., sip water before the next bite, add protein at your next meal). Keep it to one line and save it. If you miss it, simply start fresh at your next meal and treat it as a tiny momentum boost.",
+    "agent_monologue": "I can’t share my full internal chain-of-thought, but here’s a brief rationale: this user benefits from a tiny, structured, low-effort post-meal cue to reinforce logging and reduce cognitive load, especially given stress and evening sensitivity. It supports gradual habit-building toward the target level without triggering overwhelm.",
+    "agent_endkey": false,
+    "user_utterance": "I like this micro-step. After dinner tonight I’ll jot one line in my notes about what I ate, how full I felt, and one small tweak for tomorrow. If I miss it, I’ll reset at the next meal and keep going—BED is tough, but these tiny checks feel doable.",
+    "user_endkey": false,
+    "planned_suggestion": 1.9191919191919191,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Tonight’s micro-step: after you finish dinner, spend 60 seconds to write a single-line note in your notes app that (a) names what you ate, (b) shows how full you felt on a 0–5 scale, and (c) names one simple tweak for tomorrow (e.g., sip water before bites, add a protein at the next meal, or pause 10 seconds before seconds). Right after logging, move your phone to another room for a short window to reduce evening checks. If you miss it, reset at the next meal and treat it as a tiny momentum boost. You’ve got this.",
+    "agent_monologue": "The user shows a clear preference for tiny, structured steps and is sensitive to evening cues (BED context). Their current momentum is fragile but intentional, so I’ll propose a two-part micro-step that is easy to execute, supports habit stacking, and reduces evening distractions. By adding a non-food trigger (phone away) alongside the post-dinner log, we address both memory/logging consistency and environmental nudges that often derail meals. The approach respects their need for structure and provides a gentle reset option at the next meal, which aligns with their profile and aims to gradually lift the behavior score toward the target.",
+    "agent_endkey": false,
+    "user_utterance": "Plan for tonight: after dinner I'll jot a single-line note in my notes app about what I ate, how full I felt (0–5), and one small tweak for tomorrow. If I miss it, I'll reset at the next meal and keep going—BED is tough, but these tiny checks feel doable.",
+    "user_endkey": false,
+    "planned_suggestion": 1.9191919191919191,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Tonight, try a small variation: after dinner, spend 60 seconds jotting a single-line note that (a) lists what you ate, (b) rates fullness 0–5, and (c) records one tiny tweak for tomorrow. Immediately move your phone to another room for a brief 10-minute wind-down to reduce evening checks. If you miss it, reset at the next meal and keep going—these ultra-simple checks are doable and will gradually move you toward the target.",
+    "agent_monologue": "A concise CBT-style rationale: You respond well to clear, structured routines. A tiny post-meal log paired with a short wind-down reduces evening cues and cognitive load, reinforcing a controllable habit and building steady momentum toward the goal without overhauling your day.",
+    "agent_endkey": false,
+    "user_utterance": "Yeah, I'll try tonight's 60-second note after dinner—one line about what I ate, my fullness on a 0–5 scale, and one tweak for tomorrow. BED makes this hard, but these tiny checks feel doable. If I miss it, I'll reset at the next meal and keep going.",
+    "user_endkey": false,
+    "planned_suggestion": 1.9191919191919191,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Tonight’s micro-step: after dinner, write a single-line note that (a) lists what you ate, (b) rates fullness 0–5, and (c) records one tiny tweak for tomorrow. Then immediately pair that with a quick cue to close the loop (e.g., brush your teeth or take a 2-minute mindful breath) and move on. If you miss it, reset at the next meal and keep going—BED is tough, but these ultra-simple checks are doable and will steadily build a reliable routine.",
+    "agent_monologue": "Brief CBT-style reasoning: The user benefits from a highly structured, low-effort routine to counter evening BED cues. By tying a tiny post-dinner monitoring step to a clear, immediate cue and a single tomorrow tweak, we reinforce self-efficacy and reduce decision fatigue. This aligns with behavioral activation and habit formation principles, promoting consistency through ultra-short, repeatable actions rather than all-or-nothing effort.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s 60-second post-dinner note—one line about what I ate, my fullness on a 0–5 scale, and one tweak for tomorrow. BED is tough, but these tiny checks feel doable. If I miss it, I’ll reset at the next meal and keep going.",
+    "user_endkey": false,
+    "planned_suggestion": 1.9191919191919191,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "Tonight, try a slightly adjusted micro-step: after dinner, in under a minute jot a one-line log (what you ate, fullness 0–5, and one tweak for tomorrow). Immediately pair that with a brief wind-down: sip water, take three slow breaths, and move your phone to another room for a 10-minute window. If you miss it, reset at the next meal and keep going—BED is tough, but these ultra-simple checks build a steady routine toward your goal.",
+    "agent_monologue": "Reasoning: The user benefits from a small, structured, low-friction routine after dinner, given their high sensitivity to evening cues and need for fixed structure. A slightly adjusted micro-step that includes a quick wind-down helps close the loop and reduces the likelihood of BED-related evening grazing, promoting gradual progress toward the target behavior without overwhelming the user.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s 60-second post-dinner note—one line about what I ate, my fullness on a 0–5 scale, and one tweak for tomorrow. BED is tough, but these tiny checks feel doable. If I miss it, I’ll reset at the next meal and keep going.",
+    "user_endkey": false,
+    "planned_suggestion": 1.9191919191919191,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Tonight, after dinner, log in under a minute: one line with what you ate, fullness on a 0–5 scale, and one tiny tweak for tomorrow. Then do a quick wind-down (sip water, three slow breaths) and move your phone to another room for a short window. If you miss it, reset at the next meal and keep going.",
+    "agent_monologue": "This user benefits from a highly structured, low-ambiguity approach due to high sensitivity to evening cues and a strong need for routine. By anchoring behavior to a tiny, clearly defined post-dinner log and pairing it with a brief wind-down, we reduce cognitive load and promote consistent practice. The emphasis on resets after misses honors BED-related challenges and prevents all-or-nothing thinking, supporting gradual habit formation and momentum.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s 60-second post-dinner note—one line about what I ate, my fullness on a 0–5 scale, and one tweak for tomorrow. BED is tough, but these tiny checks feel doable. If I miss it, I’ll reset at the next meal and keep going.",
+    "user_endkey": false,
+    "planned_suggestion": 1.9191919191919191,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 8,
+    "agent_utterance": "Tonight, after dinner, spend just under a minute to log one line: what you ate, your fullness on a 0–5 scale, and one tiny tweak for tomorrow. Then do a brief 2-minute wind-down (sip water, take three slow breaths) and move your phone to another room for a short quiet window. If you miss it, reset at the next meal and keep going.",
+    "agent_monologue": "Brief CBT-style reasoning: The micro-step uses a small, predictable post-meal action paired with a brief wind-down to reduce evening cognitive load and BED-related triggers. By tying logging to dinner and adding a tiny ritual, we reinforce consistency without pressure, supporting gradual progress toward a fuller routine.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try tonight’s micro-step after dinner: one line about what I ate, my fullness on a 0–5 scale, and one tweak for tomorrow. BED is tough, but these tiny checks feel doable. If I miss it, I’ll reset at the next meal and keep going.",
+    "user_endkey": false,
+    "planned_suggestion": 1.9191919191919191,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 9,
+    "agent_utterance": "After dinner, commit to a micro-log: one line noting what you ate, your fullness on a 0–5 scale, and one small tweak for tomorrow. Then pair that with a brief wind-down (sip water, slow breath) and move your phone to another room for a few minutes. If you miss it, reset at the next meal and keep going.",
+    "agent_monologue": "I’m choosing a small, structured post-dinner cue that aligns with her need for routine and evening sensitivity. By keeping the action to a single-line log plus a brief wind-down, this supports steady habit formation without triggering overwhelm, nudging toward consistent self-monitoring.",
+    "agent_endkey": false,
+    "user_utterance": "I like this micro-step and I'll try tonight's 60-second post-dinner log: one line about what I ate, my fullness on a 0–5 scale, and one tweak for tomorrow. BED is tough, but these tiny checks feel doable. If I miss it, I'll reset at the next meal and keep going.",
+    "user_endkey": false,
+    "planned_suggestion": 1.9191919191919191,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 10,
+    "agent_utterance": "Tonight’s micro-nudge: after dinner, in under a minute, log one line detailing what you ate and your fullness on a 0–5 scale, then add one tiny tweak for tomorrow that targets a common after-dinner trigger (for example, 'sip water before dessert' or 'pause 10 seconds before seconds'). Immediately pair this with a brief wind-down and move your phone to a different room for a short window. If you miss it, reset at the next meal and keep going.",
+    "agent_monologue": "Reasoning: The user benefits from a small, trigger-aware micro-step that feels doable within a minute and reduces evening BED cues. By including a concrete, tomorrow-focused tweak tied to a common trigger, we support forward momentum and a structured routine. Treat any missed attempts as part of the process, reinforcing consistency over perfection.",
+    "agent_endkey": false,
+    "user_utterance": "I'll try tonight's micro-step after dinner: one line about what I ate, my fullness on a 0–5 scale, and one tweak for tomorrow. BED is tough, but these tiny checks feel doable. If I miss it, I'll reset at the next meal and keep going.",
+    "user_endkey": false,
+    "planned_suggestion": 1.9191919191919191,
+    "ground_truth_action": null,
+    "inferred_action": 2.5,
+    "compliance_estimate": 0.86
+  }
+]

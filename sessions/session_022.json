@@ -1,0 +1,74 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Try this small, repeatable step at your next meal: after you log, pause for 60 seconds to check your hunger, then plate a pre-planned, palm-sized portion (for example, a lean protein with vegetables) and eat that first. Avoid seconds unless you genuinely want more after finishing that portion. If you’re not hungry, sip water and revisit food decision after a short wait. This keeps your routine tight and reduces impulsive snacking while honoring your structure needs.",
+    "agent_monologue": "Reasoning: Your profile shows you thrive with structure and are sensitive to evening cues. A tiny, repeatable micro-step that introduces a predictable portion size can reduce decision fatigue and gently nudge you upward toward a steadier routine without triggering overwhelm.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try your 60-second hunger check and plate a palm-sized portion at my next meal. If I’m still hungry after finishing that portion, I’ll sip water and wait a few minutes before deciding on seconds. I’m hopeful this helps with BED and reduces impulsive snacking.",
+    "user_endkey": false,
+    "planned_suggestion": 2.878787878787879,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Great job sticking with the 60-second hunger check and the palm-sized portion. To nudge your pattern gently toward your goal, add a 2-minute post-meal urge reset: after you finish the portion, name what you crave and rate its intensity (0–10). Then choose one tiny action to bridge the urge—sip water or herbal tea, do a 2-minute gentle stretch, or take a quick 60-second walk. Reassess in 5–10 minutes: if you’re not truly hungry, skip seconds; if the urge remains strong, you can decide with patience. This keeps your routine structured, supports impulse control, and honors your hunger cues.",
+    "agent_monologue": "A brief, high-level rationale: given the user’s need for structure and sensitivity to stress, a short post-meal reset using urge labeling and a tiny coping action helps decouple urges from eating without adding pressure, nudging progress in a steady, sustainable way.",
+    "agent_endkey": false,
+    "user_utterance": "Thanks for the guidance. I’m going to try the 60-second hunger check and plate a palm-sized portion at my next meal. If I’m still hungry after that, I’ll sip water and wait a few minutes before deciding on seconds. I’ll also start naming what I crave and rating the urge after meals, plus the 2-minute urge reset, and I’ll update you on how it goes. I’m hopeful this helps with BED and reduces impulsive snacking.",
+    "user_endkey": false,
+    "planned_suggestion": 2.878787878787879,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 3,
+    "agent_utterance": "Nice progress. To gently nudge toward your goal with minimal extra load, add a tiny post-meal routine: after you finish your palm-sized portion, spend 60 seconds naming one thing you valued about the meal or a small non-food reward you earned today, then rate your urge on a 0–10 scale and pick one tiny action to bridge any remaining urge (sip water, take a 60-second walk, or a brief stretch). Keep this consistent after meals for the next week, and reassess how you feel in the evening. You’re building steady momentum one small step at a time.",
+    "agent_monologue": "High structure and sensitivity to evening cues favor ultra-short, repeatable post-meal steps with a quick self-check to counter urges. A brief reflection plus a single micro-action after meals reduces cognitive load and reinforces goal-aligned behavior, supporting gradual progress toward the target level without overwhelming the user.",
+    "agent_endkey": false,
+    "user_utterance": "Thanks for the adjustments. I’ll try the 60-second hunger check and palm-sized portion at my next meal, and I’ll wait a bit before deciding on seconds if I’m still hungry. I’ll also name what I crave and rate the urge after meals, plus the 2-minute urge reset. I’ll keep you posted on how it goes.",
+    "user_endkey": false,
+    "planned_suggestion": 2.878787878787879,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 4,
+    "agent_utterance": "Try this small post-meal anchor for the next week: after you finish your portion, spend 60 seconds naming one non-food reward you’re working toward (for example, a short walk, a new playlist, or a quick stretch). Then rate your craving on a 0–10 scale and complete a brief reset activity (1–2 minutes of light movement or breathing). Finally, pause for 5 minutes before deciding on seconds; if you’re not clearly hungry, skip seconds. This keeps meals structured, supports BED management, and builds momentum through tiny, repeatable steps.",
+    "agent_monologue": "Given the user’s need for fixed structure and sensitivity to evening cues, a tiny post-meal anchor combines value-related reflection with a low-effort reset. This leverages CBT-focused techniques (urge labeling, behavioral activation) in a highly doable step, reducing automatic snacking without increasing cognitive load and nudging toward steadier progress.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try your post-meal anchor for the next week: after I finish my portion, I’ll name one non-food reward I’m working toward, rate my craving on 0–10, and do a 1–2 minute reset. I’ll pause 5 minutes before deciding on seconds, and I’ll let you know how it goes.",
+    "user_endkey": false,
+    "planned_suggestion": 2.878787878787879,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 5,
+    "agent_utterance": "Nice plan for the week. After you finish your palm-sized portion, spend about 60 seconds noting one non-food goal you’re working toward, rate your craving from 0 to 10, and do a short reset (1–2 minutes). Then pause for 5 minutes before deciding on seconds. If you’re still unsure, try a tiny, value-aligned action (a quick stretch, a short walk, or a glass of water) before you decide. You’re building steady momentum with simple, repeatable steps.",
+    "agent_monologue": "Reasoning: The user benefits from high structure and quick, value-aligned micro-steps. A post-meal anchor with a brief urge-rating strengthens self-regulation, uses cognitive reframing, and ties actions to personal goals, which fits their profile (high need for structure, stress sensitivity, evening cues). This supports gradual movement toward a moderate target without overwhelming them.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I’ll try your post-meal anchor after my next meal: finish portion, spend 60 seconds naming a non-food reward I’m working toward, rate my craving 0–10, and do a 1–2 minute reset. Then pause 5 minutes before deciding on seconds. I’ll let you know how it goes and stay hopeful this supports BED management.",
+    "user_endkey": false,
+    "planned_suggestion": 2.878787878787879,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 6,
+    "agent_utterance": "Continue with your post-meal anchor as you described. After you rate your craving and complete the 1–2 minute reset, add one tiny, value-aligned action if you still feel the urge (for example, a 60-second mindful breath, a glass of water, or a quick stretch). Then note one quick benefit you felt from choosing the palm-sized portion. This small reinforcement keeps your routine steady and supports BED management without adding extra pressure.",
+    "agent_monologue": "From a CBT-informed view, strengthening cue-respond links with ultra-brief, value-aligned actions helps reduce automatic urges, especially given the user's high need for structure and stress sensitivity. By maintaining the post-meal anchor and adding a tiny reinforcement when urges arise, we support consistent behavior without adding cognitive burden, nudging toward the targeted level of consistency.",
+    "agent_endkey": false,
+    "user_utterance": "Thanks for the guidance. I’ll try the post-meal anchor after my next meal: finish the palm-sized portion, spend 60 seconds naming a non-food reward I’m working toward, rate my craving 0–10, and do a 1–2 minute reset. Then I’ll pause 5 minutes before deciding on seconds. I’ll let you know how it goes and stay hopeful this supports BED management.",
+    "user_endkey": false,
+    "planned_suggestion": 2.878787878787879,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 7,
+    "agent_utterance": "Great plan. To further strengthen your structure, add a brief pre-meal intention cue: 30–60 seconds before you start your palm-sized portion, name one value or goal you’re honoring with this meal (for example, fueling your day, staying grounded, or caring for your health). Then proceed with the palm-sized portion and your post-meal anchors (60-second hunger check, rate craving 0–10, 1–2 minute reset, and a 5-minute pause before deciding on seconds). Keep this one-step pre-meal anchor simple and repeatable for the week. If you’re not hungry at all, still go through the intention and proceed with your normal routine to maintain consistency.",
+    "agent_monologue": "Reasoning: The user thrives on ultra-structured, micro-steps and is sensitive to evening cues. Introducing a brief pre-meal intention cue complements the post-meal anchors and helps align each meal with a value-based goal, nudging gradual progress without adding pressure.",
+    "agent_endkey": false,
+    "user_utterance": "Sounds good. I’ll follow the post-meal anchor after my next meal: finish the palm-sized portion, spend 60 seconds naming a non-food reward I’m working toward, rate my craving 0–10, and do a 1–2 minute reset, then pause 5 minutes before deciding on seconds. I’ll update you on how it goes and stay hopeful this supports BED management.",
+    "user_endkey": true,
+    "planned_suggestion": 2.878787878787879,
+    "ground_truth_action": 4.5,
+    "inferred_action": 1.0,
+    "compliance_estimate": 0.53
+  }
+]

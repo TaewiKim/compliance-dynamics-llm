@@ -1,0 +1,24 @@
+[
+  {
+    "turn": 1,
+    "agent_utterance": "Nice progress tonight. After dinner, try a 2-minute post-meal micro-check-in: pick one word that describes your fullness (for example, 'satisfied' or 'slightly full') and jot a single line in your log about that feeling. Keep it simple and do this once per evening. If life gets busy, you can save the line for later that night. The goal is consistency over perfection to steadily build momentum toward healthier routines.",
+    "agent_monologue": "High-level reasoning: given her evening sensitivity and strong need for structure, a tiny, repeatable post-dinner cue that’s easy to perform can boost consistency without creating added stress. The aim is a small step that enhances awareness of fullness and logging, gradually nudging behavior upward toward the target without overwhelming her.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I hear you. Those numeric tips feel a bit abstract, so I’ll keep it practical: I’ll pick one mindful option today (like a balanced snack) and do my 2-minute post-meal check-in this evening, then log a one-word fullness note. My recent behavior has stayed around a 4, so I’ll aim to edge toward healthier choices without being perfect.",
+    "user_endkey": false,
+    "planned_suggestion": 2.929292929292929,
+    "ground_truth_action": null
+  },
+  {
+    "turn": 2,
+    "agent_utterance": "Great plan. Today, commit to one mindful option: a balanced snack with protein and fiber (examples: Greek yogurt with berries, or an apple with a tablespoon of peanut butter). After dinner, take 2 minutes to check in on your fullness and log a one-word note (like 'satisfied' or 'full'). If you feel a urge to snack, pause for 60 seconds and choose the mindful option you planned. Keep portions small and pre-portion if possible so the choice feels automatic. This small, steady step will help you edge toward healthier patterns without needing perfection.",
+    "agent_monologue": "This user benefits from small, structured steps and predictable routines. Evening cues can trigger substitutions; a single, protein/fiber-balanced snack plus a brief post-meal check-in reduces impulsive choices and reinforces mindful eating, building momentum toward the higher target without overwhelming changes.",
+    "agent_endkey": false,
+    "user_utterance": "Okay, I'll go with one mindful option tonight: Greek yogurt with berries as my snack. After dinner I'll do the 2-minute fullness check and log a one-word note. If I feel the urge to snack, I'll pause for 60 seconds and choose this option. I'll keep portions small and pre-portion to keep it easy.",
+    "user_endkey": true,
+    "planned_suggestion": 2.929292929292929,
+    "ground_truth_action": 4.5,
+    "inferred_action": 4.0,
+    "compliance_estimate": 0.73
+  }
+]

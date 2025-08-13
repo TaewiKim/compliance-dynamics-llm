@@ -1,0 +1,16 @@
+{
+  "user_action_estimate": 1.0,
+  "compliance_estimate": 0.18,
+  "confidence": 0.65,
+  "basis": "The user did not report any eating action in this session (no snack intake). They did follow the cue-action-logging protocol and performed the micro-action, but since the action being scored is an eating action, the actual eating action is effectively 1.0 (no eating). The last numeric suggestion S = 4.29 is about the recommended micro-action plan, which the user adhered to, but the inferred eating action itself was non-eating.",
+  "cognitive_dissonance": "Low. User expresses commitment to BED care and consistently follows the plan without expressing internal conflict.",
+  "negative_thought_patterns": "No explicit negative beliefs or self-criticism detected. The user shows ongoing monitoring and a focus on consistency; minimal all-or-nothing language observed.",
+  "emotional_triggers": "Fatigue and cravings are underlying factors discussed across sessions; current notes show motivation to maintain BED care, with urges tracked on a 0–10 scale.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Clear, actionable micro-actions",
+    "Positive reinforcement for adherence",
+    "Structured progression"
+  ],
+  "coaching_notes": "Maintain a supportive, non-judgmental tone. Continue reinforcing ultra-simple micro-actions and urge-tracking to minimize cognitive load. If progress stalls around the 4–4.5 pattern score, consider small, optional adjustments to scale or micro-actions while preserving simplicity. Encourage the user to reflect on which micro-actions most effectively reduce urges and to apply those consistently."
+}

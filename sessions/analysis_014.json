@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 5.0,
+  "compliance_estimate": 0.56,
+  "confidence": 0.7,
+  "basis": "User explicitly states no snack was taken after the 60-second pause and micro-steps, and urges were logged, indicating alignment with the plan.",
+  "cognitive_dissonance": "No explicit internal conflict expressed; user consistently notes sticking to plan despite stress.",
+  "negative_thought_patterns": "No clear self-defeating beliefs; mentions urges under stress but does not express hopelessness or blame.",
+  "emotional_triggers": "Evening stress identified as a trigger for urges; user notes triggers and intent to monitor for next time.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Maintain a calm, supportive tone with brief, actionable micro-steps. Encourage continued logging and trigger awareness. If stress increases, consider adding a short non-food grounding routine or a very brief pause before deciding about food to reinforce control without adding friction."
+}

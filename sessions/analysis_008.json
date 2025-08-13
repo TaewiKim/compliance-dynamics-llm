@@ -1,0 +1,15 @@
+{
+  "user_action_estimate": 4.0,
+  "compliance_estimate": 0.9,
+  "confidence": 0.7,
+  "basis": "User consumed the smallest pre-portioned option (a small apple) after rating hunger 6/10 (>4) and logged it, aligning with the last specified rule.",
+  "cognitive_dissonance": "No explicit internal conflict; user appears to accept and follow the plan.",
+  "negative_thought_patterns": "No self-defeating beliefs or hopeless thinking observed in this turn.",
+  "emotional_triggers": "Tension or stress preceding decision; user mentions using a brief breath or water to stay calm.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Praise",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Maintain ultra-simple anchor and hunger-rating rule. Reinforce calm strategies (breathing, water) and consistent logging. Acknowledge progress, and consider gentle scaling of choices or variations only if adherence remains strong."
+}

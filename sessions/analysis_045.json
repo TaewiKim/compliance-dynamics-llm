@@ -1,0 +1,14 @@
+{
+  "user_action_estimate": 1.0,
+  "compliance_estimate": 0.52,
+  "confidence": 0.65,
+  "basis": "User stated intention to eat a pre-planned snack tonight (an apple) and log it, but no actual eating action is described as completed in this message.",
+  "cognitive_dissonance": "Low to none; user expresses alignment with the plan and acknowledges BED without expressing internal conflict.",
+  "negative_thought_patterns": "No explicit self-defeating beliefs or guilt; references to BED but with a constructive framing. No clear all-or-nothing thinking observed in this message.",
+  "emotional_triggers": "No explicit triggers described; BED history mentioned as context, but current message focuses on planning rather than emotional response.",
+  "effective_reinforcement": [
+    "Empathy",
+    "Normalizing setbacks"
+  ],
+  "coaching_notes": "Next session: confirm whether the planned snack was actually consumed, portion size, and immediate feelings. If action was not taken, explore barriers (cravings, access, timing) and reinforce the value of small, consistent steps. Maintain a warm, non-judgmental tone; continue promoting simple, pre-planned options and mindful logging. Watch for any emerging all-or-nothing thinking and reframe as gradual progress."
+}
