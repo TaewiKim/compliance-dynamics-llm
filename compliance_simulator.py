@@ -58,93 +58,6 @@ def compute_compliance(suggestion: float, action: float) -> float:
     c = 1.0 - abs(float(action) - float(suggestion)) / rng
     return float(np.clip(c, 0.0, 1.0))
 
-
-# -------------------------------
-# Mock mode patching
-# -------------------------------
-
-def patch_mock_mode(sim: Simulator):
-    """
-    Monkey-patch Simulator.generate_response and Simulator._analyze_session
-    so the app can run without real API calls. This preserves the JSON
-    formats expected by your existing code.
-    """
-
-    def mock_generate_response(self, role, content, history, model_name, api_url, api_key, headers,
-                               return_raw=False, retries=5, backoff_base=1.0, timeout=60):
-        # Build a minimal 'messages' just to keep shape similar
-        messages = history + [{"role": ("assistant" if role == "agent" else "user"), "content": content}]
-
-        # Agent (first session) — ask one simple question
-        if role == "agent" and "first session" in content.lower():
-            parsed = {
-                "utterance": "최근 식사 패턴을 한 가지만 알려주실래요? 예: 아침은 거르는 편이에요.",
-                "monologue": "첫 세션: 라포 형성과 현재 습관 탐색.",
-                "endkey": False
-            }
-
-        # Agent (ongoing session) — supportive suggestion aligned with planned numeric suggestion
-        elif role == "agent":
-            planned = parse_last_suggestion_from_agent_prompt(content, default=3.2)
-            # Keep numeric suggestion private; utterance is qualitative
-            parsed = {
-                "utterance": "오늘은 저녁에 채소 반찬 한 가지를 먼저 접시에 담아보는 건 어때요? 너무 부담스럽지 않게 작은 한 걸음부터요.",
-                "monologue": "사용자 순응성 중간, 작은 행동 유도. 계획된 숫자 제안에 맞춰 강도 조절.",
-                "endkey": False
-            }
-
-        # User — sometimes takes an action (endkey=True) and returns action ~ last suggestion
-        elif role == "user":
-            recs = parse_recent_recs_from_user_prompt(content)
-            last_rec = recs[-1] if recs else 3.0
-            will_act = random.random() < 0.35
-            if will_act:
-                action = clip1to5(random.gauss(last_rec, 0.6))
-                parsed = {
-                    "utterance": "좋아요, 오늘은 말씀하신 대로 조금 더 신경 써볼게요.",
-                    "endkey": True,
-                    "action": action
-                }
-                # expose to analyzer
-                self._mock_last_action = action
-            else:
-                parsed = {
-                    "utterance": "음… 오늘은 일이 많아서 크게 바꾸기는 어려울 것 같아요. 내일은 시도해볼게요.",
-                    "endkey": False
-                }
-                self._mock_last_action = None
-        else:
-            parsed = {"utterance": "OK", "endkey": False}
-
-        raw = json.dumps(parsed, ensure_ascii=False)
-        return {"parsed": parsed, "raw": raw, "messages": messages} if return_raw else parsed
-
-    def mock_analyze_session(self, conversation_history, session_id, last_suggestion):
-        # Prefer the last 'ground truth' action if user took one in the mocked user turn
-        action_est = self._mock_last_action if getattr(self, "_mock_last_action", None) is not None \
-                     else clip1to5(random.gauss(last_suggestion, 0.8))
-        comp = compute_compliance(last_suggestion, action_est)
-        analysis = {
-            "user_action_estimate": round(float(action_est), 3),
-            "compliance_estimate": round(float(comp), 3),
-            "confidence": 0.65 if getattr(self, "_mock_last_action", None) is not None else 0.5,
-            "basis": "대화의 수용적 톤과 최근 제안 강도 대비 반응을 근거로 추정.",
-            "cognitive_dissonance": "변화 의지는 있으나 일정/피로로 인해 망설임.",
-            "negative_thought_patterns": "일시적 회피, 부담감.",
-            "emotional_triggers": "업무 스트레스, 시간 부족.",
-            "effective_reinforcement": ["Empathy", "Small wins", "Specific next step"],
-            "coaching_notes": "작은 행동부터, 구체적 실행조건(시간/장소) 제안."
-        }
-        # Save like the original
-        os.makedirs("sessions", exist_ok=True)
-        with open(f"sessions/analysis_{session_id:03}.json", "w", encoding="utf-8") as f:
-            json.dump(analysis, f, ensure_ascii=False, indent=2)
-        return analysis
-
-    sim.generate_response = types.MethodType(mock_generate_response, sim)
-    sim._analyze_session = types.MethodType(mock_analyze_session, sim)
-
-
 # -------------------------------
 # UI State
 # -------------------------------
@@ -158,8 +71,6 @@ def init_state():
         st.session_state.next_id = 1      # next session id after profiling
     if "last_step_info" not in st.session_state:
         st.session_state.last_step_info = {}
-    if "mock_mode" not in st.session_state:
-        st.session_state.mock_mode = True
     if "inited" not in st.session_state:
         st.session_state.inited = False
 
@@ -168,7 +79,7 @@ def init_state():
 # Build simulator
 # -------------------------------
 
-def build_simulator(user_profile, model_name="gpt-5-nano", mock_mode=True):
+def build_simulator(user_profile, model_name="gpt-5-nano"):
     action_space = np.linspace(0.0, 5.0, 100)
     # Important: Agent/User read OPENAI_API_KEY at __init__ time
     user = UserLlm(user_profile, model_name=model_name)
@@ -177,10 +88,6 @@ def build_simulator(user_profile, model_name="gpt-5-nano", mock_mode=True):
                   user_gender=user_profile.get("gender"),
                   model_name=model_name)
     sim = Simulator(user=user, agent=agent, action_space=action_space, total_steps=200)
-    if mock_mode:
-        patch_mock_mode(sim)
-    return sim
-
 
 # -------------------------------
 # One-step runner
@@ -262,10 +169,7 @@ init_state()
 st.title("Dietary Coaching Simulation — Streamlit Dashboard")
 
 with st.expander("🔧 실행 설정", expanded=True):
-    col_a, col_b, col_c = st.columns([1, 1, 1])
-    with col_a:
-        st.session_state.mock_mode = st.toggle("Mock 모드(오프라인 실행)", value=st.session_state.mock_mode,
-                                               help="OFF로 두고 OPENAI_API_KEY를 설정하면 실제 API로 동작합니다.")
+    col_b, col_c = st.columns([1, 1])
     with col_b:
         api_key_input = st.text_input("OPENAI_API_KEY", type="password", help="실제 API 사용 시 입력(선택)")
         if api_key_input:
@@ -337,7 +241,7 @@ with st.expander("👤 사용자 프로파일 설정", expanded=not st.session_s
     with c6:
         epsilon = st.selectbox("ε (irregularity tendency)", epsilon_list, index=2)
 
-    do_init = st.button("시뮬레이터 초기화")
+    do_init = st.button("사용자 프로파일 설정")
     if do_init:
         user_profile = {
             "name": "adaptive_user",
@@ -353,8 +257,7 @@ with st.expander("👤 사용자 프로파일 설정", expanded=not st.session_s
             "epsilon": epsilon,
         }
         # Important: set API key BEFORE building instances
-        st.session_state.sim = build_simulator(user_profile, model_name=model_name,
-                                               mock_mode=st.session_state.mock_mode)
+        st.session_state.sim = build_simulator(user_profile, model_name=model_name)
         st.session_state.logs = {}
         st.session_state.next_id = 1
         st.session_state.last_step_info = {}
