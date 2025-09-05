@@ -1,4 +1,4 @@
-# simulator.py (with enhanced logging)
+# simulator.py (최종 수정 버전)
 import time
 import random
 import re
@@ -23,6 +23,7 @@ class Simulator:
         self.RETRY_STATUS = {429, 500, 502, 503, 504}
         self._init_logs()
 
+    # ... [ _init_logs, _ensure_dir, _save_json, _log_io, compute_compliance, _compliance_summary, generate_response 는 이전과 동일 ] ...
     def _init_logs(self):
         self.suggestion_trace = []
         self.inferred_action_trace = []
@@ -35,8 +36,6 @@ class Simulator:
         self.q_value_trace = []
         self.io_dir = "io_logs"
         os.makedirs(self.io_dir, exist_ok=True)
-
-    # ... [helper methods like _ensure_dir, _save_json, etc. remain the same] ...
 
     def _ensure_dir(self, d):
         os.makedirs(d, exist_ok=True)
@@ -55,8 +54,7 @@ class Simulator:
         self._save_json(fname, payload)
 
     def compute_compliance(self, suggestion, inferred_action):
-        if suggestion is None or inferred_action is None:
-            return 0.0
+        if suggestion is None or inferred_action is None: return 0.0
         rng = float(np.ptp(self.action_space)) or 5.0
         comp = 1.0 - abs(float(inferred_action) - float(suggestion)) / rng
         return float(np.clip(comp, 0.0, 1.0))
@@ -85,10 +83,7 @@ class Simulator:
                 response.raise_for_status()
                 result = response.json()
                 message_content = result.get("choices", [{}])[0].get("message", {}).get("content", "")
-                
-                # --- DETAILED LOGGING ---
                 print(f"\n<< RAW LLM Response from {role.upper()} >>\n{message_content}\n--------------------")
-                
                 cleaned = message_content.strip()
                 if cleaned.startswith("```"):
                     cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned)
@@ -111,10 +106,18 @@ class Simulator:
                 else: raise
         raise RuntimeError(f"Failed to get response after {retries} retries") from last_err
 
-    # ... [other methods like _generate_agent_turn, _generate_user_utterance] ...
+    def _format_history_string(self, history):
+        if not history:
+            return "No conversation history yet."
+        return "\n".join([f"{msg['role'].capitalize()}: {msg['content']}" for msg in history])
+
     def _generate_agent_turn(self, session_id, first_session, planned_suggestion=None):
+        # ***** KEY CHANGE HERE *****
+        history_str = self._format_history_string(self.conversation_history)
+        
         if first_session:
-            prompt = self.agent.format_agent_1st_session_prompt()
+            prompt_template = self.agent.format_agent_1st_session_prompt()
+            prompt = prompt_template.replace("(The conversation history will be supplied by the system here.)", history_str)
         else:
             prior_analysis = self._load_json(f"sessions/analysis_{session_id - 1:03}.json") or {}
             prompt = self.agent.format_agent_prompt(
@@ -123,7 +126,7 @@ class Simulator:
                 prior_analysis=prior_analysis,
                 planned_suggestion=planned_suggestion if planned_suggestion is not None else self.agent.goal_behavior
             )
-        # --- DETAILED LOGGING ---
+        
         print(f"\n>> AGENT PROMPT for Session {session_id} Turn {len(self.conversation_history)//2 + 1} <<\n{prompt}\n--------------------")
         ret = self.generate_response("agent", prompt, self.conversation_history, self.agent.model_name, self.agent.api_url, self.agent.api_key, self.agent.headers, return_raw=True)
         response = ret["parsed"]
@@ -135,8 +138,7 @@ class Simulator:
             recommendation_history=self.suggestion_trace,
             action_history=self.ground_truth_action_trace
         )
-        # --- DETAILED LOGGING ---
-        print(f"\n>> USER PROMPT for Session {session_id} Turn {len(self.conversation_history)//2} <<\n{prompt}\n--------------------")
+        print(f"\n>> USER PROMPT for Session {session_id} Turn {len(self.conversation_history)//2 + 1} <<\n{prompt}\n--------------------")
         ret = self.generate_response("user", prompt, self.conversation_history, self.user.model_name, self.user.api_url, self.user.api_key, self.user.headers, return_raw=True)
         response = ret["parsed"]
         self._log_io(session_id, len(self.conversation_history)//2, "user_utterance", prompt, response, ret["raw"])
@@ -149,17 +151,18 @@ class Simulator:
             recommendation_history=self.suggestion_trace,
             action_history=self.ground_truth_action_trace
         )
-        # --- DETAILED LOGGING ---
         print(f"\n>> USER ACTION PROMPT for Session {session_id} <<\n{prompt}\n--------------------")
         ret = self.generate_response("user", prompt, [], self.user.model_name, self.user.api_url, self.user.api_key, self.user.headers, return_raw=True)
         response = ret["parsed"]
         self._log_io(session_id, 99, "user_action", prompt, response, ret["raw"])
         return response.get("action")
 
-    # ... [other methods like _analyze_session, run_session] ...
     def _analyze_session(self, session_id, last_suggestion):
-        prompt = self.agent.format_agent_session_analysis_prompt(last_suggestion=last_suggestion)
-        # --- DETAILED LOGGING ---
+        # ***** KEY CHANGE HERE *****
+        history_str = self._format_history_string(self.conversation_history)
+        prompt_template = self.agent.format_agent_session_analysis_prompt(last_suggestion=last_suggestion)
+        prompt = prompt_template.replace("(The full conversation log is provided by the system.)", history_str)
+
         print(f"\n>> ANALYSIS PROMPT for Session {session_id} <<\n{prompt}\n--------------------")
         ret = self.generate_response("agent", prompt, self.conversation_history, self.agent.model_name, self.agent.api_url, self.agent.api_key, self.agent.headers, return_raw=True)
         analysis = ret["parsed"]
@@ -168,7 +171,8 @@ class Simulator:
         self._save_json(f"sessions/analysis_{session_id:03}.json", analysis)
         self._log_io(session_id, 0, "analysis", prompt, analysis, ret["raw"])
         return analysis
-    
+
+    # ... [run_session, train, and other methods remain largely the same but will now function correctly] ...
     def _load_json(self, path):
         if os.path.exists(path):
             with open(path, "r", encoding="utf-8") as f:
@@ -212,7 +216,9 @@ class Simulator:
                 session_log[-1]["ground_truth_action"] = ground_truth_action
 
         if first_session:
-            prompt = self.agent.format_agent_1st_session_analysis_prompt()
+            history_str = self._format_history_string(self.conversation_history)
+            prompt_template = self.agent.format_agent_1st_session_analysis_prompt()
+            prompt = prompt_template.replace("(The full conversation log is provided by the system.)", history_str)
             analysis = self.generate_response("agent", prompt, self.conversation_history, self.agent.model_name, self.agent.api_url, self.agent.api_key, self.agent.headers)
             self.agent.inferred_user_profile = analysis.get("inferred_attributes", {})
             self.agent.goal_behavior = analysis.get("goal_behavior", 4.0)
@@ -234,7 +240,7 @@ class Simulator:
 
         self._save_session_log(session_log, session_id, first_session)
         return session_log
-        
+
     def train(self):
         print("\n[Session 0] -------------------------------")
         self.run_session(session_id=0, first_session=True)
@@ -262,24 +268,22 @@ class Simulator:
                 compliance = self.compute_compliance(suggestion, inferred_action)
 
             reward, _ = self.agent.reward(suggestion_idx, inferred_action if inferred_action is not None else suggestion, compliance if compliance is not None else 0.0)
-
-            # --- DETAILED LOGGING ---
+            
             print("\n" + "="*50)
             print(f"SESSION {session_id} SUMMARY")
-            print(f"  - Suggestion:           {suggestion:.2f}")
-            print(f"  - Ground Truth Action:  {ground_truth_action:.2f}" if ground_truth_action is not None else "  - Ground Truth Action:  N/A")
-            print(f"  - Inferred Action:      {inferred_action:.2f}" if inferred_action is not None else "  - Inferred Action:      N/A")
-            print(f"  - Compliance:           {compliance:.4f}" if compliance is not None else "  - Compliance:           N/A")
-            print(f"  - Reward:               {reward:.4f}")
-            print(f"  - Agent Estimated Mean: {self.agent.estimated_behavior_mean:.2f}")
-            print(f"  - Agent Temperature:    {self.agent.policy_temperature:.2f}")
+            print(f"  - Suggestion:           {suggestion:.2f}")
+            print(f"  - Ground Truth Action:  {ground_truth_action:.2f}" if ground_truth_action is not None else "  - Ground Truth Action:  N/A")
+            print(f"  - Inferred Action:      {inferred_action:.2f}" if inferred_action is not None else "  - Inferred Action:      N/A")
+            print(f"  - Compliance:           {compliance:.4f}" if compliance is not None else "  - Compliance:           N/A")
+            print(f"  - Reward:               {reward:.4f}")
+            print(f"  - Agent Estimated Mean: {self.agent.estimated_behavior_mean:.2f}")
+            print(f"  - Agent Temperature:    {self.agent.policy_temperature:.2f}")
             print("="*50 + "\n")
-
 
             self._log_after_session(suggestion, inferred_action, ground_truth_action, reward, compliance)
 
         self.save_log()
-    
+
     def _log_after_session(self, suggestion, inferred_action, ground_truth_action, reward, compliance):
         self.inferred_action_trace.append(inferred_action)
         self.ground_truth_action_trace.append(ground_truth_action)

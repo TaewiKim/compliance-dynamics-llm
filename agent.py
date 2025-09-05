@@ -1,10 +1,10 @@
-# agent.py (수정된 버전)
+# agent.py (최종 수정 버전)
 import numpy as np
 import os
 from datetime import datetime
 
 class Agent:
-    # ... [__init__ 및 다른 메서드들은 이전과 동일하게 유지] ...
+    # ... [ __init__ 및 다른 메서드들은 이전 답변과 동일 ] ...
     def __init__(
         self,
         action_space,
@@ -20,7 +20,7 @@ class Agent:
         policy_temp_decay=0.04,
         user_age=None,
         user_gender=None,
-        model_name="gpt-4-turbo",
+        model_name="gpt-5-nano",
     ):
         self.action_space = np.array(action_space)
         self.num_actions = len(action_space)
@@ -45,7 +45,7 @@ class Agent:
         self.user_profile = {"age": user_age, "gender": user_gender}
         self.inferred_user_profile = {}
         self.model_name = model_name
-        self.api_url = f"https://api.openai.com/v1/chat/completions"
+        self.api_url = "https://api.openai.com/v1/chat/completions"
         self.api_key = os.getenv("OPENAI_API_KEY") 
         self.headers = {
             "Content-Type": "application/json",
@@ -115,7 +115,6 @@ class Agent:
         return suggestion, suggestion_idx, probs
 
     def format_agent_1st_session_prompt(self) -> str:
-        # (This prompt remains the same as the improved English version)
         return """
         You are a behavior coaching agent starting your first session with a new user.
 
@@ -156,20 +155,15 @@ class Agent:
         """.strip()
     
     def format_agent_1st_session_analysis_prompt(self) -> str:
-        # (This prompt remains the same)
         return """
         You are analyzing the user's responses from a first-time dietary behavior coaching session.
         Based on the entire conversation, populate the `inferred_attributes` object. If any attribute is not clearly inferable, leave it as null.
         
+        ## ➡️ Full Conversation Log:
+        (The full conversation log is provided by the system.)
+        
         ### User Profile Attributes:
-        - `condition`: Known health conditions that influence diet
-        - `mu`: Regularity of current eating behaviors
-        - `beta`: Sensitivity to external suggestions
-        - `alpha`: Flexibility in adopting new habits
-        - `gamma`: Sensitivity to emotional/environmental factors
-        - `memory`: Ability to recall and reflect on eating patterns
-        - `delta`: Need for structure/stability in dietary change
-        - `epsilon`: Tendency for spontaneous or irregular eating behaviors
+        - `condition`, `mu`, `beta`, `alpha`, `gamma`, `memory`, `delta`, `epsilon`
 
         ### User Profile Output Format:
         ```json
@@ -190,106 +184,76 @@ class Agent:
         """.strip()
 
     def format_agent_prompt(self, suggestion_score, suggestion_history, prior_analysis, planned_suggestion) -> str:
-        # (***** THIS IS THE MODIFIED PROMPT *****)
         ctx = self.run_context or {}
         comp = ctx.get("compliance_summary", {}) or {}
-        
-        # --- NEW: Simulate dynamic contextual factors ---
         now = datetime.now()
         current_day = now.strftime("%A")
         current_time = now.strftime("%I:%M %p")
-        # Fetched weather from the previous step
-        weather_condition = "Clear"
-        temperature = "32°C"
+        weather_condition = "Clear" # Placeholder
+        temperature = "32°C" # Placeholder
 
         def _d(v, fallback="Unknown"):
             return fallback if v is None else v
 
         return f"""
         You are a **dietary behavior coaching agent** working with a user in an ongoing session.
-        The user has already completed an initial profiling session.
-
         ---
-        ## 🌍 Contextual Factors (NEW)
+        ## 🌍 Contextual Factors
         - **Location**: Suwon-si, South Korea
         - **Current Day**: {current_day}
         - **Current Time**: {current_time}
         - **Current Weather**: {weather_condition}, {temperature}
         
-        **Instruction**: Consider these environmental factors. For example, a stressful Monday or rainy weather might influence the user's mood and receptiveness to suggestions. Tailor your tone and suggestion accordingly.
-
+        **Instruction**: Consider these environmental factors. For example, a stressful Monday or rainy weather might influence the user's mood. Tailor your tone and suggestion accordingly.
         ---
-        ## ⏱ Session Context
-        - Total planned sessions: {_d(ctx.get('total_sessions'))}
-        - Current session index: {_d(ctx.get('session_id'))}
-        - Current turn: {_d(ctx.get('current_turn'))} / {_d(ctx.get('max_turns'))}
-        
         ## 📈 Compliance (so far)
         - Agent running estimate: {_d(comp.get('estimated_by_agent'), 'NA')}
         - Mean (all sessions): {_d(comp.get('mean'), 'NA')}
-        - Recent mean (last 10): {_d(comp.get('recent_mean'), 'NA')}
-        
         ---
         ## 🔢 Current Behavior Snapshot
-        - **Planned Numeric Suggestion (internal, do not reveal the number)**: {planned_suggestion:.2f}
-        - **Recent Suggestion History**:
-            ```
-            {suggestion_history}
-            ```
-        - **Prior Agent Analysis**:
-            ```
-            {prior_analysis}
-            ```
-
+        - **Planned Numeric Suggestion (internal)**: {planned_suggestion:.2f}
+        - **Recent Suggestion History**: {suggestion_history}
+        - **Prior Agent Analysis**: {prior_analysis}
         ---
         ## 🧠 User Behavioral Profile
-        - **Age Group**: {self.user_profile.get('age', 'Unknown')}
-        - **Gender**: {self.user_profile.get('gender', 'Unknown')}
-        - **Diet-related Condition**: {self.inferred_user_profile.get('condition', 'Unknown')}
-        - **Emotional/Environmental Sensitivity (γ)**: {self.inferred_user_profile.get('gamma', 'Unknown')}
+        - **Condition**: {self.inferred_user_profile.get('condition', 'Unknown')}
+        - **Emotional Sensitivity (γ)**: {self.inferred_user_profile.get('gamma', 'Unknown')}
         - **Habit Adaptability (α)**: {self.inferred_user_profile.get('alpha', 'Unknown')}
-
         ---
         ## 🎯 Instructions:
-        1.  **Reflect** on all the information provided: the user's profile, past compliance, and the current environmental context.
-        2.  **Generate a brief, supportive, and actionable suggestion** that nudges the user toward healthier behavior.
-        3.  **Align** the suggestion qualitatively with the **planned numeric suggestion**.
-        4.  Include an **internal monologue** explaining your reasoning, explicitly mentioning how the contextual factors influenced your choice.
+        1.  **Reflect** on all information: the user's profile, past compliance, and current context.
+        2.  **Generate a brief, supportive, and actionable suggestion** aligned with the planned numeric suggestion.
+        3.  Include an **internal monologue** explaining your reasoning, explicitly mentioning how contextual factors influenced your choice.
 
         ### Output Format (JSON):
         {{
-            "monologue": "Based on the rainy weather and it being a Monday afternoon, the user might be feeling low. Therefore, instead of a challenging suggestion, I will propose a simple, comforting one. This aligns with their high emotional sensitivity.",
+            "monologue": "Based on the hot weather and it being a Friday afternoon, the user might be tired. I will propose a simple, low-effort suggestion. This aligns with their emotional sensitivity.",
             "utterance": "Your warm, motivational suggestion to the user.",
             "endkey": false
         }}
         """.strip()
 
     def format_agent_session_analysis_prompt(self, last_suggestion: float) -> str:
-        # (This prompt remains the same as the improved English version)
         return f"""
         You are a behavioral psychologist analyzing a conversation between an AI coach and a user. 
-        Your task is to **predict the user's most likely action** based on their personality, tone, and stated intentions, not just their literal statements.
+        Your task is to **predict the user's most likely action** based on their personality, tone, and stated intentions.
 
-        **CRITICAL INSTRUCTION:** The user will often say "I will try..." or "Okay, I'll do that." Do **NOT** interpret this as inaction. If the user's tone is positive and they agree to the agent's suggestion, you must infer that they **performed an action that is highly aligned with the suggestion.**
+        **CRITICAL INSTRUCTION:** The user often says "I will try..." or "Okay, I'll do that." Do **NOT** interpret this as inaction. If the user's tone is positive and they agree to the suggestion, you must infer that they **performed an action that is highly aligned with the suggestion.**
 
         ### Case Examples for Inference:
-        - If user says: "Wow, that's a great idea! I will definitely try that today." -> **Estimate a high action value (e.g., 4.0-5.0).**
-        - If user says: "Hmm, I'm not sure, but I guess I can try." -> **Estimate a moderate action value (e.g., 2.5-3.5).**
-        - If user says: "No, I don't think that will work for me." -> **Estimate a low action value (e.g., 1.0-2.0).**
-
+        - User says "Wow, that's a great idea! I will definitely try that today." -> **Estimate a high action value (e.g., 4.0-5.0).**
+        - User says "Hmm, I'm not sure, but I guess I can try." -> **Estimate a moderate action value (e.g., 2.5-3.5).**
+        - User says "No, I don't think that will work for me." -> **Estimate a low action value (e.g., 1.0-2.0).**
         ---
         ### 💬 Conversation to Analyze:
         (The full conversation log is provided by the system.)
-
         ---
         ### 📝 Your Tasks:
-        1.  **Predict User's Action (`user_action_estimate`)**: Based on their final statements and overall tone, what is the most probable action (from 1.0 to 5.0) the user took after this conversation?
-        2.  **Estimate Compliance (`compliance_estimate`)**: Calculate compliance based on your predicted action and the agent's last numeric suggestion of **S = {last_suggestion:.2f}**. The formula is: 1 - |action_estimate - S| / 4.0
-        3.  **Provide Psychological Analysis**: Briefly analyze the user's cognitive state and provide coaching notes for the next session.
-
+        1.  **Predict User's Action (`user_action_estimate`)**: Based on their final statements and overall tone, what is the most probable action (1.0 to 5.0) the user took?
+        2.  **Estimate Compliance (`compliance_estimate`)**: Calculate compliance based on your predicted action and the agent's last suggestion of **S = {last_suggestion:.2f}**. (Formula: 1 - |action_estimate - S| / 4.0)
+        3.  **Provide Psychological Analysis**: Briefly analyze the user's cognitive state and provide coaching notes.
         ---
         ### 🧾 Output Format (JSON):
-        You MUST provide your output in JSON format.
         ```json
         {{
             "user_action_estimate": 4.5,
@@ -297,10 +261,10 @@ class Agent:
             "confidence": 0.85,
             "basis": "The user responded with strong enthusiasm and commitment ('Sounds good. I’ll try...'), making it highly probable they followed the suggestion closely.",
             "cognitive_dissonance": "Concise summary of user's internal conflicts.",
-            "negative_thought_patterns": "Recurring negative beliefs or emotional responses.",
-            "emotional_triggers": "Factors driving unhealthy eating or resistance to change.",
-            "effective_reinforcement": ["Empathy", "Praise", "Normalizing setbacks"],
-            "coaching_notes": "The user responds well to clear, actionable plans. Continue providing concrete examples and reinforcing their commitment."
+            "negative_thought_patterns": "Recurring negative beliefs.",
+            "emotional_triggers": "Factors driving unhealthy eating.",
+            "effective_reinforcement": ["Empathy", "Praise"],
+            "coaching_notes": "The user responds well to clear, actionable plans. Continue providing concrete examples."
         }}
         ```
         """.strip()
