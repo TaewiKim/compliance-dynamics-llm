@@ -167,7 +167,6 @@ class Agent:
 
     def format_agent_1st_session_prompt(self) -> str:
         ctx = self.run_context or {}
-        comp = ctx.get("compliance_summary", {}) or {}
 
         # 안전한 표시값
         def _d(v, fallback="Unknown"):
@@ -180,14 +179,8 @@ class Agent:
         ## ⏱ Session Context
         - Total planned sessions: {_d(ctx.get('total_sessions'))}
         - Current session index: {_d(ctx.get('session_id'))}
+        - maximum turns per session: {_d(ctx.get('max_turns'))}
         - Current turn: {_d(ctx.get('current_turn'))} / {_d(ctx.get('max_turns'))}
-
-        ## 📈 Compliance (so far)
-        - Agent running estimate: {_d(comp.get('estimated_by_agent'), 'NA')}
-        - Mean (all sessions): {_d(comp.get('mean'), 'NA')}
-        - Recent mean (last 10): {_d(comp.get('recent_mean'), 'NA')}
-        - Last observed: {_d(comp.get('last'), 'NA')}
-        - Count: {_d(comp.get('count'), 0)}
 
         Your objective is to **gently guide a natural and empathetic conversation** to understand the user's background and eating behavior traits,  
         **and collaboratively agree on a desired goal behavior level** for future coaching.
@@ -294,6 +287,7 @@ class Agent:
         ## ⏱ Session Context
         - Total planned sessions: {_d(ctx.get('total_sessions'))}
         - Current session index: {_d(ctx.get('session_id'))}
+        - Maximum turns per session: {_d(ctx.get('max_turns'))}
         - Current turn: {_d(ctx.get('current_turn'))} / {_d(ctx.get('max_turns'))}
 
         ## 📈 Compliance (so far)

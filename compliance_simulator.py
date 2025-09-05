@@ -73,6 +73,11 @@ def init_state():
         st.session_state.last_step_info = {}
     if "inited" not in st.session_state:
         st.session_state.inited = False
+    # Additional state for live chat streaming
+    if "chat_msgs" not in st.session_state:
+        st.session_state.chat_msgs = []
+    if "stop_flag" not in st.session_state:
+        st.session_state.stop_flag = False
 
 
 # -------------------------------
@@ -88,6 +93,8 @@ def build_simulator(user_profile, model_name="gpt-5-nano"):
                   user_gender=user_profile.get("gender"),
                   model_name=model_name)
     sim = Simulator(user=user, agent=agent, action_space=action_space, total_steps=200)
+    return sim
+
 
 # -------------------------------
 # One-step runner
@@ -153,6 +160,135 @@ def run_next_session(sim: Simulator):
         "suggestion": suggestion,
         "inferred_action": inferred_action,
         "gt_action": gt_action,
+        "compliance": compliance,
+        "reward": reward,
+        "agent_monologue": session_log[-1].get("agent_monologue") if session_log else None
+    }
+
+
+def run_next_session_live(sim: Simulator, max_turns: int = 10):
+    """
+    Run one RL session with real-time chat output.
+    This streams agent and user messages to st.session_state.chat_msgs and breaks early if st.session_state.stop_flag is True.
+    Returns a summary dictionary similar to run_next_session.
+    """
+    sid = st.session_state.next_id
+    suggestion, suggestion_idx, _ = sim.agent.policy()
+    sim.suggestion_trace.append(suggestion)
+
+    # Reset chat messages and stop flag for this live session
+    st.session_state.chat_msgs = []
+    st.session_state.stop_flag = False
+
+    # Prepare conversation history and session log
+    sim.conversation_history = []
+    session_log = []
+    planned_suggestion = suggestion
+
+    for t in range(max_turns):
+        # update agent context similar to Simulator.run_session
+        sim.agent.run_context = {
+            "session_id": sid,
+            "current_turn": t + 1,
+            "max_turns": max_turns,
+            "total_sessions": sim.total_steps,
+            "compliance_summary": sim._compliance_summary(window=10)
+        }
+
+        # Agent turn
+        agent_result = sim._generate_agent_turn(sid, first_session=False, planned_suggestion=planned_suggestion)
+        agent_utterance = agent_result.get("utterance", "")
+        agent_monologue = agent_result.get("monologue", "")
+        agent_end = agent_result.get("endkey", False)
+
+        sim.conversation_history.append({"role": "assistant", "content": agent_utterance})
+
+        log_entry = {
+            "turn": t + 1,
+            "agent_utterance": agent_utterance,
+            "agent_monologue": agent_monologue,
+            "agent_endkey": agent_end,
+            "planned_suggestion": planned_suggestion
+        }
+
+        # Append agent message to chat
+        st.session_state.chat_msgs.append(("assistant", agent_utterance))
+
+        # If agent signals end of conversation, append log and break
+        if agent_end:
+            session_log.append(log_entry)
+            break
+
+        # User turn
+        user_result = sim._generate_user_turn(sid)
+        user_utterance = user_result.get("utterance", "")
+        user_end = user_result.get("endkey", False)
+        ground_truth_action = user_result.get("action", None)
+
+        sim.conversation_history.append({"role": "user", "content": user_utterance})
+
+        log_entry["user_utterance"] = user_utterance
+        log_entry["user_endkey"] = user_end
+        if ground_truth_action is not None:
+            log_entry["ground_truth_action"] = ground_truth_action
+
+        # Append user message to chat
+        st.session_state.chat_msgs.append(("user", user_utterance))
+
+        session_log.append(log_entry)
+
+        # Break conditions: user or agent ended conversation
+        if user_end:
+            break
+
+        # Stop flag: user clicked stop button
+        if st.session_state.stop_flag:
+            break
+
+        # Short sleep to simulate real-time update
+        time.sleep(0.2)
+
+    # After live session: analyze and update estimates
+    # Load analysis via sim._analyze_session
+    analysis = sim._analyze_session(sim.conversation_history, sid, last_suggestion=planned_suggestion)
+
+    inferred_action = analysis.get("user_action_estimate", None)
+    try:
+        inferred_action = float(inferred_action) if inferred_action is not None else None
+    except:
+        inferred_action = None
+
+    compliance = analysis.get("compliance_estimate", None)
+    try:
+        compliance = float(compliance) if compliance is not None else None
+    except:
+        compliance = None
+
+    if compliance is None:
+        compliance = sim.compute_compliance(planned_suggestion, inferred_action)
+
+    # Persist inferred action and compliance in last log entry
+    if session_log:
+        session_log[-1]["inferred_action"] = inferred_action
+        session_log[-1]["compliance_estimate"] = compliance
+
+    # Compute reward and update traces
+    reward, _ = sim.agent.reward(
+        suggestion_idx,
+        inferred_action if inferred_action is not None else suggestion,
+        compliance if compliance is not None else 0.0
+    )
+    sim._log_after_session(suggestion, inferred_action, session_log[-1].get("ground_truth_action") if session_log else None, reward, compliance)
+
+    # Store session log
+    st.session_state.logs[sid] = session_log
+    st.session_state.next_id = sid + 1
+
+    return {
+        "session_id": sid,
+        "suggestion": suggestion,
+        "inferred_action": inferred_action,
+        "gt_action": session_log[-1].get("ground_truth_action") if session_log else None,
         "compliance": compliance,
         "reward": reward,
         "agent_monologue": session_log[-1].get("agent_monologue") if session_log else None
@@ -275,6 +411,7 @@ with ctrl_col1:
             st.toast("Session 0 완료")
 
 with ctrl_col2:
+    # Traditional one-step execution
     if st.button("다음 세션 1스텝 실행"):
         if st.session_state.sim is None:
             st.warning("먼저 시뮬레이터를 초기화하세요.")
@@ -284,6 +421,16 @@ with ctrl_col2:
             info = run_next_session(st.session_state.sim)
             st.session_state.last_step_info = info
             st.toast(f"Session {info['session_id']} 완료")
+    # Real-time live execution
+    if st.button("실시간 세션 실행"):
+        if st.session_state.sim is None:
+            st.warning("먼저 시뮬레이터를 초기화하세요.")
+        elif 0 not in st.session_state.logs:
+            st.warning("먼저 '프로파일링 세션'을 실행하세요.")
+        else:
+            info = run_next_session_live(st.session_state.sim)
+            st.session_state.last_step_info = info
+            st.toast(f"실시간 Session {info['session_id']} 완료")
 
 with ctrl_col3:
     steps = st.number_input("여러 스텝 연속 실행", min_value=1, max_value=200, value=5, step=1)
@@ -299,6 +446,9 @@ with ctrl_col3:
                 # 짧은 sleep으로 UI 갱신 느낌(모의)
                 time.sleep(0.05)
             st.toast(f"{steps} 스텝 실행 완료")
+    # Button to stop live conversation
+    if st.button("대화 중지"):
+        st.session_state.stop_flag = True
 
 st.markdown("---")
 
@@ -348,29 +498,35 @@ with left:
 # -------------------------------
 with right:
     st.subheader("💬 대화 뷰")
-    # Choose which session to display
-    max_sid = max(st.session_state.logs.keys()) if st.session_state.logs else 0
-    view_sid = st.number_input("세션 선택", min_value=0, max_value=int(max_sid), value=int(max_sid), step=1)
-
-    if st.session_state.logs and view_sid in st.session_state.logs:
-        log = st.session_state.logs[view_sid]
-        st.caption(f"Session {view_sid} — 턴 로그")
-        for row in log:
-            st.chat_message("assistant").write(row.get("agent_utterance", ""))
-            st.chat_message("user").write(row.get("user_utterance", ""))
-
-        # Action snapshot for this session (if any)
-        last_row = log[-1] if log else {}
-        gt = last_row.get("ground_truth_action", None)
-        inf = last_row.get("inferred_action", None)
-        comp = last_row.get("compliance_estimate", None)
-        st.markdown("—")
-        c1, c2, c3 = st.columns(3)
-        with c1:
-            st.metric("GT Action(사용자 실제)", f"{gt:.2f}" if isinstance(gt, (int, float)) else "—")
-        with c2:
-            st.metric("Inferred Action(추론)", f"{inf:.2f}" if isinstance(inf, (int, float)) else "—")
-        with c3:
-            st.metric("Compliance", f"{comp:.3f}" if isinstance(comp, (int, float)) else "—")
+    # If live chat messages exist, display them directly
+    if st.session_state.chat_msgs:
+        for role, msg in st.session_state.chat_msgs:
+            # Role stored as 'assistant' or 'user'
+            st.chat_message("assistant" if role == "assistant" else "user").write(msg)
     else:
-        st.info("표시할 세션 로그가 없습니다. 먼저 세션을 실행해 주세요.")
+        # Choose which session to display
+        max_sid = max(st.session_state.logs.keys()) if st.session_state.logs else 0
+        view_sid = st.number_input("세션 선택", min_value=0, max_value=int(max_sid), value=int(max_sid), step=1)
+
+        if st.session_state.logs and view_sid in st.session_state.logs:
+            log = st.session_state.logs[view_sid]
+            st.caption(f"Session {view_sid} — 턴 로그")
+            for row in log:
+                st.chat_message("assistant").write(row.get("agent_utterance", ""))
+                st.chat_message("user").write(row.get("user_utterance", ""))
+
+            # Action snapshot for this session (if any)
+            last_row = log[-1] if log else {}
+            gt = last_row.get("ground_truth_action", None)
+            inf = last_row.get("inferred_action", None)
+            comp = last_row.get("compliance_estimate", None)
+            st.markdown("—")
+            c1, c2, c3 = st.columns(3)
+            with c1:
+                st.metric("GT Action(사용자 실제)", f"{gt:.2f}" if isinstance(gt, (int, float)) else "—")
+            with c2:
+                st.metric("Inferred Action(추론)", f"{inf:.2f}" if isinstance(inf, (int, float)) else "—")
+            with c3:
+                st.metric("Compliance", f"{comp:.3f}" if isinstance(comp, (int, float)) else "—")
+        else:
+            st.info("표시할 세션 로그가 없습니다. 먼저 세션을 실행해 주세요.")
