@@ -72,6 +72,7 @@ class Simulator:
         
     def generate_response(self, role, content, history, model_name, api_url, api_key, headers, return_raw=False, retries: int = 5, backoff_base: float = 1.0, timeout: int = 60):
         assert role in ["user", "agent"]
+        print(history)
         messages = history + [{"role": "user" if role == "user" else "assistant", "content": content}]
         payload = {"model": model_name, "messages": messages, "response_format": {"type": "json_object"}}
         last_err = None
@@ -112,7 +113,6 @@ class Simulator:
         return "\n".join([f"{msg['role'].capitalize()}: {msg['content']}" for msg in history])
 
     def _generate_agent_turn(self, session_id, first_session, planned_suggestion=None):
-        # ***** KEY CHANGE HERE *****
         history_str = self._format_history_string(self.conversation_history)
         
         if first_session:
